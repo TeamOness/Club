@@ -1,7 +1,7 @@
 <?php
 /*
  *管理系统首页控制器
- *2016/06/11
+ *2016/06/12
  */
 
 namespace frontend\controllers;
@@ -18,16 +18,6 @@ class IndexController extends \yii\web\Controller
         $name = $session['login'];
 		$name = $name['admin_name'];
         return $this->renderPartial('index', ['name' => $name]);
-    }
-
-	public function actionTables()
-    {
-        return $this->renderPartial('tables');
-    }
-
-	public function actionForm()
-    {
-        return $this->renderPartial('form-elements');
     }
 
 }
