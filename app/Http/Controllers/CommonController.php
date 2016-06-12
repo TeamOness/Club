@@ -39,5 +39,7 @@ class CommonController extends Controller
 
 	}
 	public function abc(){
+		echo 'ddd';
 	}
+
 }
