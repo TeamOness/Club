@@ -38,4 +38,6 @@ class CommonController extends Controller
 		}
 
 	}
+	public function abc(){
+	}
 }
