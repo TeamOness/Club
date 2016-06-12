@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('common','CommonController@common');//分期购车表单添加页面
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -29,3 +29,5 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+//Route::any('/','CommonController@common');//分期购车表单添加页面
+//Route::any('commonok','CommonController@commonok');//分期购车表单添加页面

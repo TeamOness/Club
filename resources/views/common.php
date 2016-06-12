@@ -3,9 +3,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="keywords" content="瓜子，分期购车，汽车金融">
     <title>汽车金融-分期购车</title>
-    <script src="js/hm.js"></script>
-	<script src="js/index.js"></script>
-	<script src="js/common.js"></script>
+    <script src="public/js/hm.js"></script>
+	<script src="public/js/index.js"></script>
+	<script src="public/js/common.js"></script>
 <style type="text/css">.panel-mask{position:fixed;background:rgba(0,0,0,.4);top:0;left:0;width:100%;height:100%;z-index:101}.panel-box{position:absolute;height:400px;width:500px;border:2px solid #e7e7e7;background:#fff}.panel-title{height:55px;padding-left:25px;font-size:24px;line-height:55px;color:#e54121;border-bottom:1px solid #e8e8e8}.panel-title span{float:left}.panel-title .panel-close{float:right;width:15px;height:15px;text-indent:-100px;white-space:nowrap;overflow:hidden;background:url(http://sta.guazistatic.com/finance_web/close.d6daaea4ca14acfc31a10b7bc703ef9d.png) no-repeat;margin:20px 20px 0 0}.panel-title .panel-close:hover{color:red;cursor:pointer}</style></head>
 <body>
 <div class="header">
@@ -26,7 +26,7 @@
                     <dl>
                         <dt>热门</dt>
                         <dd>
-                            <a href="http://jr.guazi.com/all/">全国</a>
+                            <a href="http://www.head.com/all/">全国</a>
                                                                                                 <a href="http://jr.guazi.com/bj/">北京</a>
                                                                                                                                 <a href="http://jr.guazi.com/sh/">上海</a>
                                                                                                                                 <a href="http://jr.guazi.com/gz/">广州</a>
@@ -220,13 +220,13 @@
     <div class="nav">
         <div class="w">
 
-            <a class="fr" target="_blank" href="http://www.guazi.com/zq_app/" gjalog="100000000521000100000010">APP下载</a>
+            <a class="fr" target="_blank" href="app_download.php" gjalog="100000000521000100000010">APP下载</a>
             <a baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_fenqi_c" class="fr active" href="http://jr.guazi.com/" gjalog="100000001231000100000010">分期购车</a>
             <!--<a class="fr" href="http://www.guazi.com/zq_expandMarket/" gjalog="100000001248000100000010">车生活</a>-->
-            <a class="fl" href="http://www.guazi.com/bj/" gjalog="100000000053000100000010">首页</a>
-            <a class="fl" href="http://www.guazi.com/bj/buy/" gjalog="100000000054000100000010">我要买车</a>
-            <a class="fl" href="http://www.guazi.com/bj/sell/" gjalog="100000000055000100000010">我要卖车</a>
-            <a class="fl" href="http://www.guazi.com/bj/intro/" gjalog="100000000056000100000010">服务保障</a>
+            <a class="fl" href="index.php" gjalog="100000000053000100000010">首页</a>
+            <a class="fl" href="buy.php" gjalog="100000000054000100000010">我要买车</a>
+            <a class="fl" href="sell.php" gjalog="100000000055000100000010">我要卖车</a>
+            <a class="fl" href="server_security.php" gjalog="100000000056000100000010">服务保障</a>
         </div>
     </div>
 </div>
@@ -237,17 +237,18 @@
     <div class="w rel">
         <div class="loan-car" data-allbanks="{&quot;11&quot;:&quot;\u72ee\u6865\u8d44\u672c&quot;,&quot;4&quot;:&quot;\u6d66\u53d1\u94f6\u884c&quot;,&quot;20&quot;:&quot;\u957f\u5b89\u4fe1\u6258&quot;,&quot;12&quot;:&quot;\u957f\u5b89\u4fe1\u6258&quot;,&quot;9&quot;:&quot;\u529b\u8574\u91d1\u878d&quot;,&quot;14&quot;:&quot;\u5fae\u8d37\u7f51&quot;,&quot;2&quot;:&quot;\u7396\u5bcc\u5206\u671f&quot;,&quot;8&quot;:&quot;\u6210\u90fd\u4fca\u9a70&quot;,&quot;28&quot;:&quot;\u5947\u745e\u91d1\u878d&quot;,&quot;24&quot;:&quot;\u6613\u946b&quot;,&quot;25&quot;:&quot;\u946b\u5e73\u8d37\u6b3e&quot;,&quot;10&quot;:&quot;\u91cd\u5e86\u7f14\u4fe1&quot;,&quot;23&quot;:&quot;\u6613\u946b&quot;,&quot;26&quot;:&quot;\u94f6\u8302\u91d1\u878d&quot;,&quot;22&quot;:&quot;\u4fca\u8302\u91d1\u878d&quot;,&quot;19&quot;:&quot;\u4e9a\u590f\u8d44\u672c&quot;}" data-banksofcity="{&quot;12&quot;:[&quot;11&quot;,&quot;4&quot;,&quot;14&quot;,&quot;2&quot;],&quot;15&quot;:[&quot;11&quot;,&quot;26&quot;],&quot;45&quot;:[&quot;11&quot;,&quot;8&quot;],&quot;103&quot;:[&quot;11&quot;,&quot;20&quot;,&quot;2&quot;],&quot;67&quot;:[&quot;11&quot;,&quot;9&quot;,&quot;2&quot;],&quot;65&quot;:[&quot;11&quot;,&quot;2&quot;],&quot;113&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;2&quot;,&quot;28&quot;],&quot;2&quot;:[&quot;11&quot;],&quot;1&quot;:[&quot;11&quot;],&quot;176&quot;:[&quot;11&quot;,&quot;2&quot;,&quot;28&quot;],&quot;155&quot;:[&quot;11&quot;,&quot;2&quot;],&quot;204&quot;:[&quot;11&quot;],&quot;123&quot;:[&quot;11&quot;,&quot;20&quot;,&quot;28&quot;,&quot;19&quot;],&quot;194&quot;:[&quot;11&quot;],&quot;53&quot;:[&quot;11&quot;],&quot;16&quot;:[&quot;11&quot;,&quot;14&quot;],&quot;119&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;28&quot;],&quot;68&quot;:[&quot;11&quot;],&quot;66&quot;:[&quot;11&quot;],&quot;20&quot;:[&quot;11&quot;],&quot;145&quot;:[&quot;11&quot;],&quot;225&quot;:[&quot;11&quot;,&quot;9&quot;],&quot;118&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;28&quot;],&quot;214&quot;:[&quot;11&quot;],&quot;142&quot;:[&quot;11&quot;],&quot;17&quot;:[&quot;11&quot;,&quot;28&quot;],&quot;104&quot;:[&quot;11&quot;,&quot;20&quot;],&quot;49&quot;:[&quot;11&quot;],&quot;307&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;28&quot;],&quot;304&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;28&quot;],&quot;108&quot;:[&quot;20&quot;],&quot;111&quot;:[&quot;20&quot;],&quot;114&quot;:[&quot;12&quot;,&quot;14&quot;,&quot;2&quot;],&quot;120&quot;:[&quot;12&quot;],&quot;115&quot;:[&quot;12&quot;,&quot;28&quot;],&quot;55&quot;:[&quot;9&quot;,&quot;14&quot;,&quot;2&quot;,&quot;24&quot;],&quot;84&quot;:[&quot;9&quot;,&quot;23&quot;],&quot;76&quot;:[&quot;14&quot;],&quot;13&quot;:[&quot;2&quot;],&quot;56&quot;:[&quot;2&quot;,&quot;25&quot;],&quot;24&quot;:[&quot;28&quot;],&quot;23&quot;:[&quot;28&quot;],&quot;305&quot;:[&quot;28&quot;],&quot;129&quot;:[&quot;28&quot;],&quot;338&quot;:[&quot;28&quot;],&quot;116&quot;:[&quot;28&quot;],&quot;306&quot;:[&quot;28&quot;],&quot;344&quot;:[&quot;10&quot;],&quot;93&quot;:[&quot;22&quot;],&quot;132&quot;:[&quot;19&quot;],&quot;124&quot;:[&quot;19&quot;]}">
             <h3 class="tc">分期购车</h3>
+<form action="commonok" method='post'>
             <ul class="basic-list clearfix">
                 <li class="list-item">
                     <div class="rel">
-                        <input data-role="amount" name="application_amount" class="input-1" placeholder="借款额度" type="text">
+                        <input data-role="amount" name="buy_money" class="input-1" placeholder="借款额度" type="text">
                         <span class="million fs16">万</span>
                     </div>
                 </li>
                 <li class="list-item">
                     <div id="stage" data-role="stageArr" class="comselect-1" data-max-num="10">
                         <input data-role="text" class="inputype" value="12期" readonly="readonly" type="text">
-                        <input value="12" data-role="hidden" name="application_month" title="借款期限" type="hidden">
+                        <input value="12" data-role="hidden" name="buy_money_date" title="借款期限" type="hidden">
                         <div class="p-rl">
                             <div style="width: 135px; max-height: 360px; overflow-y: auto;" class="downbox">
                                 <ul data-role="list">
@@ -261,7 +262,7 @@
                 </li>
                 <li class="list-item list-item2">
                     <div class="rel">
-                        <input data-role="phone" name="phone" class="input-1" placeholder="手机号" type="text">
+                        <input data-role="phone" name="buy_phone" class="input-1" placeholder="手机号" type="text">
                     </div>
                 </li>
                 <li style="display: none;" class="list-item">
@@ -407,14 +408,17 @@
                     </div>
                 </li>
             </ul>
-            <div data-role="submit" data-puid="0" class="tc mt10">
+            <!-- <div data-role="submit" data-puid="0" class="tc mt10">
                 <a baidu_alog="vehicle_finance_loan_web&amp;click&amp;pc_loan_top_apply_c" class="btn btn-submit" href="javascript:%20void(0);">提交</a>
-            </div>
+            </div> -->
+			<input type="submit" value='提交' />
+			</form>
             <p data-role="tip" class="basic-error">&nbsp;</p>
             <p class="tc fs16">或咨询瓜子金融管家<br>400-733-3377</p>
         </div>
     </div>
 </div>
+
 <!--分期购车 end-->
 
 <!--暂时隐藏，等侯产品需求-->
@@ -767,7 +771,7 @@
         </div>
     </div>
 </div>
-<img src="images/p.gif" style="display: none">
+<img src="public/images/p.gif" style="display: none">
 <!--页面底部end-->
 
 <!--用户提交贷款信息的弹窗begin-->
@@ -781,6 +785,7 @@
 
             <!--用户提交贷款信息的表单-->
             <div data-role="loan_form" class="popup-apply">
+
                 <ul class="basic-list clearfix">
                     <li class="list-item">
                         <div class="rel">
