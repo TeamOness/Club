@@ -14,6 +14,10 @@
 /*Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
+Route::get('/', 'BuyController@buy');
+Route::get('goodslist', 'BuyController@goodslist');
+=======
 */
 //加载静态页面的方法(牛亮)
 
@@ -22,6 +26,7 @@ Route::any('/','IndexController@index');
 
 
 
+>>>>>>> d6532c240a11b0326635f4b18eb3c771e7653a0c
 /*
 |--------------------------------------------------------------------------
 | Application Routes
