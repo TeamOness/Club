@@ -11,10 +11,21 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
+<<<<<<< HEAD
 Route::get('common','CommonController@common');//åˆ†æœŸè´­è½¦è¡¨å•æ·»åŠ é¡µé¢
+=======
+*/
+//¼ÓÔØ¾²Ì¬Ò³ÃæµÄ·½·¨(Å£ÁÁ)
+
+Route::any('/','IndexController@index');
+
+
+
+
+>>>>>>> 5af2ca2ac12c399f70284b37f7bfdbf442648de1
 /*
 |--------------------------------------------------------------------------
 | Application Routes
