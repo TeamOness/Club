@@ -1,7 +1,7 @@
 <?php
 /*
  *管理员登录控制器
- *2016/06/11
+ *2016/06/12
  */
 
 namespace frontend\controllers;

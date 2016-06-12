@@ -2,15 +2,15 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Bootstrap表单组件 - Bootstrap后台管理系统模版Ace下载</title>
-		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
-		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+		<title>友情链接信息添加 - 龙头后台管理系统</title>
+		<meta name="keywords" content="友情链接信息添加 - 龙头后台管理系统" />
+		<meta name="description" content="友情链接信息添加 - 龙头后台管理系统" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->
 
-		<link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css" />
+		<link href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/font-awesome.min.css" />
 
 		<!--[if IE 7]>
 		  <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css" />
@@ -18,12 +18,12 @@
 
 		<!-- page specific plugin styles -->
 
-		<link rel="stylesheet" href="assets/css/jquery-ui-1.10.3.custom.min.css" />
-		<link rel="stylesheet" href="assets/css/chosen.css" />
-		<link rel="stylesheet" href="assets/css/datepicker.css" />
-		<link rel="stylesheet" href="assets/css/bootstrap-timepicker.css" />
-		<link rel="stylesheet" href="assets/css/daterangepicker.css" />
-		<link rel="stylesheet" href="assets/css/colorpicker.css" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/chosen.css" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/datepicker.css" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/bootstrap-timepicker.css" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/daterangepicker.css" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/colorpicker.css" />
 
 		<!-- fonts -->
 
@@ -31,9 +31,9 @@
 
 		<!-- ace styles -->
 
-		<link rel="stylesheet" href="assets/css/ace.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/ace.min.css" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="<?php echo Yii::$app->request->baseUrl; ?>/assets/css/ace-skins.min.css" />
 
 		<!--[if lte IE 8]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
@@ -43,7 +43,7 @@
 
 		<!-- ace settings handler -->
 
-		<script src="assets/js/ace-extra.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 
@@ -64,7 +64,7 @@
 					<a href="#" class="navbar-brand">
 						<small>
 							<i class="icon-leaf"></i>
-							Ace Admin
+							龙头后台管理系统
 						</small>
 					</a><!-- /.brand -->
 				</div><!-- /.navbar-header -->
@@ -222,7 +222,7 @@
 
 								<li>
 									<a href="#">
-										<img src="assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+										<img src="<?php echo Yii::$app->request->baseUrl; ?>/assets/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Alex:</span>
@@ -239,7 +239,7 @@
 
 								<li>
 									<a href="#">
-										<img src="assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+										<img src="<?php echo Yii::$app->request->baseUrl; ?>/assets/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Susan:</span>
@@ -256,7 +256,7 @@
 
 								<li>
 									<a href="#">
-										<img src="assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+										<img src="<?php echo Yii::$app->request->baseUrl; ?>/assets/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 										<span class="msg-body">
 											<span class="msg-title">
 												<span class="blue">Bob:</span>
@@ -282,17 +282,17 @@
 
 						<li class="light-blue">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="<?php echo Yii::$app->request->baseUrl; ?>/assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
-									Jason
+									<?php echo $name; ?>
 								</span>
 
 								<i class="icon-caret-down"></i>
 							</a>
 
 							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								<li>
+								<!-- <li>
 									<a href="#">
 										<i class="icon-cog"></i>
 										Settings
@@ -304,14 +304,14 @@
 										<i class="icon-user"></i>
 										Profile
 									</a>
-								</li>
+								</li> -->
 
 								<li class="divider"></li>
 
 								<li>
-									<a href="#">
+									<a href="index.php?r=login/out">
 										<i class="icon-off"></i>
-										Logout
+										退出
 									</a>
 								</li>
 							</ul>
@@ -367,105 +367,32 @@
 					</div><!-- #sidebar-shortcuts -->
 
 					<ul class="nav nav-list">
-						<li class="active">
-							<a href="index.html">
+						<li>
+							<a href="index.php?r=index">
 								<i class="icon-dashboard"></i>
 								<span class="menu-text"> 控制台 </span>
 							</a>
 						</li>
 
 						<li>
-							<a href="typography.html">
-								<i class="icon-text-width"></i>
-								<span class="menu-text"> 文字排版 </span>
-							</a>
-						</li>
-
-						<li>
 							<a href="#" class="dropdown-toggle">
-								<i class="icon-desktop"></i>
-								<span class="menu-text"> UI 组件 </span>
-
+								<i class="icon-list"></i>
+								<span class="menu-text"> 汽车管理 </span>
 								<b class="arrow icon-angle-down"></b>
 							</a>
 
 							<ul class="submenu">
 								<li>
-									<a href="elements.html">
+									<a href="index.php?r=car/index">
 										<i class="icon-double-angle-right"></i>
-										组件
+										汽车信息列表
 									</a>
 								</li>
-
 								<li>
-									<a href="buttons.html">
+									<a href="index.php?r=car/carcheck">
 										<i class="icon-double-angle-right"></i>
-										按钮 &amp; 图表
+										添加汽车检测信息
 									</a>
-								</li>
-
-								<li>
-									<a href="treeview.html">
-										<i class="icon-double-angle-right"></i>
-										树菜单
-									</a>
-								</li>
-
-								<li>
-									<a href="jquery-ui.html">
-										<i class="icon-double-angle-right"></i>
-										jQuery UI
-									</a>
-								</li>
-
-								<li>
-									<a href="nestable-list.html">
-										<i class="icon-double-angle-right"></i>
-										可拖拽列表
-									</a>
-								</li>
-
-								<li>
-									<a href="#" class="dropdown-toggle">
-										<i class="icon-double-angle-right"></i>
-
-										三级菜单
-										<b class="arrow icon-angle-down"></b>
-									</a>
-
-									<ul class="submenu">
-										<li>
-											<a href="#">
-												<i class="icon-leaf"></i>
-												第一级
-											</a>
-										</li>
-
-										<li>
-											<a href="#" class="dropdown-toggle">
-												<i class="icon-pencil"></i>
-
-												第四级
-												<b class="arrow icon-angle-down"></b>
-											</a>
-
-											<ul class="submenu">
-												<li>
-													<a href="#">
-														<i class="icon-plus"></i>
-														添加产品
-													</a>
-												</li>
-
-												<li>
-													<a href="#">
-														<i class="icon-eye-open"></i>
-														查看商品
-													</a>
-												</li>
-											</ul>
-										</li>
-									</ul>
 								</li>
 							</ul>
 						</li>
@@ -473,142 +400,15 @@
 						<li>
 							<a href="#" class="dropdown-toggle">
 								<i class="icon-list"></i>
-								<span class="menu-text"> 表格 </span>
-
+								<span class="menu-text"> 用户管理 </span>
 								<b class="arrow icon-angle-down"></b>
 							</a>
 
 							<ul class="submenu">
 								<li>
-									<a href="tables.html">
+									<a href="index.php?r=user">
 										<i class="icon-double-angle-right"></i>
-										简单 &amp; 动态
-									</a>
-								</li>
-
-								<li>
-									<a href="jqgrid.html">
-										<i class="icon-double-angle-right"></i>
-										jqGrid plugin
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li class="active open">
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-edit"></i>
-								<span class="menu-text"> 表单 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li class="active">
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										表单组件
-									</a>
-								</li>
-
-								<li>
-									<a href="form-wizard.html">
-										<i class="icon-double-angle-right"></i>
-										向导提示 &amp; 验证
-									</a>
-								</li>
-
-								<li>
-									<a href="wysiwyg.html">
-										<i class="icon-double-angle-right"></i>
-										编辑器
-									</a>
-								</li>
-
-								<li>
-									<a href="dropzone.html">
-										<i class="icon-double-angle-right"></i>
-										文件上传
-									</a>
-								</li>
-							</ul>
-						</li>
-
-						<li>
-							<a href="widgets.html">
-								<i class="icon-list-alt"></i>
-								<span class="menu-text"> 插件 </span>
-							</a>
-						</li>
-
-						<li>
-							<a href="calendar.html">
-								<i class="icon-calendar"></i>
-
-								<span class="menu-text">
-									日历
-									<span class="badge badge-transparent tooltip-error" title="2&nbsp;Important&nbsp;Events">
-										<i class="icon-warning-sign red bigger-130"></i>
-									</span>
-								</span>
-							</a>
-						</li>
-
-						<li>
-							<a href="gallery.html">
-								<i class="icon-picture"></i>
-								<span class="menu-text"> 相册 </span>
-							</a>
-						</li>
-
-						<li>
-							<a href="#" class="dropdown-toggle">
-								<i class="icon-tag"></i>
-								<span class="menu-text"> 更多页面 </span>
-
-								<b class="arrow icon-angle-down"></b>
-							</a>
-
-							<ul class="submenu">
-								<li>
-									<a href="profile.html">
-										<i class="icon-double-angle-right"></i>
-										用户信息
-									</a>
-								</li>
-
-								<li>
-									<a href="inbox.html">
-										<i class="icon-double-angle-right"></i>
-										收件箱
-									</a>
-								</li>
-
-								<li>
-									<a href="pricing.html">
-										<i class="icon-double-angle-right"></i>
-										售价单
-									</a>
-								</li>
-
-								<li>
-									<a href="invoice.html">
-										<i class="icon-double-angle-right"></i>
-										购物车
-									</a>
-								</li>
-
-								<li>
-									<a href="timeline.html">
-										<i class="icon-double-angle-right"></i>
-										时间轴
-									</a>
-								</li>
-
-								<li>
-									<a href="login.html">
-										<i class="icon-double-angle-right"></i>
-										登录 &amp; 注册
+										用户信息列表
 									</a>
 								</li>
 							</ul>
@@ -616,49 +416,45 @@
 
 						<li>
 							<a href="#" class="dropdown-toggle">
-								<i class="icon-file-alt"></i>
-
-								<span class="menu-text">
-									其他页面
-									<span class="badge badge-primary ">5</span>
-								</span>
-
+								<i class="icon-list"></i>
+								<span class="menu-text"> 检测师管理 </span>
 								<b class="arrow icon-angle-down"></b>
 							</a>
 
 							<ul class="submenu">
 								<li>
-									<a href="faq.html">
+									<a href="index.php?r=check">
 										<i class="icon-double-angle-right"></i>
-										帮助
+										检测师信息列表
 									</a>
 								</li>
-
 								<li>
-									<a href="error-404.html">
+									<a href="index.php?r=check/check">
 										<i class="icon-double-angle-right"></i>
-										404错误页面
+										检测师添加
 									</a>
 								</li>
+							</ul>
+						</li>
 
+						<li class="active">
+							<a href="#" class="dropdown-toggle">
+								<i class="icon-list"></i>
+								<span class="menu-text"> 友情链接管理 </span>
+								<b class="arrow icon-angle-down"></b>
+							</a>
+
+							<ul class="submenu">
 								<li>
-									<a href="error-500.html">
+									<a href="index.php?r=link">
 										<i class="icon-double-angle-right"></i>
-										500错误页面
+										友情链接列表
 									</a>
 								</li>
-
 								<li>
-									<a href="grid.html">
+									<a href="index.php?r=link/link">
 										<i class="icon-double-angle-right"></i>
-										网格
-									</a>
-								</li>
-
-								<li>
-									<a href="blank.html">
-										<i class="icon-double-angle-right"></i>
-										空白页面
+										添加友情链接
 									</a>
 								</li>
 							</ul>
@@ -683,13 +479,13 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="icon-home home-icon"></i>
-								<a href="#">Home</a>
+								<a href="index.php?r=index">控制台</a>
 							</li>
 
 							<li>
-								<a href="#">Forms</a>
+								<a href="index.php?r=car">友情链接管理</a>
 							</li>
-							<li class="active">Form Elements</li>
+							<li class="active">友情链接添加</li>
 						</ul><!-- .breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -705,11 +501,7 @@
 					<div class="page-content">
 						<div class="page-header">
 							<h1>
-								Form Elements
-								<small>
-									<i class="icon-double-angle-right"></i>
-									Common form elements and layouts
-								</small>
+								友情链接
 							</h1>
 						</div><!-- /.page-header -->
 
