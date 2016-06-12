@@ -11,9 +11,16 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
 });
+*/
+//加载静态页面的方法(牛亮)
+
+Route::any('/','IndexController@index');
+
+
+
 
 /*
 |--------------------------------------------------------------------------
