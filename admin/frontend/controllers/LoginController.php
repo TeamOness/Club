@@ -30,6 +30,7 @@ class LoginController extends \yii\web\Controller
 		{
 			$find = $v;
 		}
+		print_r($find);die;
 		if($find['admin_name'] == $name)
 		{
 			if($find['admin_pwd'] == $pwd)
