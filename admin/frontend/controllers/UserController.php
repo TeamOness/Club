@@ -10,7 +10,10 @@ class UserController extends \yii\web\Controller
 {
 	public function actionIndex()
 	{
-		return $this->renderPartial('userlist');
+		$session=Yii::$app->session;
+        $name = $session['login'];
+		$name = $name['admin_name'];
+		return $this->renderPartial('userlist', ['name' => $name]);
 	}
 
 }
