@@ -14,7 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
+Route::get('/', 'BuyController@buy');
+Route::get('goodslist', 'BuyController@goodslist');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
