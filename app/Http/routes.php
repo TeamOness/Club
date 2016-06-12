@@ -11,21 +11,21 @@
 |
 */
 
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
-Route::get('common','CommonController@common');//分期购车表单添加页面
-=======
-*/
-//���ؾ�̬ҳ��ķ���(ţ��)
+
+Route::any('common','CommonController@common');//分期购车表单添加页面
+
+Route::post('commonok','CommonController@commonok');//分期购车表单添加成功页面
+
 
 Route::any('/','IndexController@index');
 
 
 
 
->>>>>>> 5af2ca2ac12c399f70284b37f7bfdbf442648de1
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
