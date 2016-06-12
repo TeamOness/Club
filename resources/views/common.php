@@ -6,7 +6,15 @@
     <script src="js/hm.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/common.js"></script>
-<style type="text/css">.panel-mask{position:fixed;background:rgba(0,0,0,.4);top:0;left:0;width:100%;height:100%;z-index:101}.panel-box{position:absolute;height:400px;width:500px;border:2px solid #e7e7e7;background:#fff}.panel-title{height:55px;padding-left:25px;font-size:24px;line-height:55px;color:#e54121;border-bottom:1px solid #e8e8e8}.panel-title span{float:left}.panel-title .panel-close{float:right;width:15px;height:15px;text-indent:-100px;white-space:nowrap;overflow:hidden;background:url(http://sta.guazistatic.com/finance_web/close.d6daaea4ca14acfc31a10b7bc703ef9d.png) no-repeat;margin:20px 20px 0 0}.panel-title .panel-close:hover{color:red;cursor:pointer}</style></head>
+<style type="text/css">.panel-mask{position:fixed;background:rgba(0,0,0,.4);top:0;left:0;width:100%;height:100%;z-index:101}.panel-box{position:absolute;height:400px;width:500px;border:2px solid #e7e7e7;background:#fff}.panel-title{height:55px;padding-left:25px;font-size:24px;line-height:55px;color:#e54121;border-bottom:1px solid #e8e8e8}.panel-title span{float:left}.panel-title .panel-close{float:right;width:15px;height:15px;text-indent:-100px;white-space:nowrap;overflow:hidden;background:url(http://sta.guazistatic.com/finance_web/close.d6daaea4ca14acfc31a10b7bc703ef9d.png) no-repeat;margin:20px 20px 0 0}.panel-title .panel-close:hover{color:red;cursor:pointer}</style>
+<style type="text/css">
+.op{
+height:40px;
+width:140px;
+border:solid 1px #9999;
+}
+</style>
+</head>
 <body>
 <div class="header">
     <div class="hd-top clearfix">
@@ -26,7 +34,7 @@
                     <dl>
                         <dt>热门</dt>
                         <dd>
-                            <a href="http://jr.guazi.com/all/">全国</a>
+                            <a href="http://www.head.com/all/">全国</a>
                                                                                                 <a href="http://jr.guazi.com/bj/">北京</a>
                                                                                                                                 <a href="http://jr.guazi.com/sh/">上海</a>
                                                                                                                                 <a href="http://jr.guazi.com/gz/">广州</a>
@@ -194,7 +202,7 @@
         </div>
         <div class="hot-phone">
             <i></i>
-            400-733-3377
+            666-888-6688
         </div>
         <div class="search-box" style="visibility: hidden;">
             <div>
@@ -220,13 +228,13 @@
     <div class="nav">
         <div class="w">
 
-            <a class="fr" target="_blank" href="http://www.guazi.com/zq_app/" gjalog="100000000521000100000010">APP下载</a>
+            <a class="fr" target="_blank" href="app_download.php" gjalog="100000000521000100000010">APP下载</a>
             <a baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_fenqi_c" class="fr active" href="http://jr.guazi.com/" gjalog="100000001231000100000010">分期购车</a>
             <!--<a class="fr" href="http://www.guazi.com/zq_expandMarket/" gjalog="100000001248000100000010">车生活</a>-->
-            <a class="fl" href="http://www.guazi.com/bj/" gjalog="100000000053000100000010">首页</a>
-            <a class="fl" href="http://www.guazi.com/bj/buy/" gjalog="100000000054000100000010">我要买车</a>
-            <a class="fl" href="http://www.guazi.com/bj/sell/" gjalog="100000000055000100000010">我要卖车</a>
-            <a class="fl" href="http://www.guazi.com/bj/intro/" gjalog="100000000056000100000010">服务保障</a>
+            <a class="fl" href="index" gjalog="100000000053000100000010">首页</a>
+            <a class="fl" href="buy" gjalog="100000000054000100000010">我要买车</a>
+            <a class="fl" href="sell" gjalog="100000000055000100000010">我要卖车</a>
+            <a class="fl" href="server_security" gjalog="100000000056000100000010">服务保障</a>
         </div>
     </div>
 </div>
@@ -237,31 +245,47 @@
     <div class="w rel">
         <div class="loan-car" data-allbanks="{&quot;11&quot;:&quot;\u72ee\u6865\u8d44\u672c&quot;,&quot;4&quot;:&quot;\u6d66\u53d1\u94f6\u884c&quot;,&quot;20&quot;:&quot;\u957f\u5b89\u4fe1\u6258&quot;,&quot;12&quot;:&quot;\u957f\u5b89\u4fe1\u6258&quot;,&quot;9&quot;:&quot;\u529b\u8574\u91d1\u878d&quot;,&quot;14&quot;:&quot;\u5fae\u8d37\u7f51&quot;,&quot;2&quot;:&quot;\u7396\u5bcc\u5206\u671f&quot;,&quot;8&quot;:&quot;\u6210\u90fd\u4fca\u9a70&quot;,&quot;28&quot;:&quot;\u5947\u745e\u91d1\u878d&quot;,&quot;24&quot;:&quot;\u6613\u946b&quot;,&quot;25&quot;:&quot;\u946b\u5e73\u8d37\u6b3e&quot;,&quot;10&quot;:&quot;\u91cd\u5e86\u7f14\u4fe1&quot;,&quot;23&quot;:&quot;\u6613\u946b&quot;,&quot;26&quot;:&quot;\u94f6\u8302\u91d1\u878d&quot;,&quot;22&quot;:&quot;\u4fca\u8302\u91d1\u878d&quot;,&quot;19&quot;:&quot;\u4e9a\u590f\u8d44\u672c&quot;}" data-banksofcity="{&quot;12&quot;:[&quot;11&quot;,&quot;4&quot;,&quot;14&quot;,&quot;2&quot;],&quot;15&quot;:[&quot;11&quot;,&quot;26&quot;],&quot;45&quot;:[&quot;11&quot;,&quot;8&quot;],&quot;103&quot;:[&quot;11&quot;,&quot;20&quot;,&quot;2&quot;],&quot;67&quot;:[&quot;11&quot;,&quot;9&quot;,&quot;2&quot;],&quot;65&quot;:[&quot;11&quot;,&quot;2&quot;],&quot;113&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;2&quot;,&quot;28&quot;],&quot;2&quot;:[&quot;11&quot;],&quot;1&quot;:[&quot;11&quot;],&quot;176&quot;:[&quot;11&quot;,&quot;2&quot;,&quot;28&quot;],&quot;155&quot;:[&quot;11&quot;,&quot;2&quot;],&quot;204&quot;:[&quot;11&quot;],&quot;123&quot;:[&quot;11&quot;,&quot;20&quot;,&quot;28&quot;,&quot;19&quot;],&quot;194&quot;:[&quot;11&quot;],&quot;53&quot;:[&quot;11&quot;],&quot;16&quot;:[&quot;11&quot;,&quot;14&quot;],&quot;119&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;28&quot;],&quot;68&quot;:[&quot;11&quot;],&quot;66&quot;:[&quot;11&quot;],&quot;20&quot;:[&quot;11&quot;],&quot;145&quot;:[&quot;11&quot;],&quot;225&quot;:[&quot;11&quot;,&quot;9&quot;],&quot;118&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;28&quot;],&quot;214&quot;:[&quot;11&quot;],&quot;142&quot;:[&quot;11&quot;],&quot;17&quot;:[&quot;11&quot;,&quot;28&quot;],&quot;104&quot;:[&quot;11&quot;,&quot;20&quot;],&quot;49&quot;:[&quot;11&quot;],&quot;307&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;28&quot;],&quot;304&quot;:[&quot;11&quot;,&quot;12&quot;,&quot;28&quot;],&quot;108&quot;:[&quot;20&quot;],&quot;111&quot;:[&quot;20&quot;],&quot;114&quot;:[&quot;12&quot;,&quot;14&quot;,&quot;2&quot;],&quot;120&quot;:[&quot;12&quot;],&quot;115&quot;:[&quot;12&quot;,&quot;28&quot;],&quot;55&quot;:[&quot;9&quot;,&quot;14&quot;,&quot;2&quot;,&quot;24&quot;],&quot;84&quot;:[&quot;9&quot;,&quot;23&quot;],&quot;76&quot;:[&quot;14&quot;],&quot;13&quot;:[&quot;2&quot;],&quot;56&quot;:[&quot;2&quot;,&quot;25&quot;],&quot;24&quot;:[&quot;28&quot;],&quot;23&quot;:[&quot;28&quot;],&quot;305&quot;:[&quot;28&quot;],&quot;129&quot;:[&quot;28&quot;],&quot;338&quot;:[&quot;28&quot;],&quot;116&quot;:[&quot;28&quot;],&quot;306&quot;:[&quot;28&quot;],&quot;344&quot;:[&quot;10&quot;],&quot;93&quot;:[&quot;22&quot;],&quot;132&quot;:[&quot;19&quot;],&quot;124&quot;:[&quot;19&quot;]}">
             <h3 class="tc">分期购车</h3>
+            <form action="commonok" method='post'>
             <ul class="basic-list clearfix">
                 <li class="list-item">
                     <div class="rel">
-                        <input data-role="amount" name="application_amount" class="input-1" placeholder="借款额度" type="text">
+                        <input data-role="amount" name="buy_money" class="input-1" placeholder="借款额度" type="text">
                         <span class="million fs16">万</span>
                     </div>
                 </li>
                 <li class="list-item">
                     <div id="stage" data-role="stageArr" class="comselect-1" data-max-num="10">
-                        <input data-role="text" class="inputype" value="12期" readonly="readonly" type="text">
-                        <input value="12" data-role="hidden" name="application_month" title="借款期限" type="hidden">
-                        <div class="p-rl">
+                        <!--<input data-role="text" class="inputype" value="12期" readonly="readonly" type="text">-->
+						<select name="buy_money_date" id="" class='op'>
+						<option value="0">请选择......</option>
+						<option value="12期">12期</option>
+						<option value="24期">24期</option>
+						<option value="36期">36期</option>
+						
+						</select>
+                        <!--<input value="12" data-role="hidden" name="buy_money_date" title="借款期限" type="hidden">-->
+                        <!--<div class="p-rl">
                             <div style="width: 135px; max-height: 360px; overflow-y: auto;" class="downbox">
-                                <ul data-role="list">
+							<ul id="nav">
+							<li></li>
+							<li></li>
+							<li id="droplist">
+								<span>下拉菜单</span>
+                                <ul data-role="list" id='nav'>
                                     <li data-role="item" data-value="12"><a href="javascript:%20void(0);">12期</a></li>
                                     <li data-role="item" data-value="24"><a href="javascript:%20void(0);">24期</a></li>
                                     <li data-role="item" data-value="36"><a href="javascript:%20void(0);">36期</a></li>
                                 </ul>
+								</li>
+								<li></li>
+								</ul>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                 </li>
                 <li class="list-item list-item2">
                     <div class="rel">
-                        <input data-role="phone" name="phone" class="input-1" placeholder="手机号" type="text">
+                        <input data-role="phone" name="buy_phone" class="input-1" placeholder="手机号" type="text">
                     </div>
                 </li>
                 <li style="display: none;" class="list-item">
@@ -408,13 +432,16 @@
                 </li>
             </ul>
             <div data-role="submit" data-puid="0" class="tc mt10">
-                <a baidu_alog="vehicle_finance_loan_web&amp;click&amp;pc_loan_top_apply_c" class="btn btn-submit" href="javascript:%20void(0);">提交</a>
-            </div>
+                <!--<a baidu_alog="vehicle_finance_loan_web&amp;click&amp;pc_loan_top_apply_c" class="btn btn-submit" href="javascript:%20void(0);">提交</a>-->
+            </div> 
+			<input type="submit" value='提交' baidu_alog="vehicle_finance_loan_web&amp;click&amp;pc_loan_top_apply_c" class="btn btn-submit"/>
+			</form>
             <p data-role="tip" class="basic-error">&nbsp;</p>
-            <p class="tc fs16">或咨询瓜子金融管家<br>400-733-3377</p>
+            <p class="tc fs16">或咨询龙头金融管家<br>666-888-6688</p>
         </div>
     </div>
 </div>
+
 <!--分期购车 end-->
 
 <!--暂时隐藏，等侯产品需求-->
@@ -682,11 +709,11 @@
         <ul class="loan-answer">
             <li>
                 <h3><span>Q1</span>在瓜子二手车直卖网上买二手车可以办理贷款吗？</h3>
-                <p><span>A1</span>可以的，目前与瓜子合作有信用贷抵押贷，可点击瓜子官网页面上的“分期购车”，详细了解贷款产品的情况；也可直接拨打瓜子金融客服热线400-733-3377进行咨询</p>
+                <p><span>A1</span>可以的，目前与瓜子合作有信用贷抵押贷，可点击瓜子官网页面上的“分期购车”，详细了解贷款产品的情况；也可直接拨打瓜子金融客服热线666-888-6688进行咨询</p>
             </li>
             <li>
                 <h3><span>Q2</span>在瓜子二手车直卖网上买二手车怎么办理贷款？</h3>
-                <p><span>A2</span>可点击瓜子官网页面上的“分期购车”，选择您心仪的贷款产品进行预约，金融客服会第一时间联系您了解您的基本情况，为您推荐适合的贷款产品；也可以拨打金融客服热线400-733-3377进行咨询</p>
+                <p><span>A2</span>可点击瓜子官网页面上的“分期购车”，选择您心仪的贷款产品进行预约，金融客服会第一时间联系您了解您的基本情况，为您推荐适合的贷款产品；也可以拨打金融客服热线666-888-6688进行咨询</p>
             </li>
         </ul>
         <ul class="loan-answer">
@@ -747,7 +774,7 @@
         <div class="footer-logo"></div>
         <div class="phone-email">
             <p>
-                咨询电话：400-733-6622 <br>
+                咨询电话：666-888-6688 <br>
                 <span>（周一至周日 8:00-21:00）</span>
             </p>
         </div>
@@ -781,6 +808,7 @@
 
             <!--用户提交贷款信息的表单-->
             <div data-role="loan_form" class="popup-apply">
+
                 <ul class="basic-list clearfix">
                     <li class="list-item">
                         <div class="rel">
@@ -966,7 +994,7 @@
                 </ul>
                 <p data-role="tip" id="tip-warning" class="panel-tip basic-error">&nbsp;</p>
                 <div class="tc mt20"><a baidu_alog="vehicle_finance_loan_web&amp;click&amp;pc_loan_tab_apply_c" data-role="submit" data-is_popup="1" data-puid="0" class="btn btn-apply" href="javascript:%20void(0);">提交</a></div>
-                <p class="tc fs16 mt20">或咨询瓜子金融管家400-733-3377</p>
+                <p class="tc fs16 mt20">或咨询瓜子金融管家666-888-6688</p>
 
             </div>
 
@@ -1129,3 +1157,12 @@
 
 
 </body></html>
+<script type="text/javascript" src='js/jquery.js'></script>
+<script type="text/javascript">
+//$("#droplist").mouseleave(function(){
+
+  //$("#droplist").css("background-color","red");
+
+//});
+
+</script>
