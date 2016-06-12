@@ -30,7 +30,6 @@ Route::get('goodslist', 'BuyController@goodslist');
 
 Route::any('/','IndexController@index');
 
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
