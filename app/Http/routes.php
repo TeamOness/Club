@@ -14,31 +14,23 @@
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
+
 
 Route::any('common','CommonController@common');//分期购车表单添加页面
 
 Route::post('commonok','CommonController@commonok');//分期购车表单添加成功页面
 
-=======
-<<<<<<< HEAD
+
+Route::any('sell','SellController@sell');
+
 Route::get('/', 'BuyController@buy');
 Route::get('goodslist', 'BuyController@goodslist');
-=======
-*/
-//���ؾ�̬ҳ��ķ���(ţ��)
->>>>>>> d68ceb6833d1bb1ceb25fc7a525411b9315278b4
+
+
 
 Route::any('/','IndexController@index');
 
 
-
-
-<<<<<<< HEAD
-
-=======
->>>>>>> d6532c240a11b0326635f4b18eb3c771e7653a0c
->>>>>>> d68ceb6833d1bb1ceb25fc7a525411b9315278b4
 /*
 |--------------------------------------------------------------------------
 | Application Routes
