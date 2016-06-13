@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>汽车检测信息添加 - 龙头后台管理系统模版Ace下载</title>
-		<meta name="keywords" content="Bootstrap模版,Bootstrap模版下载,Bootstrap教程,Bootstrap中文" />
-		<meta name="description" content="站长素材提供Bootstrap模版,Bootstrap教程,Bootstrap中文翻译等相关Bootstrap插件下载" />
+		<title>汽车检测信息添加 - 龙头后台管理系统</title>
+		<meta name="keywords" content="汽车检测信息添加 - 龙头后台管理系统" />
+		<meta name="description" content="汽车检测信息添加 - 龙头后台管理系统" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->
@@ -284,7 +284,7 @@
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
 								<img class="nav-user-photo" src="<?php echo Yii::$app->request->baseUrl; ?>/assets/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
-									<small>Welcome,</small>
+									<small>欢迎光临,</small>
 									<?php echo $name; ?>
 								</span>
 

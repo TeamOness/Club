@@ -283,7 +283,7 @@
 							</a>
 
 							<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-								<li>
+								<!-- <li>
 									<a href="#">
 										<i class="icon-cog"></i>
 										设置
@@ -295,7 +295,7 @@
 										<i class="icon-user"></i>
 										个人资料
 									</a>
-								</li>
+								</li> -->
 
 								<li class="divider"></li>
 
@@ -374,16 +374,16 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="tables.html">
+									<a href="index.php?r=car/index">
 										<i class="icon-double-angle-right"></i>
 										汽车信息列表
 									</a>
-									<li>
-										<a href="blank.html">
-											<i class="icon-double-angle-right"></i>
-											空白页面
-										</a>
-									</li>
+								</li>
+								<li>
+									<a href="index.php?r=car/carcheck">
+										<i class="icon-double-angle-right"></i>
+										添加汽车检测信息
+									</a>
 								</li>
 							</ul>
 						</li>
@@ -397,16 +397,10 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="tables.html">
+									<a href="index.php?r=user">
 										<i class="icon-double-angle-right"></i>
 										用户信息列表
 									</a>
-									<li>
-										<a href="blank.html">
-											<i class="icon-double-angle-right"></i>
-											空白页面
-										</a>
-									</li>
 								</li>
 							</ul>
 						</li>
@@ -420,16 +414,16 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="tables.html">
+									<a href="index.php?r=check">
 										<i class="icon-double-angle-right"></i>
 										检测师信息列表
 									</a>
-									<li>
-									<a href="form-elements.html">
-										<i class="icon-double-angle-right"></i>
-										添加检测师
-									</a>
 								</li>
+								<li>
+									<a href="index.php?r=check/check">
+										<i class="icon-double-angle-right"></i>
+										检测师添加
+									</a>
 								</li>
 							</ul>
 						</li>
@@ -443,13 +437,13 @@
 
 							<ul class="submenu">
 								<li>
-									<a href="tables.html">
+									<a href="index.php?r=link">
 										<i class="icon-double-angle-right"></i>
 										友情链接列表
 									</a>
 								</li>
 								<li>
-									<a href="form-elements.html">
+									<a href="index.php?r=link/link">
 										<i class="icon-double-angle-right"></i>
 										添加友情链接
 									</a>
@@ -476,9 +470,8 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="icon-home home-icon"></i>
-								<a href="#">首页</a>
+								<a href="#">控制台</a>
 							</li>
-							<li class="active">控制台</li>
 						</ul><!-- .breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
