@@ -6,6 +6,10 @@
 
 namespace frontend\controllers;
 
+use yii;
+use app\models\User;
+use yii\web\Controller;
+
 class UserController extends \yii\web\Controller
 {
 	public function actionIndex()
@@ -13,7 +17,9 @@ class UserController extends \yii\web\Controller
 		$session=Yii::$app->session;
 		$name = $session['login'];
 		$name = $name['admin_name'];
-		return $this->renderPartial('userlist', ['name' => $name]);
+		$list = User::find()->asArray()->all();
+		//print_r($list);die;
+		return $this->renderPartial('userlist', ['name' => $name, 'list' => $list]);
 	}
 
 }
