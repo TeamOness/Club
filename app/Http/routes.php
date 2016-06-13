@@ -14,10 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
-<<<<<<< HEAD
-Route::get('/', 'BuyController@buy');
-Route::get('/goodslist', 'BuyController@goodslist');
-=======
+
+// Route::get('/buy', 'BuyController@buy');
+// Route::get('/goodslist', 'BuyController@goodslist');
 
 
 Route::any('common','CommonController@common');//分期购车表单添加页面
@@ -32,10 +31,9 @@ Route::get('goodslist', 'BuyController@goodslist');
 
 
 //牛宗亮加载首页
-Route::any('/','IndexController@index');
+//Route::any('/','IndexController@index');
 
 
->>>>>>> a29f04cd8cc76730f11d6860ea4e729e401b3f62
 /*
 |--------------------------------------------------------------------------
 | Application Routes
