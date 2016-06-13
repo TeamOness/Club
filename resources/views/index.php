@@ -182,11 +182,11 @@ data-gzlog='tracking_type=click&eventid=0050080000000024&brand=audi'   href="bj/
 
 <script>
      //鼠标滑过所有品牌触发的鼠标滑过事件
-	function brand(){
+	/*function brand(){
 		//alert(1);die;
 			//$('.ppmore').show();
 			//$('.tbr').show();
-	}
+	}*/
 
 
 </script>
