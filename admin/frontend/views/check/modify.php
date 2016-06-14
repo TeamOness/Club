@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>检测师信息添加 - 龙头后台管理系统</title>
-		<meta name="keywords" content="检测师信息添加 - 龙头后台管理系统" />
-		<meta name="description" content="检测师信息添加 - 龙头后台管理系统" />
+		<title>检测师信息修改 - 龙头后台管理系统</title>
+		<meta name="keywords" content="检测师信息修改 - 龙头后台管理系统" />
+		<meta name="description" content="检测师信息修改 - 龙头后台管理系统" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->
@@ -485,7 +485,7 @@
 							<li>
 								<a href="index.php?r=car">检测师信息管理</a>
 							</li>
-							<li class="active">检测师信息添加</li>
+							<li class="active">检测师信息修改</li>
 						</ul><!-- .breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -516,14 +516,15 @@
 
 									$form = ActiveForm::begin([
 										'options' => ['class' => 'form-horizontal', 'role' => 'form'],
-										'action' => ['check/checkadd'],
+										'action' => ['check/check_modify'],
 										'method'=>'post',
 									]) ?>
+									<input type="hidden" name="id" value="<?php echo $arr['division_id']; ?>">
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 检测师姓名 </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="检测师姓名" name="name" class="col-xs-10 col-sm-5" />
+											<input type="text" id="form-field-1" placeholder="检测师姓名" name="name" class="col-xs-10 col-sm-5" value="<?php echo $arr['division_name']; ?>" />
 										</div>
 									</div>
 
@@ -533,10 +534,9 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 检测师级别 </label>
 										<div class="col-xs-12 col-sm-4">
 											<select class="form-control" id="form-field-select-1" name="level">
-												<option value="请选择检测师级别">请选择检测师级别</option>
-												<option value="初级二手车检测师">初级二手车检测师</option>
-												<option value="高级二手车检测师">高级二手车检测师</option>
-												<option value="资深二手车检测师">资深二手车检测师</option>
+												<option <?php if($arr['division_level'] == "初级二手车检测师") {?>checked<?php } ?> value="初级二手车检测师">初级二手车检测师</option>
+												<option <?php if($arr['division_level'] == "高级二手车检测师") {?>checked<?php } ?> value="高级二手车检测师">高级二手车检测师</option>
+												<option <?php if($arr['division_level'] == "资深二手车检测师") {?>checked<?php } ?> value="资深二手车检测师">资深二手车检测师</option>
 											</select>
 										</div>
 									</div>
@@ -549,12 +549,12 @@
 											<div class="control-group">
 												<div class="radio">
 													<label>
-														<input name="sex" value="男" type="radio" class="ace" checked />
+														<input name="sex" value="男" <?php if($arr['division_sex'] == "男") {?>checked<?php } ?> type="radio" class="ace" />
 														<span class="lbl"> 男 </span>
 													</label>
 													
 													<label style="margin-left:20px;">
-														<input name="sex" value="女" type="radio" class="ace" />
+														<input name="sex" value="女"  <?php if($arr['division_sex'] == "女") {?>checked<?php } ?> type="radio" class="ace" />
 														<span class="lbl"> 女 </span>
 													</label>
 												</div>
@@ -568,7 +568,6 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 检测师年龄 </label>
 										<div class="col-xs-12 col-sm-4">
 											<select class="form-control" id="form-field-select-1" name="age">
-												<option value="请选择检测师年龄">请选择检测师年龄</option>
 												<?php for ($i=18; $i<=60; $i++) {?>
 												<option value="<?php echo $i; ?>"><?php echo $i; ?></option>
 												<?php } ?>
@@ -582,7 +581,6 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 检测师住址 </label>
 										<div class="col-xs-12 col-sm-4">
 											<select class="form-control" id="form-field-select-1" name="address">
-												<option value="请选择检测师住址">请选择检测师住址</option>
 												<?php foreach($city as $c){?>
 												<option value="<?php echo $c['c_name']; ?>"><?php echo $c['c_name']; ?></option>
 												<?php } ?>
@@ -596,7 +594,7 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 检测师电话 </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-2" placeholder="检测师电话" name="phone" class="col-xs-10 col-sm-5" />
+											<input type="text" id="form-field-2" placeholder="检测师电话" name="phone" class="col-xs-10 col-sm-5" value="<?php echo $arr['division_phone']; ?>" />
 										</div>
 									</div>
 
@@ -615,7 +613,7 @@
 										<div class="col-md-offset-3 col-md-9">
 											<button class="btn btn-info" type="submit">
 												<i class="icon-ok bigger-110"></i>
-												添加
+												修改
 											</button>
 
 											&nbsp; &nbsp; &nbsp;

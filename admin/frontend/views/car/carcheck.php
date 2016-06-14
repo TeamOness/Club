@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>汽车检测信息添加 - 龙头后台管理系统</title>
-		<meta name="keywords" content="汽车检测信息添加 - 龙头后台管理系统" />
-		<meta name="description" content="汽车检测信息添加 - 龙头后台管理系统" />
+		<title>汽车信息添加 - 龙头后台管理系统</title>
+		<meta name="keywords" content="汽车信息添加 - 龙头后台管理系统" />
+		<meta name="description" content="汽车信息添加 - 龙头后台管理系统" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->
@@ -1720,7 +1720,7 @@
 
 		<!--[if !IE]> -->
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script> -->
 
 		<!-- <![endif]-->
 
@@ -1731,7 +1731,7 @@
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
@@ -1743,10 +1743,10 @@
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="assets/js/bootstrap.min.js"></script>
-		<script src="assets/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/bootstrap.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
@@ -1754,25 +1754,25 @@
 		  <script src="assets/js/excanvas.min.js"></script>
 		<![endif]-->
 
-		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="assets/js/chosen.jquery.min.js"></script>
-		<script src="assets/js/fuelux/fuelux.spinner.min.js"></script>
-		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
-		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
-		<script src="assets/js/date-time/moment.min.js"></script>
-		<script src="assets/js/date-time/daterangepicker.min.js"></script>
-		<script src="assets/js/bootstrap-colorpicker.min.js"></script>
-		<script src="assets/js/jquery.knob.min.js"></script>
-		<script src="assets/js/jquery.autosize.min.js"></script>
-		<script src="assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
-		<script src="assets/js/jquery.maskedinput.min.js"></script>
-		<script src="assets/js/bootstrap-tag.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/chosen.jquery.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/fuelux/fuelux.spinner.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/date-time/moment.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/date-time/daterangepicker.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/bootstrap-colorpicker.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.knob.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.autosize.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.maskedinput.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/bootstrap-tag.min.js"></script>
 
 		<!-- ace scripts -->
 
-		<script src="assets/js/ace-elements.min.js"></script>
-		<script src="assets/js/ace.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/ace-elements.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 

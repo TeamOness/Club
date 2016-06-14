@@ -16,33 +16,13 @@ class BuyController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public function buy(){
-    	//查询车信息
-        // $buys=DB::select('select * from details as d join brand as b where d.brand_id=b.brand_id');
-        // $buys = DB::table('details')
-        //     ->join('brand', 'details.brand_id', '=', 'brand.brand_id')
-        //     ->simplePaginate(3);
-        //$buyss=$this->objectToArray($buys);
-       // var_dump($buyss);die;
-    	// foreach ($buyss as $key => $v) {
-     //        //var_dump($value);
-    	// 	$chexi=$v['parent_id'];
-    	// 	//echo($chexi);
-    	// 	//查询车品牌
-    	// 	$brands=DB::select("select brand_name from brand where brand_id=$chexi");
-     //        // $brands = DB::table('brand')->where('brand_id',$chexi)->simplePaginate(3);
-    	// 	$brandss=$this->objectToArray($brands);
-    	// 	//var_dump($brands);
-    	// 	$buyss[$key][]=$brandss;
-    		
-    	// }
-    	//var_dump($buyss);
         //获取总条数
         $counts=DB::select("select count(*) from details");
         $c=$this->objectToArray($counts);
         //var_dump($c);
         //总条数
         $size=$c[0]['count(*)'];
-        //echo $count;
+        //echo $size;
         //长度
         $length=4;
         //总页数
@@ -73,7 +53,7 @@ class BuyController extends BaseController
             
         }
         //var_dump($buyss);die;
-    	return view('buy/buy',['buys'=>$buyss,'pages'=>$pages,'prev'=>$prev,'next'=>$next]);
+    	return view('buy/buy',['buys'=>$buyss,'pages'=>$pages,'prev'=>$prev,'next'=>$next,'counts'=>$size]);
     }
     //对象转化为数组
     public function objectToArray($e){

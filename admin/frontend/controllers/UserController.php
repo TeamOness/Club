@@ -22,4 +22,12 @@ class UserController extends \yii\web\Controller
 		return $this->renderPartial('userlist', ['name' => $name, 'list' => $list]);
 	}
 
+	//删除
+	public function actionDel()
+	{
+		$id = Yii::$app->request->get('id');
+		User::deleteAll("user_id = $id");
+		return $this->redirect('index.php?r=user');
+	}
+
 }
