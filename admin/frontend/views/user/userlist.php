@@ -3,8 +3,8 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>用户信息管理 - 龙头后台管理系统</title>
-		<meta name="keywords" content="汽车信息管理列表 - 龙头后台管理系统" />
-		<meta name="description" content="汽车信息管理列表 - 龙头后台管理系统" />
+		<meta name="keywords" content="用户信息管理 - 龙头后台管理系统" />
+		<meta name="description" content="用户信息管理 - 龙头后台管理系统" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->
@@ -547,15 +547,7 @@
 
 														<td>
 															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="blue" href="#">
-																	<i class="icon-zoom-in bigger-130"></i>
-																</a>
-
-																<a class="green" href="#">
-																	<i class="icon-pencil bigger-130"></i>
-																</a>
-
-																<a class="red" href="#">
+																<a class="red" href="index.php?r=user/del&id=<?php echo $v['user_id']; ?>">
 																	<i class="icon-trash bigger-130"></i>
 																</a>
 															</div>
