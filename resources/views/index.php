@@ -1,6 +1,7 @@
 <!doctype html><html><head _tracker='{"pagetype":"index"}'>    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="renderer" content="webkit"><title>【北京个人二手车_北京二手车市场_北京二手车交易市场】-北京瓜子二手车直卖网</title><meta name="keywords" content="北京二手车,北京二手车交易市场,北京二手车市场" /><meta name="description" content="北京瓜子二手车直卖网,北京个人二手车交易市场,所有北京二手车经过259项检测,标准无事故,100%个人二手车,14天可退1年质保,瓜子二手车，北京二手车市场全程担保!" />    <meta http-equiv="P3P" content='CP="CAO PSA OUR"' />    <meta name="baidu-site-verification" content="BPGd9vyB6h" />    <meta name="360-site-verification" content="3c22335c23344347291dbb8273c12f1b" />    <meta http-equiv="Cache-Control" content="no-transform " />    <meta name="sogou_site_verification" content="hJqKUw5CFE">    <meta name="shenma-site-verification" content="47174ef55ff6318bd3c48a846b608ee8_1446541131">    <link rel="shortcut icon" type="image/x-icon" href="http://www.guazi.com/favicon.ico" media="screen" />    <link rel="canonical" href="http://www.guazi.com/bj/"></head>
 <!-- 加载js/css-->
-<!--<script type="text/javascript" src="js/jquery.js"></script>-->
+<script type="text/javascript" src="js/zoom1.js"></script>
+
 <script type="text/javascript" src="js/c8b6.js"></script>
 <!--<script type="text/javascript" src="js/jquery.js"></script>-->
 <script src="js/jquery-1.11.1.min.js"></script>
