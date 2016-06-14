@@ -3,9 +3,13 @@
 <head _tracker='{"pagetype":"detail"}'>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="renderer" content="webkit">
-<title>【北京二手斯柯达昊锐 2009款 昊锐 1.8TSI 自动 贵雅版_北京海淀二手三厢轿车报价9.00万】-瓜子二手车直卖网</title>
-<meta name="description" content="斯柯达昊锐 2009款 昊锐 1.8TSI 自动 贵雅版 我这款车是一款很经典的车型，方向盘指向精准，没有虚位，提速较快，动力充沛，操控性能好等都是这车的特点，换挡顺畅，无怠速抖动等问题。乘坐舒适驾..." />
+<?php foreach ($lists as $key => $v) { ?>
+   <title>【<?php echo $v['details_address']?>二手<?php echo $v[0][0]['brand_name']?><?php echo $v['brand_name']?> <?php echo $v['details_time']?> <?php echo $v['details_weight']?>t  <?php echo $v['details_move']?> <?php echo $v['details_type']?>_北京海淀二手三厢轿车报价<?php echo $v['details_price']?>万】-瓜子二手车直卖网
+</title>
 
+
+<meta name="description" content="<?php echo $v[0][0]['brand_name']?><?php echo $v['brand_name']?> <?php echo $v['details_time']?> <?php echo $v['details_weight']?>t  <?php echo $v['details_move']?> <?php echo $v['details_type']?> <?php echo $v['details_introduction']?>" />
+<?php }?>
     <meta http-equiv="P3P" content='CP="CAO PSA OUR"' />
     <meta name="baidu-site-verification" content="BPGd9vyB6h" />
     <meta name="360-site-verification" content="3c22335c23344347291dbb8273c12f1b" />
@@ -14,8 +18,12 @@
     <meta name="shenma-site-verification" content="47174ef55ff6318bd3c48a846b608ee8_1446541131">
     <link rel="shortcut icon" type="image/x-icon" href="http://www.guazi.com/favicon.ico" media="screen" />
     <link rel="canonical" href="http://www.guazi.com/bj/3000155921x.htm"/>
-</head><!-- 加载js/css-->
-<script type="text/javascript" src="http://sta.guazistatic.com/c2c_web/base.737383934a290395c8b6.js"></script><script type="text/javascript" src="http://sta.guazistatic.com/c2c_web/detail.4d35abe36688e5e9281a.js"></script>
+
+</head>
+<!-- 加载js/css-->
+<script type="text/javascript" src="js/zoom1.js"></script>
+<script type="text/javascript" src="http://sta.guazistatic.com/c2c_web/base.737383934a290395c8b6.js"></script>
+<script type="text/javascript" src="http://sta.guazistatic.com/c2c_web/detail.4d35abe36688e5e9281a.js"></script>
 <body >
 <!-- 头部 -->
     <div class="header">
@@ -849,7 +857,7 @@
                                                                 
             <!-- 车源售卖状态显示 -->
 
-            <img src="images/<?php echo $v['details_img']?>" width='600' height='400' alt="斯柯达昊锐 2009款 昊锐 1.8TSI 自动 贵雅版">
+            <img src="images/<?php echo $v['details_img']?>" width='600' height='400' alt="<?php echo $v[0][0]['brand_name']?><?php echo $v['brand_name']?> <?php echo $v['details_time']?> <?php echo $v['details_weight']?>t  <?php echo $v['details_move']?> <?php echo $v['details_type']?>">
             </li>
         <?php }?>
             
@@ -1135,10 +1143,11 @@
         <a href="javascript:void(0);" class="fr tm-arrow-next next" data-role="thumbArrow"></a>
     </div>
 </div>
-<?php foreach ($lists as $key => $value) { ?>
+<?php foreach ($lists as $key => $v) { ?>
    <div class="det-sumright appoint">
     <div class="dt-titbox">
-        <h1 class="dt-titletype" title="斯柯达昊锐 2009款 昊锐 1.8TSI 自动 贵雅版"><?php echo $value[0][0]['brand_name']?><?php echo $value['brand_name']?> <?php echo $v['details_time']?> <?php echo $v['details_weight']?>t  <?php echo $v['details_move']?> <?php echo $v['details_type']?></h1>
+        <h1 class="dt-titletype" title="<?php echo $v[0][0]['brand_name']?><?php echo $v['brand_name']?> <?php echo $v['details_time']?> <?php echo $v['details_weight']?>t  <?php echo $v['details_move']?> <?php echo $v['details_type']?>">
+        <?php echo $v[0][0]['brand_name']?><?php echo $v['brand_name']?> <?php echo $v['details_time']?> <?php echo $v['details_weight']?>t  <?php echo $v['details_move']?> <?php echo $v['details_type']?></h1>
         <div class="dt-titleinfo clearfix">
             <p class="car-error fr">
                 <a href="javascript:void(0)" data-role="feed_back" class="feed_back"><i></i>车源信息纠错</a>
@@ -1147,22 +1156,22 @@
                 <!-- <li><span class="bg-span" data-widget="app/ms_v2/common/detail_page.js#storeFavorite" data-premier="" data-ref='{"puid":"3000155921","title":"\u65af\u67ef\u8fbe\u660a\u9510 2009\u6b3e \u660a\u9510 1.8TSI \u81ea\u52a8 \u8d35\u96c5\u7248","url":"http:\/\/www.ganji.com\/bj\/3000155921x.htm"}'><a href="#" title=""><i class="ico-collect"></i>收藏</a></span></li>-->
                  </ul>
 
-            <span style="color:#999">车源号：</span><span style="color:#000"><?php echo $value['details_num']?></span>
+            <span style="color:#999">车源号：</span><span style="color:#000"><?php echo $v['details_num']?></span>
         </div>
     </div>
     <div class="basic-box">
         <div class="pricebox">
             <i class="ico-txt ico-mt">车主报价：</i>
-            <span class="fc-org pricestype"><b class="f30 numtype">&yen;<?php echo $value['details_price']?></b>万</span>
-                                    <span class="f14">新车价(含税)<font color="#f60"><?php echo $value['details_allprice']?>万</font>,
-                        省<font color="#f60"><?php echo $value['details_allprice']-$value['details_price']?>万</font></span>
+            <span class="fc-org pricestype"><b class="f30 numtype">&yen;<?php echo $v['details_price']?></b>万</span>
+                                    <span class="f14">新车价(含税)<font color="#f60"><?php echo $v['details_allprice']?>万</font>,
+                        省<font color="#f60"><?php echo $v['details_allprice']-$v['details_price']?>万</font></span>
         </div>
 
         <!--贷款-->
          <div class="car-fuwu" data-puid="3000155921" gjalog="100000001100000100000010">
                 <i class="ico-txt">分期付款：</i>
-                <span>首付<em><?php echo $value['details_first']?>万</em>
-                    ，月供<em><?php echo $value['details_first']*10000/12?>元</em>
+                <span>首付<em><?php echo $v['details_first']?>万</em>
+                    ，月供<em><?php echo $v['details_first']*10000/12?>元</em>
                 </span>
                 <a data-gzlog="tracking_type=click&eventid=0460310000000073" target="_blank" baidu_alog="pc_detail_tab&click&pc_detail_tab_fenqi_c" data-role="viewjr" source-id="347215" city-domain="bj" href="javascript:void(0)">查看详情</a>
         </div>
@@ -1174,22 +1183,22 @@
         </div>
     </div>
     <ul class="assort clearfix">
-        <li class="one"><b><?php echo $value['details_brandtime']?></b>上牌时间</li>
-        <li><b><?php echo $value['details_mial']?></b>里程</li>
-        <li><b><?php echo $value['details_move']?></b>变速箱</li>
+        <li class="one"><b><?php echo $v['details_brandtime']?></b>上牌时间</li>
+        <li><b><?php echo $v['details_mial']?></b>里程</li>
+        <li><b><?php echo $v['details_move']?></b>变速箱</li>
         <li class="em-sta detailHoverTips">
             <em class="tip-icon"></em>
             <p class="sta-tip-txt"><i></i>
              各地车管所对排放标准认定有差异，结果仅供参考，外迁请详细咨询迁入地车管所。
             </p>
-            <b><?php echo $value['details_standard']?></b>排放标准
+            <b><?php echo $v['details_standard']?></b>排放标准
         </li>
-            <li><b><?php echo $value['details_address']?></b>上牌地</li>
+            <li><b><?php echo $v['details_address']?></b>上牌地</li>
     </ul>
     <p class="stipul-p">
 
         <!-- 车源售卖状态显示 -->
-            <a data-gzlog="tracking_type=click&eventid=0040180000000074" href="javascript:void(0);" data-role="appoint" data-city-id="12" class="stipul-btn" data-puid="3000155921"
+            <a data-gzlog="tracking_type=click&eventid=0040180000000074" href="javascript:void(0);" data-role="appoint" data-city-id="12" class="stipul-btn" id='yue' data-puid="3000155921"
                gjalog="100000000061000100000010">预约看车</a>
             <a data-gzlog="tracking_type=click&eventid=0040180000000075" href="javascrpt:void(0);" data-role="wantCutPrice" data-city-id="12" class="bargain-btn" data-puid="3000155921" data-price-display="9.00" gjalog="100000000602000100000010">砍价
             </a>
@@ -1224,7 +1233,6 @@
 
 
 </div>
-
 <script type="text/template" charset="utf-8" id="cut_price_qrcode_layer">
     <div class="lpn_canvas" style="height:376px;">
         <!--弹窗开始-->
@@ -1250,136 +1258,136 @@
     <div class="lpn_ctrl_group" style="width: 26px;"><a href="javascript:;" class="lpn_close" style="margin-left: 3px;">关闭</a></div>
 </script>
         <!-- 检测结果 -->
-        <div class="laybox combox">
-    <div class="detect-bd clearfix">
-        <div class="detect-right fr">
-            <span class="divis-pic evaluatorShow">
-                <img data-role="evaluatorImg" data-src="http://image.ganjistatic1.com/gjfs17/M03/D1/13/CgEHX1YCnDbQ50eTAACP6zRloms357_100-150c_8-1.png" width="100" height="150">
-            </span>
-            <p class="f-type02">李春雨</p>
-            <p>资深二手车检测师</p>
-        </div>
-        <div class="detect-left fl">
-            <div class="detect-c scrollTo">
-                <div class="detect-tt">
-                    <a href="#report" class="fr det-go">查看完整检测报告&gt;&gt;</a>
-                    <p class="f16 yahei">检测结果</p>
-                </div>
-                <div class="detect-info">
-                    <div class="detect-txt">车辆整体状况良好，车身有做漆腻子现象，有划痕剐蹭未修复，发动机变速箱正常磨损，内饰无明显脏污破损痕迹，机舱内有轻微油液渗漏，右前大灯更换，因路况问题，无法路试，买方请路试。</div>
-                    <div class="detect-xm clearfix">
-                        <div class="detect-xm-c showItem">
-                                                                                            <dl>
-                                    <dt>事故排查</dt>
-                                                                        <dd>
-                                        <span class="d-w1">排除重大碰撞（共18项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                        <dd>
-                                        <span class="d-w1">排除泡水（共8项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                        <dd>
-                                        <span class="d-w1">排除火烧（共2项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                    </dl>
-                                                                <dl>
-                                    <dt>外观内饰检测</dt>
-                                                                        <dd>
-                                        <span class="d-w1">外观修复检查（共51项）</span>
-                                        <span class="d-w2">
-                                                                                            <em class="fc-org">
-                                                    5项
-                                                </em>
-                                                 <i class="via-icon04" data-role="show" baidu_alog="pc_detail_checkXiaci&click&pc_detail_checkXiaci_c"></i>
-                                                <div class="d-pop" style="display: none" data-role="itemShow">
-                                                    <em class="arrow"></em>
-                                                    <p class="tit">外观修复检查：</p>
-                                                    <ul class="fc-9">
-                                                                                                                                                                                    <li>
-                                                                    有5处钣金修复痕迹                                                                </li>
-                                                                                                                                                                                                                                </ul>
-                                                    <p><a data-gzlog="tracking_type=click&eventid=0110000000000083" href="#surface">查看详情>></a></p>
-                                                </div>
-                                                                                     </span>
-                                    </dd>
-                                                                        <dd>
-                                        <span class="d-w1">外观缺陷检查（共34项）</span>
-                                        <span class="d-w2">
-                                                                                            <em class="fc-org">
-                                                    7项
-                                                </em>
-                                                 <i class="via-icon04" data-role="show" baidu_alog="pc_detail_checkXiaci&click&pc_detail_checkXiaci_c"></i>
-                                                <div class="d-pop" style="display: none" data-role="itemShow">
-                                                    <em class="arrow"></em>
-                                                    <p class="tit">外观缺陷检查：</p>
-                                                    <ul class="fc-9">
-                                                                                                                                                                                    <li>有7处划痕</li>
-                                                                                                                                                                                                                                </ul>
-                                                    <p><a data-gzlog="tracking_type=click&eventid=0110000000000083" href="#surface">查看详情>></a></p>
-                                                </div>
-                                                                                     </span>
-                                    </dd>
-                                                                        <dd>
-                                        <span class="d-w1">内饰缺陷检查（共29项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                    </dl>
-                                                                <dl>
-                                    <dt>系统设备检测</dt>
-                                                                        <dd>
-                                        <span class="d-w1">安全系统检测（共6项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                        <dd>
-                                        <span class="d-w1">刹车系统检测（共4项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                        <dd>
-                                        <span class="d-w1">电子设备检测（共8项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                    </dl>
-                                                                <dl>
-                                    <dt>驾驶检测</dt>
-                                                                        <dd>
-                                        <span class="d-w1">启动与起步（共5项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                        <dd>
-                                        <span class="d-w1">加速与行驶（共8项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                        <dd>
-                                        <span class="d-w1">减速与制动（共4项）</span>
-                                        <span class="d-w2">
-                                                                                            <i class="via-icon03"></i>
-                                                                                     </span>
-                                    </dd>
-                                                                    </dl>
-                                                                                    </div>
-                    </div>
-                </div>
-            </div>
+<div class="laybox combox">
+<div class="detect-bd clearfix">
+<div class="detect-right fr">
+<span class="divis-pic evaluatorShow">
+<img data-role="evaluatorImg" data-src="http://image.ganjistatic1.com/gjfs17/M03/D1/13/CgEHX1YCnDbQ50eTAACP6zRloms357_100-150c_8-1.png" width="100" height="150">
+</span>
+<p class="f-type02">李春雨</p>
+<p>资深二手车检测师</p>
+</div>
+<div class="detect-left fl">
+<div class="detect-c scrollTo">
+<div class="detect-tt">
+<a href="#report" class="fr det-go">查看完整检测报告&gt;&gt;</a>
+<p class="f16 yahei">检测结果</p>
+</div>
+<div class="detect-info">
+<div class="detect-txt">车辆整体状况良好，车身有做漆腻子现象，有划痕剐蹭未修复，发动机变速箱正常磨损，内饰无明显脏污破损痕迹，机舱内有轻微油液渗漏，右前大灯更换，因路况问题，无法路试，买方请路试。</div>
+<div class="detect-xm clearfix">
+<div class="detect-xm-c showItem">
+<dl>
+<dt>事故排查</dt>
+<dd>
+<span class="d-w1">排除重大碰撞（共18项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+<dd>
+<span class="d-w1">排除泡水（共8项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+<dd>
+<span class="d-w1">排除火烧（共2项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+</dl>
+<dl>
+<dt>外观内饰检测</dt>
+<dd>
+<span class="d-w1">外观修复检查（共51项）</span>
+<span class="d-w2">
+<em class="fc-org">
+5项
+</em>
+<i class="via-icon04" data-role="show" baidu_alog="pc_detail_checkXiaci&click&pc_detail_checkXiaci_c"></i>
+<div class="d-pop" style="display: none" data-role="itemShow">
+<em class="arrow"></em>
+<p class="tit">外观修复检查：</p>
+<ul class="fc-9">
+<li>
+有5处钣金修复痕迹                                                                </li>
+</ul>
+<p><a data-gzlog="tracking_type=click&eventid=0110000000000083" href="#surface">查看详情>></a></p>
+</div>
+</span>
+</dd>
+<dd>
+<span class="d-w1">外观缺陷检查（共34项）</span>
+<span class="d-w2">
+<em class="fc-org">
+7项
+</em>
+<i class="via-icon04" data-role="show" baidu_alog="pc_detail_checkXiaci&click&pc_detail_checkXiaci_c"></i>
+<div class="d-pop" style="display: none" data-role="itemShow">
+<em class="arrow"></em>
+<p class="tit">外观缺陷检查：</p>
+<ul class="fc-9">
+<li>有7处划痕</li>
+</ul>
+<p><a data-gzlog="tracking_type=click&eventid=0110000000000083" href="#surface">查看详情>></a></p>
+</div>
+</span>
+</dd>
+<dd>
+<span class="d-w1">内饰缺陷检查（共29项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+</dl>
+<dl>
+<dt>系统设备检测</dt>
+<dd>
+<span class="d-w1">安全系统检测（共6项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+<dd>
+<span class="d-w1">刹车系统检测（共4项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+<dd>
+<span class="d-w1">电子设备检测（共8项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+</dl>
+<dl>
+<dt>驾驶检测</dt>
+<dd>
+<span class="d-w1">启动与起步（共5项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+<dd>
+<span class="d-w1">加速与行驶（共8项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+<dd>
+<span class="d-w1">减速与制动（共4项）</span>
+<span class="d-w2">
+<i class="via-icon03"></i>
+</span>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+</div>
         </div>
     </div>
 </div>
@@ -1388,109 +1396,112 @@
         <div class="descrip-box">
             <!--top 菜单-->
             <div class="cont-tips-outer">
-    <div class="cont-tips fixNavbar">
-        <a data-gzlog="tracking_type=click&eventid=0090180000000076" href="#" data-role="appoint" data-city-id="12" class="apt-btn fr" data-puid="3000155921"
-           gjalog="100000001147000100000010">预约看车</a>
-                    <p class="fr check-tel">
-                        <span class="f18">
-                            <i class="fc-org yahei">看车电话：</i>
-                            <b class="teltype js-change-phone">400-733-6622</b>
-                        </span>
-            </p>
-                <ul class="cont-tips-qh clearfix">
-            <li><a data-gzlog="tracking_type=click&eventid=0090000000000077" href="#base"  data-role="item" data-id="#base" class="active"   baidu_alog="pc_detail_tab&click&pc_detail_tab_jibenxinxi_c">基本信息</a></li>
-            <li><a data-gzlog="tracking_type=click&eventid=0090000000000078" href="#picture" data-role="item" data-id="#picture" baidu_alog="pc_detail_tab&click&pc_detail_tab_cheliangtupian_c">车辆图片</a></li>
-            <li><a data-gzlog="tracking_type=click&eventid=0090000000000079" href="#report" data-role="item" data-id="#report" baidu_alog="pc_detail_tab&click&pc_detail_tab_jiancebaogao_c">检测报告</a></li>
-                            <li><a data-gzlog="tracking_type=click&eventid=0090000000000080" href="#config" data-role="item" data-id="#config" baidu_alog="pc_detail_tab&click&pc_detail_tab_peizhicanshu_c">配置参数</a></li>
-                    </ul>
-    </div>
-</div>            <div class="descrip">
+<div class="cont-tips fixNavbar">
+    <a data-gzlog="tracking_type=click&eventid=0090180000000076" href="#" data-role="appoint" data-city-id="12" class="apt-btn fr" data-puid="3000155921"
+       gjalog="100000001147000100000010">预约看车</a>
+                <p class="fr check-tel">
+                    <span class="f18">
+                        <i class="fc-org yahei">看车电话：</i>
+                        <b class="teltype js-change-phone">400-733-6622</b>
+                    </span>
+        </p>
+            <ul class="cont-tips-qh clearfix">
+        <li><a data-gzlog="tracking_type=click&eventid=0090000000000077" href="#base"  data-role="item" data-id="#base" class="active"   baidu_alog="pc_detail_tab&click&pc_detail_tab_jibenxinxi_c">基本信息</a></li>
+        <li><a data-gzlog="tracking_type=click&eventid=0090000000000078" href="#picture" data-role="item" data-id="#picture" baidu_alog="pc_detail_tab&click&pc_detail_tab_cheliangtupian_c">车辆图片</a></li>
+        <li><a data-gzlog="tracking_type=click&eventid=0090000000000079" href="#report" data-role="item" data-id="#report" baidu_alog="pc_detail_tab&click&pc_detail_tab_jiancebaogao_c">检测报告</a></li>
+                        <li><a data-gzlog="tracking_type=click&eventid=0090000000000080" href="#config" data-role="item" data-id="#config" baidu_alog="pc_detail_tab&click&pc_detail_tab_peizhicanshu_c">配置参数</a></li>
+                </ul>
+</div>
+</div>            
+<div class="descrip">
                 <!--车源基本信息-->
-                    <div class="modbox" id="base">
-        <h3 class="yahei publicTit" baidu_alog="pc_detail_tab&click&pc_detail_tab_jibenxinxi_c"><i class="deck"></i>基本信息</h3>
-        <ul class="owner-infor clearfix">
-            <li class="owner">
-                <label>车主：</label>
-                韩先生<i class="jg-line">|</i>
-                职员<i class="jg-line">|</i>
-                海淀            </li>
-            <li class="nianjian"><label>年检到期：</label>2016-9</li>
-            <li class="baoxian"><label>交强险到期：</label>2016-9</li>
-            <li class="baoxian"><label>商业险到期：</label>2016-9</li>
-            <li class="guohu"><label>过户次数：</label>0</li>
-        </ul>
-        <p class="f-type03"><em></em>我这款车是一款很经典的车型，方向盘指向精准，没有虚位，提速较快，动力充沛，操控性能好等都是这车的特点，换挡顺畅，无怠速抖动等问题。乘坐舒适驾驶起来也是很有信心，感觉很不错，内部空间宽敞，后备箱足够大，家用也挺合适，主要上下班和外出游玩代步使用，就近修理厂保养。有感兴趣的朋友可以考虑一下，欢迎来看车试驾。</p>
-    </div>
+<div class="modbox" id="base">
+<h3 class="yahei publicTit" baidu_alog="pc_detail_tab&click&pc_detail_tab_jibenxinxi_c"><i class="deck"></i>基本信息</h3>
+<?php foreach ($lists as $key => $value) { ?>
+    <ul class="owner-infor clearfix">
+        <li class="owner">
+        <label>车主：</label>
+        韩先生<i class="jg-line">|</i>
+        职员<i class="jg-line">|</i>
+        海淀            </li>
+        <li class="nianjian"><label>年检到期：</label><?php echo $value['details_year']?></li>
+        <li class="baoxian"><label>交强险到期：</label><?php echo $value['details_insurance']?></li>
+        <li class="baoxian"><label>商业险到期：</label><?php echo $value['details_commercial']?></li>
+        <li class="guohu"><label>过户次数：</label><?php echo $value['details_number']?></li>
+    </ul>
+<?php }?>
 
-                <!--车辆图片-->
-                    <div class="modbox" id="picture">
-        <h3 class="yahei publicTit"><i class="deck"></i>车辆图片</h3>
-        <div class="dt-pictype lazyLoadV2">
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/75949a338666213b144ba6422f275346.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/c8dff7c4ee6d20398817b34ddcb1f801.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/d99f17480bacae3c4e3a51be89b610db.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/aeb1c33edaa9f17782c38cfd9ea2124a.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/d82243b6ff41807d9c280b04dcfb3d11.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/171aa9a4d7a8eff424742762e4abf4b4.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/49ac378c3a654abf9c379924de3d9cdf.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/4bda33e5d62f0f93c494418e8c014bfc.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/2bf0ca8afeaa7aeb49731e64a618544b.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/06e90a264e874b92b778b608f0466df2.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/a5bbb6658351c8844d52b606942ab76d.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/daa8e36682fc98382a1cee87f93acbb0.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/c5991dcc90015a7910973dc03b2e84dc.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/39/b2ecc03ff06afe45dabb3d4dd232bcf6.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/7886e78978952b1c34dad195e8e819d0.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/7e1931c3c8e949536621628471e87781.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/96c8f1157c201b007f9a4b9deec58685.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/34f41a3eac2aa858b31af09d48bf5235.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/ac906a1f81229898ab2adc87da8a1c53.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/a8b635b7ad3c4e4dbe57e22bd2e92b0f.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/4e34680d7864035e281714515a634edd.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/67624a5c9d7ae5899929f51a79ca46cf.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/612220c1ea22aef0e5894af40b3c76df.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/a4de974c5e69e1c45edcd67b27ffe37d.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/27acc2fdf95d471321f280c2e0ec4b1e.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/c0f874b380c717f74b9c79aecec9c3a6.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/f58a9eb99e4fc4b372e0985e2e80f287.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/8a763aecd908a5838afabc6a27288ade.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/07b21b8618dbb45240b7a6fc655deede.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                            <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
-                     data-original="http://image.guazistatic.com/gz01160612/12/09/69a0e5787a1e19d52f1f3f298c9abb3f.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
-                    </div>
-    </div>
+<p class="f-type03"><em></em><?php echo $v['details_introduction']?></p>
+</div>
 
-                <!--检测报告开始-->
-                    <div class="modbox1 combox" id="report">
+<!--车辆图片-->
+<div class="modbox" id="picture">
+<h3 class="yahei publicTit"><i class="deck"></i>车辆图片</h3>
+<div class="dt-pictype lazyLoadV2">
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/75949a338666213b144ba6422f275346.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/c8dff7c4ee6d20398817b34ddcb1f801.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/d99f17480bacae3c4e3a51be89b610db.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/aeb1c33edaa9f17782c38cfd9ea2124a.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/d82243b6ff41807d9c280b04dcfb3d11.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/171aa9a4d7a8eff424742762e4abf4b4.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/49ac378c3a654abf9c379924de3d9cdf.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/4bda33e5d62f0f93c494418e8c014bfc.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/2bf0ca8afeaa7aeb49731e64a618544b.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/06e90a264e874b92b778b608f0466df2.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/a5bbb6658351c8844d52b606942ab76d.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/daa8e36682fc98382a1cee87f93acbb0.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/c5991dcc90015a7910973dc03b2e84dc.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/39/b2ecc03ff06afe45dabb3d4dd232bcf6.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/7886e78978952b1c34dad195e8e819d0.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/7e1931c3c8e949536621628471e87781.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/96c8f1157c201b007f9a4b9deec58685.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/34f41a3eac2aa858b31af09d48bf5235.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/ac906a1f81229898ab2adc87da8a1c53.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/a8b635b7ad3c4e4dbe57e22bd2e92b0f.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/4e34680d7864035e281714515a634edd.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/67624a5c9d7ae5899929f51a79ca46cf.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/612220c1ea22aef0e5894af40b3c76df.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/a4de974c5e69e1c45edcd67b27ffe37d.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/27acc2fdf95d471321f280c2e0ec4b1e.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/c0f874b380c717f74b9c79aecec9c3a6.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/f58a9eb99e4fc4b372e0985e2e80f287.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/8a763aecd908a5838afabc6a27288ade.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/07b21b8618dbb45240b7a6fc655deede.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+        <img width="580" height="400" class="js-lazy-load" src="http://sta.guazi.com/static/c2c/web/detail/default.png"
+ data-original="http://image.guazistatic.com/gz01160612/12/09/69a0e5787a1e19d52f1f3f298c9abb3f.jpg@base@tag=imgScale&w=620&h=430&c=1&m=2&q=88" />
+</div>
+</div>
+<!--检测报告开始-->
+        <div class="modbox1 combox" id="report">
         <div class="detecttitle">
             <h3 class="yahei f30">瓜子二手车直卖网车辆检测报告</h3>
             <span>检测时间：2016-06-12</span>

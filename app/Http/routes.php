@@ -15,7 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', 'BuyController@buy');
+
+
+// Route::get('/buy', 'BuyController@buy');
+// Route::get('/goodslist', 'BuyController@goodslist');
+
+
+Route::get('/buy', 'BuyController@buy');
 Route::get('/goodslist', 'BuyController@goodslist');
 
 
@@ -29,8 +35,11 @@ Route::any('sell','SellController@sell');//我要卖车首页显示页面
 Route::any('sellok','SellController@sellok');//我要卖车添加成功页面
 
 
-Route::get('/', 'BuyController@buy');
-Route::get('goodslist', 'BuyController@goodslist');
+// Route::get('/', 'BuyController@buy');
+// Route::get('goodslist', 'BuyController@goodslist');
+
+
+
 
 
 //牛宗亮加载首页
@@ -52,3 +61,6 @@ Route::group(['middleware' => ['web']], function () {
 });
 //Route::any('/','CommonController@common');//分期购车表单添加页面
 //Route::any('commonok','CommonController@commonok');//分期购车表单添加页面
+
+?>
+

@@ -8,11 +8,17 @@
 	<script src="js/index.js"></script>
 	<script src="js/common.js"></script>
 <style type="text/css">.panel-mask{position:fixed;background:rgba(0,0,0,.4);top:0;left:0;width:100%;height:100%;z-index:101}.panel-box{position:absolute;height:400px;width:500px;border:2px solid #e7e7e7;background:#fff}.panel-title{height:55px;padding-left:25px;font-size:24px;line-height:55px;color:#e54121;border-bottom:1px solid #e8e8e8}.panel-title span{float:left}.panel-title .panel-close{float:right;width:15px;height:15px;text-indent:-100px;white-space:nowrap;overflow:hidden;background:url(http://sta.guazistatic.com/finance_web/close.d6daaea4ca14acfc31a10b7bc703ef9d.png) no-repeat;margin:20px 20px 0 0}.panel-title .panel-close:hover{color:red;cursor:pointer}</style>
+
 <style type="text/css">
 .op{
-height:40px;
-width:140px;
-border:solid 1px #9999;
+	height:40px;
+	width:140px;
+	border:solid 1px #9999;
+}
+#partner{
+    height:40px;
+	width:560px;
+	border:solid 1px #9999;
 }
 </style>
 </head>
@@ -1032,13 +1038,20 @@ border:solid 1px #9999;
             <span>申请成为合作伙伴</span>
             <span class="panel-close">关闭</span>
         </div>
+		<form action="partnerok" method='post'>
         <div class="panel-content">
             <div class="popup-partner">
                 <ul class="basic-list clearfix">
                     <li class="list-item">
-                        <div id="partner_type" class="comselect-1" data-max-num="10">
-                            <input data-role="text" class="inputype" value="合作方向" readonly="readonly" type="text">
-                            <input value="" name="partner_type" data-role="hidden" placeholder="合作方向" type="hidden">
+                        <div id="partner_type" class="comselect-1" data-max-num="10" id='div1'>
+                            <!--<input data-role="text" class="inputype" value="合作方向" readonly="readonly" type="text">-->
+							<select name="partner_type" id="partner">
+							    <option value="合作方向">合作方向</option>
+								<option value="车贷合作">车贷合作</option>
+								<option value="车险合作">车险合作</option>
+								<option value="延保合作">延保合作</option>
+							</select>
+                            <!--<input value="" name="partner_type" data-role="hidden" placeholder="合作方向" type="hidden">
                             <div class="p-rl">
                                 <div style="max-height: 360px; overflow-y: auto;" class="downbox">
                                     <ul data-role="list">
@@ -1047,7 +1060,7 @@ border:solid 1px #9999;
                                                                                     <li data-role="item" data-value="3"><a href="javascript:%20void(0);">延保合作</a></li>
                                                                             </ul>
                                 </div>
-                            </div>
+                            </div>-->
                         </div>
                     </li>
                     <li class="list-item">
@@ -1072,9 +1085,12 @@ border:solid 1px #9999;
                     </li>
                 </ul>
                 <p data-role="partner_tip" class="panel-tip basic-error">&nbsp;</p>
-                <div class="tc mt10"><a data-role="submit" id="partner_btn" class="btn" href="javascript:%20void(0);">提交</a></div>
+                <div class="tc mt10"><input type="submit" value='提交' data-role="submit" id="partner_btn" class="btn" href="javascript:%20void(0);"/></div>
+				
+				
             </div>
         </div>
+		</form>
     </div>
 </div>
 <!--合作伙伴弹窗end-->
