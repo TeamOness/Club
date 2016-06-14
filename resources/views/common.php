@@ -20,6 +20,16 @@
 	width:560px;
 	border:solid 1px #9999;
 }
+.op1{
+	height:35px;
+	width:110px;
+	border:solid 1px #9999;
+}
+.address1{
+	height:35px;
+	width:105px;
+	border:solid 1px #9999;	
+}
 </style>
 </head>
 <body>
@@ -814,19 +824,20 @@
         <div class="panel-content">
 
             <!--用户提交贷款信息的表单-->
+			<form action="amountok" method='post'>
             <div data-role="loan_form" class="popup-apply">
 
                 <ul class="basic-list clearfix">
                     <li class="list-item">
                         <div class="rel">
-                            <input data-role="amount" name="application_amount" class="input-1" placeholder="借款额度" type="text">
+                            <input data-role="amount" name="amount_money" class="input-1" placeholder="借款额度" type="text">
                             <span class="million fs14">万</span>
                         </div>
                     </li>
                     <li class="list-item">
-                        <div id="popup_stage" data-role="stageArr" class="comselect-1" data-max-num="10">
+                        <!--<div id="popup_stage" data-role="stageArr" class="comselect-1" data-max-num="10">
                             <input data-role="text" class="inputype" value="12期" readonly="readonly" type="text">
-                            <input value="12" data-role="hidden" name="application_month" title="借款期限" type="hidden">
+                            <input value="12" data-role="hidden" name="buy_money_date" title="借款期限" type="hidden">
                             <div class="p-rl">
                                 <div style="max-height: 360px; overflow-y: auto;" class="downbox">
                                     <ul data-role="list">
@@ -836,12 +847,21 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
+						<div id="stage" data-role="stageArr" class="comselect-1" data-max-num="10">
+                        <!--<input data-role="text" class="inputype" value="12期" readonly="readonly" type="text">-->
+						<select name="amount_money_date" id="" class='op1'>
+						<option value="12期">12期</option>
+						<option value="24期">24期</option>
+						<option value="36期">36期</option>
+						
+						</select>
+						</div>
                     </li>
 
                     <li class="list-item">
                         <div id="popup_city_id" data-role="cityArr" class="comselect-1" data-max-num="10">
-                            <input data-role="text" class="inputype" value="北京" readonly="readonly" type="text">
+                            <!--<input data-role="text" class="inputype" value="北京" readonly="readonly" type="text">
                             <input data-role="hidden" name="city_id" title="购车城市" value="12" type="hidden">
                             <div class="p-rl">
                                 <div style="max-height: 360px; overflow-y: auto;" class="downbox">
@@ -900,24 +920,39 @@
                                                                             </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
+						<!--<div id="stage" data-role="stageArr" class="comselect-1" data-max-num="10">-->
+						<select name="amount_city" id="address1" class='address1'>
+							<option value="北京">北京</option>
+							<option value="海淀">海淀</option>
+							<option value="石家庄">石家庄</option>
+							<option value="衡水">衡水</option>
+							<option value="邯郸">邯郸</option>
+							<option value="哈尔滨">哈尔滨</option>
+						</select>
                     </li>
 
                     <li class="list-item">
                         <div id="popup_bank_type" data-role="bankArr" class="comselect-1" data-max-num="10">
-                            <input data-role="text" class="inputype" value="分期产品" readonly="readonly" type="text">
-                            <input value="" data-role="hidden" name="bank_type" title="分期产品" type="hidden">
+                            <!--<input data-role="text" class="inputype" value="分期产品" readonly="readonly" type="text">-->
+                            <!--<input value="" data-role="hidden" name="bank_type" title="分期产品" type="hidden">
                             <div class="p-rl">
                                 <div style="max-height: 360px; overflow-y: auto;" class="downbox">
                                     <ul data-role="list"><li data-role="item" data-value="11"><a href="javascript:%20void(0);">狮桥资本</a></li><li data-role="item" data-value="4"><a href="javascript:%20void(0);">浦发银行</a></li><li data-role="item" data-value="14"><a href="javascript:%20void(0);">微贷网</a></li><li data-role="item" data-value="2"><a href="javascript:%20void(0);">玖富分期</a></li></ul>
                                 </div>
                             </div>
-                        </div>
+                        </div>-->
+						<select name="user_address" id="address1" class='address1'>
+							<option value="狮桥资本">狮桥资本</option>
+							<option value="浦发银行">浦发银行</option>
+							<option value="微贷网">微贷网</option>
+							<option value="玖富分期">玖富分期</option>
+						</select>
                     </li>
 
                     <li class="list-item">
                         <div id="popup_work" class="comselect-1" data-max-num="10">
-                            <input data-role="text" class="inputype" value="职业身份" readonly="readonly" type="text">
+                            <!--<input data-role="text" class="inputype" value="职业身份" readonly="readonly" type="text">
                             <input value="" data-role="hidden" name="work" title="职业身份" type="hidden">
                             <div class="p-rl">
                                 <div style="max-height: 360px; overflow-y: auto;" class="downbox">
@@ -930,13 +965,23 @@
                                                                                 <li data-role="item" data-value="99"><a href="javascript:%20void(0);">未知</a></li>
                                                                             </ul>
                                 </div>
-                            </div>
+                            </div>-->
+							<select name="amount_zhi" id="address1" class='address1'>
+							<option value="职业身份">职业身份</option>
+							<option value="事业单位">事业单位</option>
+							<option value="上班族">上班族</option>
+							<option value="企业主">企业主</option>
+							<option value="个体户">个体户</option>
+							<option value="无固定职业">无固定职业</option>
+							<option value="未知">未知</option>
+						</select>
                         </div>
+						
                     </li>
 
                     <li class="list-item">
                         <div id="popup_credit" class="comselect-1" data-max-num="10">
-                            <input data-role="text" class="inputype" value="信用记录" readonly="readonly" type="text">
+                            <!--<input data-role="text" class="inputype" value="信用记录" readonly="readonly" type="text">
                             <input value="" data-role="hidden" name="credit" title="信用记录" type="hidden">
                             <div class="p-rl">
                                 <div style="max-height: 360px; overflow-y: auto;" class="downbox">
@@ -948,13 +993,22 @@
                                                                                 <li data-role="item" data-value="99"><a href="javascript:%20void(0);">未知</a></li>
                                                                             </ul>
                                 </div>
-                            </div>
+                            </div>-->
+							<select name="amount_xinyong" id="address1" class='address1'>
+							<option value="信用记录">信用记录</option>
+							<option value="信用良好">信用良好</option>
+							<option value="少数逾期">少数逾期</option>
+							<option value="长期多次逾期">长期多次逾期</option>
+							<option value="无信用记录">无信用记录</option>
+							<option value="无固定职业">无固定职业</option>
+							<option value="未知">未知</option>
+						</select>
                         </div>
                     </li>
 
                     <li class="list-item">
                         <div id="popup_salary_form" class="comselect-1" data-max-num="10">
-                            <input data-role="text" class="inputype" value="工资形式" readonly="readonly" type="text">
+                            <!--<input data-role="text" class="inputype" value="工资形式" readonly="readonly" type="text">
                             <input value="" data-role="hidden" name="salary_form" title="工资形式" type="hidden">
                             <div class="p-rl">
                                 <div style="max-height: 360px; overflow-y: auto;" class="downbox">
@@ -964,13 +1018,19 @@
                                                                                 <li data-role="item" data-value="99"><a href="javascript:%20void(0);">未知</a></li>
                                                                             </ul>
                                 </div>
-                            </div>
+                            </div>-->
+						    <select name="amount_gongzi" id="address1" class='address1'>
+							<option value="工资形式">工资形式</option>
+							<option value="打卡">打卡</option>
+							<option value="现金">现金</option>
+							<option value="未知">未知</option>
+						</select>
                         </div>
                     </li>
 
                     <li class="list-item">
                         <div id="popup_house" class="comselect-1" data-max-num="10">
-                            <input data-role="text" class="inputype" value="住房状况" readonly="readonly" type="text">
+                            <!--<input data-role="text" class="inputype" value="住房状况" readonly="readonly" type="text">
                             <input value="" data-role="hidden" name="house" title="住房状况" type="hidden">
                             <div class="p-rl">
                                 <div style="max-height: 360px; overflow-y: auto;" class="downbox">
@@ -983,7 +1043,16 @@
                                                                                 <li data-role="item" data-value="99"><a href="javascript:%20void(0);">未知</a></li>
                                                                             </ul>
                                 </div>
-                            </div>
+                            </div>-->
+						    <select name="amount_fang" id="address1" class='address1'>
+							<option value="住房状况">住房状况</option>
+							<option value="租房">租房</option>
+							<option value="集体宿舍">集体宿舍</option>
+							<option value="与亲戚合住">与亲戚合住</option>
+							<option value="有房有贷款">有房有贷款</option>
+							<option value="有房无贷款">有房无贷款</option>
+							<option value="未知">未知</option>
+						</select>
                         </div>
                     </li>
 
@@ -1029,6 +1098,7 @@
         </div>
     </div>
 </div>
+</form>
 <!--用户提交贷款信息的弹窗end-->
 
 <!--合作伙伴弹窗begin-->

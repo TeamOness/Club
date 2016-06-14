@@ -32,10 +32,32 @@ class CommonController extends Controller
 		$add=DB::insert('insert into buy (buy_money,buy_money_date,buy_phone) values ( ?,?,?)', [$buy_money,$buy_money_date,$buy_phone]);
 		//判断
 		if($add){
-			echo "<script>alert('提交成功');location.href='common'</script>";
+			echo "<script>alert('亲,(づ￣3￣)づ╭❤～,你现在可以贷款了殴!');location.href='common'</script>";
 		}else{
 			echo "提交失败";
 		}
+
+	}
+	//分期购车申请成为合作伙伴
+	public function partnerok(request $request){
+		//接收数据
+		$partner_type=$request->input('partner_type');
+		$company_name=$request->input('company_name');
+		$company_address=$request->input('company_address');
+		$name=$request->input('name');
+		$phone=$request->input('phone');
+		$partner=DB::insert('insert into partner (partner_type,company_name,company_address,name,phone) values ( ?,?,?,?,?)', [$partner_type,$company_name,$company_address,$name,$phone]);
+		//判断
+		if($partner){
+			echo "<script>alert('亲,(づ￣3￣)づ╭❤～,您的申请提交成功了!');location.href='common'</script>";
+		}else{
+			echo "添加失败";
+		}
+
+	}
+	//分期购车我要申请添加页面
+	public function amountok(){
+		//接收表单提交的值
 
 	}
 }

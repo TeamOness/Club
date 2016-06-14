@@ -28,6 +28,8 @@ Route::any('common','CommonController@common');//分期购车表单添加页面
 
 Route::post('commonok','CommonController@commonok');//分期购车表单添加成功页面
 
+Route::post('partnerok','CommonController@partnerok');//分期购车申请合作伙伴添加成功页面
+
 
 Route::any('sell','SellController@sell');//我要卖车首页显示页面
 Route::any('sellok','SellController@sellok');//我要卖车添加成功页面
