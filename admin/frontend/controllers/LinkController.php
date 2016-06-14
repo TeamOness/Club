@@ -62,7 +62,7 @@ class LinkController extends \yii\web\Controller
 		return $this->renderPartial('modify', ['name' => $name, 'arr' => $arr]);
 	}
 
-	//添加入库
+	//修改入库
 	public function actionLink_modify()
 	{
 		$model = new Links();
@@ -81,6 +81,41 @@ class LinkController extends \yii\web\Controller
 		} else {
 			return $this->redirect("index.php?r=link/modify&id=$id");
 		}
+	}
+
+	//是否显示即点即改
+	public function actionChange()
+	{
+		$model = new Links;
+		$id = Yii::$app->request->get('id');
+		//echo $id;die;
+		$model = $model::findOne($id);
+		//var_dump($data);die;
+		//echo $model['link_type'];die;
+		if($model['link_type']==1){
+			$model->link_type=0;
+		}else{
+			$model->link_type=1;
+		}
+		//print_r($model);die;
+		$model->update(array('link_type'));
+		$arr = $model::find()->where(['link_id' => $id])->asArray()->one();
+		//print_r($arr['link_type']);die;
+		if ($arr['link_type'] == 1)
+		{
+			return "显示";
+		} else {
+			return "不显示";
+		}
+	}
+
+	//删除
+	public function actionDel()
+	{
+		$id = Yii::$app->request->get('id');
+		//echo $id;die;
+		Links::deleteAll("link_id = $id");
+		return $this->redirect('index.php?r=link');
 	}
 
 }

@@ -2,9 +2,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>友情链接信息添加 - 龙头后台管理系统</title>
-		<meta name="keywords" content="友情链接信息添加 - 龙头后台管理系统" />
-		<meta name="description" content="友情链接信息添加 - 龙头后台管理系统" />
+		<title>友情链接信息修改 - 龙头后台管理系统</title>
+		<meta name="keywords" content="友情链接信息修改 - 龙头后台管理系统" />
+		<meta name="description" content="友情链接信息修改 - 龙头后台管理系统" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 		<!-- basic styles -->

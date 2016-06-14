@@ -538,7 +538,7 @@
 														<td><?php echo $v['link_name']; ?></td>
 														<td class="hidden-480"><?php echo $v['link_url']; ?></td>
 														<td>
-															<span class="label label-sm label-warning"><?php if($v['link_type'] == 1) {echo "显示";} else {echo "不显示";} ?></span>
+															<span id="type" class="label label-sm label-warning" onclick="chana(<?php echo $v['link_id'];?>)"><?php if($v['link_type'] == 1) {echo "显示";} else {echo "不显示";} ?></span>
 														</td>
 
 														<td class="hidden-480"><?php echo $v['link_ranking']; ?></td>
@@ -547,6 +547,10 @@
 															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
 																<a class="green" href="index.php?r=link/modify&id=<?php echo $v['link_id']; ?>">
 																	<i class="icon-pencil bigger-130"></i>
+																</a>
+
+																<a class="red" href="index.php?r=link/del&id=<?php echo $v['link_id']; ?>">
+																	<i class="icon-trash bigger-130"></i>
 																</a>
 															</div>
 
@@ -730,6 +734,13 @@
 					return 'left';
 				}
 			})
+			function chana(id){
+				$.get('index.php?r=link/change',{id:id},function(msg){
+					//alert(msg);
+					//$('#type').html(msg);
+					location=location
+				});
+			}
 		</script>
 	<div style="display:none"><script src='http://v7.cnzz.com/stat.php?id=155540&web_id=155540' language='JavaScript' charset='gb2312'></script></div>
 </body>
