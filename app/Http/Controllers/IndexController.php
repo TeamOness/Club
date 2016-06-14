@@ -58,6 +58,13 @@ class IndexController extends Controller
         }
       //print_r($newcar);die;
 
+        //查询出所有的汽车品牌
+        //$brandinfo=DB::select('select * from brand where parent_id=0');
+
+        //print_r($brandinfo);die;
+
+
+
 
      
       return view('index',['carsell'=>$car,'newcar'=>$newcar]);

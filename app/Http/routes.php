@@ -25,7 +25,7 @@ Route::get('/buy', 'BuyController@buy');
 Route::get('/goodslist', 'BuyController@goodslist');
 
 
-//崔阳阳做的模块
+//崔阳阳做的模�?
 Route::any('common','CommonController@common');//分期购车表单添加页面
 
 Route::post('commonok','CommonController@commonok');//分期购车表单添加成功页面
@@ -42,8 +42,9 @@ Route::any('sellok','SellController@sellok');//我要卖车添加成功页面
 
 
 
-//牛宗亮加载首页
+//牛宗亮加载首�?
 Route::any('/','IndexController@index');
+Route::any('/buysearch','BuyController@buysearch');
 
 /*
 |--------------------------------------------------------------------------
