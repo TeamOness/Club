@@ -24,9 +24,6 @@
 	width:210px;
 	border:solid 1px #9999;
 	}
-	#btn{
-	
-	}
 	</style>
 
     
@@ -442,7 +439,7 @@
                     <input id="minor_show" data-role="brandText" class="input-txt" placeholder="请选择品牌车系" autocomplete="off" type="text">
                     <div data-role="selectBrand" class="ucarselecttype hide" style="display: none">
                         <div class="ucarselecttype-pinpai ">
-						<select name="s1" onChange="changeselect1(this.value)" id="minor_show" data-role="selectBrand">
+						<!--<select name="s1" onChange="changeselect1(this.value)" id="minor_show" data-role="selectBrand">
 						<option>==请选择==</option>
 						<option value="10">1-10</option>
 						<option value="20">11-20</option>
