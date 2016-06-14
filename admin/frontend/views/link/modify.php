@@ -516,14 +516,15 @@
 
 									$form = ActiveForm::begin([
 										'options' => ['class' => 'form-horizontal', 'role' => 'form'],
-										'action' => ['link/linkadd'],
+										'action' => ['link/link_modify'],
 										'method'=>'post',
 									]) ?>
 									<div class="form-group">
+										<input type="hidden" name="id" value="<?php echo $arr['link_id']; ?>">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-1"> 友情链接名称 </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-1" placeholder="link name" name='name' class="col-xs-10 col-sm-5" />
+											<input type="text" id="form-field-1" placeholder="link name" value="<?php echo $arr['link_name']; ?>" name='name' class="col-xs-10 col-sm-5" />
 										</div>
 									</div>
 
@@ -533,7 +534,7 @@
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 友情链接路径 </label>
 
 										<div class="col-sm-9">
-											<input type="text" id="form-field-2" placeholder="link url" name='url' class="col-xs-10 col-sm-5" />
+											<input type="text" id="form-field-2" placeholder="link url" value="<?php echo $arr['link_url']; ?>" name='url' class="col-xs-10 col-sm-5" />
 										</div>
 									</div>
 
@@ -545,12 +546,12 @@
 											<div class="control-group">
 												<div class="radio">
 													<label>
-														<input name="type" value="1" type="radio" class="ace" checked />
+														<input name="type" value="1" <?php if($arr['link_type'] == 1) {?>checked<?php } ?> type="radio" class="ace" />
 														<span class="lbl"> 显示 </span>
 													</label>
-													
+
 													<label style="margin-left:20px;">
-														<input name="type" value="0" type="radio" class="ace" />
+														<input name="type" value="0" <?php if($arr['link_type'] == 0) {?>checked<?php } ?> type="radio" class="ace" />
 														<span class="lbl"> 不显示 </span>
 													</label>
 												</div>
@@ -563,7 +564,7 @@
 									<div class="form-group">
 										<label class="col-sm-3 control-label no-padding-right" for="form-field-2"> 显示排行 </label>
 										<div class="col-sm-4">
-											<input type="text" name="ranking" class="input-mini" id="spinner3" />
+											<input type="text" name="ranking" class="input-mini" value="<?php echo $arr['link_ranking']; ?>" id="spinner3" />
 										</div>
 									</div>
 
@@ -573,7 +574,7 @@
 										<div class="col-md-offset-3 col-md-9">
 											<button class="btn btn-info" type="submit">
 												<i class="icon-ok bigger-110"></i>
-												添加
+												修改
 											</button>
 
 											&nbsp; &nbsp; &nbsp;
@@ -583,7 +584,6 @@
 											</button>
 										</div>
 									</div>
-
 								<?php ActiveForm::end() ?>
 								<!-- </form> -->
 							</div><!-- /.col -->
@@ -660,7 +660,7 @@
 		<!--[if !IE]> -->
 
 		<script type="text/javascript">
-			window.jQuery || document.write("<script src='assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
+			window.jQuery || document.write("<script src='<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery-2.0.3.min.js'>"+"<"+"/script>");
 		</script>
 
 		<!-- <![endif]-->
@@ -672,10 +672,10 @@
 <![endif]-->
 
 		<script type="text/javascript">
-			if("ontouchend" in document) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+			if("ontouchend" in document) document.write("<script src='<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
 		</script>
-		<script src="assets/js/bootstrap.min.js"></script>
-		<script src="assets/js/typeahead-bs2.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/bootstrap.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/typeahead-bs2.min.js"></script>
 
 		<!-- page specific plugin scripts -->
 
@@ -683,25 +683,25 @@
 		  <script src="assets/js/excanvas.min.js"></script>
 		<![endif]-->
 
-		<script src="assets/js/jquery-ui-1.10.3.custom.min.js"></script>
-		<script src="assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="assets/js/chosen.jquery.min.js"></script>
-		<script src="assets/js/fuelux/fuelux.spinner.min.js"></script>
-		<script src="assets/js/date-time/bootstrap-datepicker.min.js"></script>
-		<script src="assets/js/date-time/bootstrap-timepicker.min.js"></script>
-		<script src="assets/js/date-time/moment.min.js"></script>
-		<script src="assets/js/date-time/daterangepicker.min.js"></script>
-		<script src="assets/js/bootstrap-colorpicker.min.js"></script>
-		<script src="assets/js/jquery.knob.min.js"></script>
-		<script src="assets/js/jquery.autosize.min.js"></script>
-		<script src="assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
-		<script src="assets/js/jquery.maskedinput.min.js"></script>
-		<script src="assets/js/bootstrap-tag.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/chosen.jquery.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/fuelux/fuelux.spinner.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/date-time/bootstrap-datepicker.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/date-time/bootstrap-timepicker.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/date-time/moment.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/date-time/daterangepicker.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/bootstrap-colorpicker.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.knob.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.autosize.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.inputlimiter.1.3.1.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/jquery.maskedinput.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/bootstrap-tag.min.js"></script>
 
 		<!-- ace scripts -->
 
-		<script src="assets/js/ace-elements.min.js"></script>
-		<script src="assets/js/ace.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/ace-elements.min.js"></script>
+		<script src="<?php echo Yii::$app->request->baseUrl; ?>/assets/js/ace.min.js"></script>
 
 		<!-- inline scripts related to this page -->
 
@@ -896,7 +896,7 @@
 					//alert(this.value)
 				});
 				$('#spinner2').ace_spinner({value:0,min:0,max:10000,step:100, touch_spinner: true, icon_up:'icon-caret-up', icon_down:'icon-caret-down'});
-				$('#spinner3').ace_spinner({value:0,min:0,max:100,step:1, on_sides: true, icon_up:'icon-plus smaller-75', icon_down:'icon-minus smaller-75', btn_up_class:'btn-success' , btn_down_class:'btn-danger'});
+				$('#spinner3').ace_spinner({min:0,max:100,step:1, on_sides: true, icon_up:'icon-plus smaller-75', icon_down:'icon-minus smaller-75', btn_up_class:'btn-success' , btn_down_class:'btn-danger'});
 
 				$('.date-picker').datepicker({autoclose:true}).next().on(ace.click_event, function(){
 					$(this).prev().focus();

@@ -3,6 +3,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="keywords" content="瓜子，分期购车，汽车金融">
     <title>汽车金融-分期购车</title>
+	<script src="js/zoom1.js"></script>
     <script src="js/hm.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/common.js"></script>
