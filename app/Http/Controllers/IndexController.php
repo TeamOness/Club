@@ -20,9 +20,10 @@ class IndexController extends Controller
     {   
 
         header('content-type:text/html;charset=utf-8');
+        
 
-        //查询出所有的汽车信息(只查出8条)
-        $carinfo=DB::select('select * from details inner join brand on details.brand_id=brand.brand_id limit 8');
+        //查询出降价急售汽车信息(只查出8条)
+        $carinfo=DB::select('select * from details inner join brand on details.brand_id=brand.brand_id where details.sell_type=0 limit 8');
         
         $car=$this->objectToArray($carinfo);
          
@@ -36,11 +37,14 @@ class IndexController extends Controller
             $car[$k][ ]=$info1;
 
         }
-        //查询出所有的汽车信息(只查出8条)
-        
+        //查询出降价急售汽车信息(只查出8条)
+            
+       // print_r($car);die;
+
+
 
         //查询处最新上架信息(只查出4条)
-        $newcarinfo=DB::select('select * from details inner join brand on details.brand_id=brand.brand_id order by details_id desc limit 4');
+        $newcarinfo=DB::select('select * from details inner join brand on details.brand_id=brand.brand_id order by details_id desc limit 8');
         //print_r($newcarinfo);die;
         $newcar=$this->objectToArray($newcarinfo);
         //print_r($newcar);die;
@@ -52,11 +56,11 @@ class IndexController extends Controller
             $newcar[$k][ ]=$info1;
 
         }
-      // print_r($newcar);die;
+      //print_r($newcar);die;
 
 
-
-      return view('index',['carinfo'=>$car,'newcar'=>$newcar]);
+     
+      return view('index',['carsell'=>$car,'newcar'=>$newcar]);
     }
 
 
