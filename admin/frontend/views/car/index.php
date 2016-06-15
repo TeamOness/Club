@@ -544,7 +544,7 @@
 
 														<td>
 															<div class="visible-md visible-lg hidden-sm hidden-xs action-buttons">
-																<a class="blue" href="#">
+																<a class="blue" href="index.php?r=car/details&id=<?php echo $v['details_id']; ?>">
 																	<i class="icon-zoom-in bigger-130"></i>
 																</a>
 
@@ -552,7 +552,7 @@
 																	<i class="icon-pencil bigger-130"></i>
 																</a>
 
-																<a class="red" href="#">
+																<a class="red" href="index.php?r=car/del&id=<?php echo $v['details_id']; ?>">
 																	<i class="icon-trash bigger-130"></i>
 																</a>
 															</div>
