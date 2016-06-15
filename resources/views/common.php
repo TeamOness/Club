@@ -3,7 +3,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="keywords" content="瓜子，分期购车，汽车金融">
     <title>汽车金融-分期购车</title>
-	<script src="js/zoom1.js"></script>
+	<script src="js/zoom.js"></script>
     <script src="js/hm.js"></script>
 	<script src="js/index.js"></script>
 	<script src="js/common.js"></script>
@@ -24,11 +24,6 @@
 	height:35px;
 	width:110px;
 	border:solid 1px #9999;
-}
-.address1{
-	height:35px;
-	width:105px;
-	border:solid 1px #9999;	
 }
 </style>
 </head>
@@ -835,36 +830,36 @@
                         </div>
                     </li>
                     <li class="list-item">
-                        <!--<div id="popup_stage" data-role="stageArr" class="comselect-1" data-max-num="10">
-                            <input data-role="text" class="inputype" value="12期" readonly="readonly" type="text">
-                            <input value="12" data-role="hidden" name="buy_money_date" title="借款期限" type="hidden">
+                        <div id="popup_stage" data-role="stageArr" class="comselect-1" data-max-num="10">
+                            <input data-role="text" class="inputype" value="12期" readonly="readonly" type="text" id='qi'>
+                            <input value="12" data-role="hidden" name="amount_money_date" title="借款期限" type="hidden">
                             <div class="p-rl">
-                                <div style="max-height: 360px; overflow-y: auto;" class="downbox">
-                                    <ul data-role="list">
+                                <div style="max-height: 360px; overflow-y: auto;" class="downbox" id='a1'>
+                                    <ul data-role="list" class='qi'>
                                         <li data-role="item" data-value="12"><a href="javascript:%20void(0);">12期</a></li>
                                         <li data-role="item" data-value="24"><a href="javascript:%20void(0);">24期</a></li>
                                         <li data-role="item" data-value="36"><a href="javascript:%20void(0);">36期</a></li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>-->
-						<div id="stage" data-role="stageArr" class="comselect-1" data-max-num="10">
-                        <!--<input data-role="text" class="inputype" value="12期" readonly="readonly" type="text">-->
-						<select name="amount_money_date" id="" class='op1'>
+                        </div>
+						<!--<div id="stage" data-role="stageArr" class="comselect-1" data-max-num="10">-->
+                       <!-- <input data-role="text" class="inputype" value="12期" readonly="readonly" type="text">
+						 <select name="amount_money_date" id="" class='op1'>
 						<option value="12期">12期</option>
 						<option value="24期">24期</option>
 						<option value="36期">36期</option>
 						
-						</select>
-						</div>
+						</select> -->
+						<!-- </div> -->
                     </li>
 
                     <li class="list-item">
                         <div id="popup_city_id" data-role="cityArr" class="comselect-1" data-max-num="10">
-                            <!--<input data-role="text" class="inputype" value="北京" readonly="readonly" type="text">
-                            <input data-role="hidden" name="city_id" title="购车城市" value="12" type="hidden">
+                            <input data-role="text" class="inputype" value="北京" readonly="readonly" type="text" id='shi'>
+                            <input data-role="hidden" name="amount_city" title="购车城市" value="12" type="hidden">
                             <div class="p-rl">
-                                <div style="max-height: 360px; overflow-y: auto;" class="downbox">
+                                <div style="max-height: 360px; overflow-y: auto;" class="downbox" id='a2'>
                                     <ul data-role="list">
                                                                                 <li data-role="item" data-value="12"><a href="javascript:%20void(0);">北京</a></li>
                                                                                 <li data-role="item" data-value="84"><a href="javascript:%20void(0);">长春</a></li>
@@ -920,42 +915,42 @@
                                                                             </ul>
                                 </div>
                             </div>
-                        </div>-->
-						<!--<div id="stage" data-role="stageArr" class="comselect-1" data-max-num="10">-->
-						<select name="amount_city" id="address1" class='address1'>
+                        </div>
+						<div id="stage" data-role="stageArr" class="comselect-1" data-max-num="10">
+						<!-- <select name="amount_city" id="address1" class='address1'>
 							<option value="北京">北京</option>
 							<option value="海淀">海淀</option>
 							<option value="石家庄">石家庄</option>
 							<option value="衡水">衡水</option>
 							<option value="邯郸">邯郸</option>
 							<option value="哈尔滨">哈尔滨</option>
-						</select>
+						</select> -->
                     </li>
 
                     <li class="list-item">
-                        <div id="popup_bank_type" data-role="bankArr" class="comselect-1" data-max-num="10">
-                            <!--<input data-role="text" class="inputype" value="分期产品" readonly="readonly" type="text">-->
-                            <!--<input value="" data-role="hidden" name="bank_type" title="分期产品" type="hidden">
+                        <div id="popup_bank_type" data-role="bankArr" class="comselect-1" data-max-num="10" id='pin'>
+                            <input data-role="text" class="inputype" value="分期产品" readonly="readonly" type="text" id='pin'>
+                            <input value="" data-role="hidden" name="amount_type" title="分期产品" type="hidden">
                             <div class="p-rl">
-                                <div style="max-height: 360px; overflow-y: auto;" class="downbox">
+                                <div style="max-height: 360px; overflow-y: auto;" class="downbox" id='a3'>
                                     <ul data-role="list"><li data-role="item" data-value="11"><a href="javascript:%20void(0);">狮桥资本</a></li><li data-role="item" data-value="4"><a href="javascript:%20void(0);">浦发银行</a></li><li data-role="item" data-value="14"><a href="javascript:%20void(0);">微贷网</a></li><li data-role="item" data-value="2"><a href="javascript:%20void(0);">玖富分期</a></li></ul>
                                 </div>
                             </div>
-                        </div>-->
-						<select name="user_address" id="address1" class='address1'>
+                        </div>
+						<!-- <select name="user_address" id="address1" class='address1'>
 							<option value="狮桥资本">狮桥资本</option>
 							<option value="浦发银行">浦发银行</option>
 							<option value="微贷网">微贷网</option>
 							<option value="玖富分期">玖富分期</option>
-						</select>
+						</select> -->
                     </li>
 
                     <li class="list-item">
                         <div id="popup_work" class="comselect-1" data-max-num="10">
-                            <!--<input data-role="text" class="inputype" value="职业身份" readonly="readonly" type="text">
-                            <input value="" data-role="hidden" name="work" title="职业身份" type="hidden">
+                            <input data-role="text" class="inputype" value="职业身份" readonly="readonly" type="text" id='fen'>
+                            <input value="" data-role="hidden" name="amount_zhi" title="职业身份" type="hidden">
                             <div class="p-rl">
-                                <div style="max-height: 360px; overflow-y: auto;" class="downbox">
+                                <div style="max-height: 360px; overflow-y: auto;" class="downbox" id='a4'>
                                     <ul data-role="list">
                                                                                 <li data-role="item" data-value="1"><a href="javascript:%20void(0);">事业单位</a></li>
                                                                                 <li data-role="item" data-value="2"><a href="javascript:%20void(0);">上班族</a></li>
@@ -965,8 +960,8 @@
                                                                                 <li data-role="item" data-value="99"><a href="javascript:%20void(0);">未知</a></li>
                                                                             </ul>
                                 </div>
-                            </div>-->
-							<select name="amount_zhi" id="address1" class='address1'>
+                            </div>
+							<!-- <select name="amount_zhi" id="address1" class='address1'>
 							<option value="职业身份">职业身份</option>
 							<option value="事业单位">事业单位</option>
 							<option value="上班族">上班族</option>
@@ -974,17 +969,17 @@
 							<option value="个体户">个体户</option>
 							<option value="无固定职业">无固定职业</option>
 							<option value="未知">未知</option>
-						</select>
+													</select> -->
                         </div>
 						
                     </li>
 
                     <li class="list-item">
                         <div id="popup_credit" class="comselect-1" data-max-num="10">
-                            <!--<input data-role="text" class="inputype" value="信用记录" readonly="readonly" type="text">
-                            <input value="" data-role="hidden" name="credit" title="信用记录" type="hidden">
+                            <input data-role="text" class="inputype" value="信用记录" readonly="readonly" type="text" id='lu'>
+                            <input value="" data-role="hidden" name="amount_xinyong" title="信用记录" type="hidden">
                             <div class="p-rl">
-                                <div style="max-height: 360px; overflow-y: auto;" class="downbox">
+                                <div style="max-height: 360px; overflow-y: auto;" class="downbox" id='a5'>
                                     <ul data-role="list">
                                                                                 <li data-role="item" data-value="1"><a href="javascript:%20void(0);">信用良好</a></li>
                                                                                 <li data-role="item" data-value="2"><a href="javascript:%20void(0);">少数逾期</a></li>
@@ -993,8 +988,8 @@
                                                                                 <li data-role="item" data-value="99"><a href="javascript:%20void(0);">未知</a></li>
                                                                             </ul>
                                 </div>
-                            </div>-->
-							<select name="amount_xinyong" id="address1" class='address1'>
+                            </div>
+							<!-- <select name="amount_xinyong" id="address1" class='address1'>
 							<option value="信用记录">信用记录</option>
 							<option value="信用良好">信用良好</option>
 							<option value="少数逾期">少数逾期</option>
@@ -1002,38 +997,38 @@
 							<option value="无信用记录">无信用记录</option>
 							<option value="无固定职业">无固定职业</option>
 							<option value="未知">未知</option>
-						</select>
+													</select> -->
                         </div>
                     </li>
 
                     <li class="list-item">
                         <div id="popup_salary_form" class="comselect-1" data-max-num="10">
-                            <!--<input data-role="text" class="inputype" value="工资形式" readonly="readonly" type="text">
-                            <input value="" data-role="hidden" name="salary_form" title="工资形式" type="hidden">
+                            <input data-role="text" class="inputype" value="工资形式" readonly="readonly" type="text" id='xing'>
+                            <input value="" data-role="hidden" name="amount_gongzi" title="工资形式" type="hidden">
                             <div class="p-rl">
-                                <div style="max-height: 360px; overflow-y: auto;" class="downbox">
+                                <div style="max-height: 360px; overflow-y: auto;" class="downbox" id='a6'>
                                     <ul data-role="list">
                                                                                 <li data-role="item" data-value="1"><a href="javascript:%20void(0);">打卡</a></li>
                                                                                 <li data-role="item" data-value="2"><a href="javascript:%20void(0);">现金</a></li>
                                                                                 <li data-role="item" data-value="99"><a href="javascript:%20void(0);">未知</a></li>
                                                                             </ul>
                                 </div>
-                            </div>-->
-						    <select name="amount_gongzi" id="address1" class='address1'>
-							<option value="工资形式">工资形式</option>
-							<option value="打卡">打卡</option>
-							<option value="现金">现金</option>
-							<option value="未知">未知</option>
-						</select>
+                            </div>
+						    <!-- <select name="amount_gongzi" id="address1" class='address1'>
+						    							<option value="工资形式">工资形式</option>
+						    							<option value="打卡">打卡</option>
+						    							<option value="现金">现金</option>
+						    							<option value="未知">未知</option>
+						    						</select> -->
                         </div>
                     </li>
 
                     <li class="list-item">
                         <div id="popup_house" class="comselect-1" data-max-num="10">
-                            <!--<input data-role="text" class="inputype" value="住房状况" readonly="readonly" type="text">
-                            <input value="" data-role="hidden" name="house" title="住房状况" type="hidden">
+                            <input data-role="text" class="inputype" value="住房状况" readonly="readonly" type="text" id='fang'>
+                            <input value="" data-role="hidden" name="amount_fang" title="住房状况" type="hidden">
                             <div class="p-rl">
-                                <div style="max-height: 360px; overflow-y: auto;" class="downbox">
+                                <div style="max-height: 360px; overflow-y: auto;" class="downbox" id='a7'>
                                     <ul data-role="list">
                                                                                 <li data-role="item" data-value="1"><a href="javascript:%20void(0);">租房</a></li>
                                                                                 <li data-role="item" data-value="2"><a href="javascript:%20void(0);">集体宿舍</a></li>
@@ -1043,16 +1038,16 @@
                                                                                 <li data-role="item" data-value="99"><a href="javascript:%20void(0);">未知</a></li>
                                                                             </ul>
                                 </div>
-                            </div>-->
-						    <select name="amount_fang" id="address1" class='address1'>
-							<option value="住房状况">住房状况</option>
-							<option value="租房">租房</option>
-							<option value="集体宿舍">集体宿舍</option>
-							<option value="与亲戚合住">与亲戚合住</option>
-							<option value="有房有贷款">有房有贷款</option>
-							<option value="有房无贷款">有房无贷款</option>
-							<option value="未知">未知</option>
-						</select>
+                            </div>
+						    <!-- <select name="amount_fang" id="address1" class='address1'>
+						    							<option value="住房状况">住房状况</option>
+						    							<option value="租房">租房</option>
+						    							<option value="集体宿舍">集体宿舍</option>
+						    							<option value="与亲戚合住">与亲戚合住</option>
+						    							<option value="有房有贷款">有房有贷款</option>
+						    							<option value="有房无贷款">有房无贷款</option>
+						    							<option value="未知">未知</option>
+						    						</select> -->
                         </div>
                     </li>
 
@@ -1246,10 +1241,28 @@
 </body></html>
 <script type="text/javascript" src='js/jquery.js'></script>
 <script type="text/javascript">
-//$("#droplist").mouseleave(function(){
-
-  //$("#droplist").css("background-color","red");
-
-//});
-
+$('#qi').mouseover(function(){
+	$('#a1').show();
+});
+//$('.nav').toggle(function(){
+	//$('.content').slideToggle();
+//})
+$('#shi').mouseover(function(){
+	$('#a2').show();
+});
+$('#pin').mouseover(function(){
+	$('#a3').show();
+});
+$('#fen').mouseover(function(){
+	$('#a4').show();
+});
+$('#lu').mouseover(function(){
+	$('#a5').show();
+});
+$('#xing').mouseover(function(){
+	$('#a6').show();
+});
+$('#fang').mouseover(function(){
+	$('#a7').show();
+});
 </script>
