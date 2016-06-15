@@ -63,7 +63,7 @@ class IndexController extends Controller
 
         //print_r($brandinfo);die;
 
-
+       // print_r($car);die;
 
 
      
