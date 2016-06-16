@@ -816,7 +816,9 @@
         </div>
 
         <!-- menu s-->
-                        <div class="nav">
+		<!--加载公共导航栏-->
+		<?php include ('nav.htm');?>     
+              <!--          <div class="nav">
             <div class="w">
                 <a class="fr " baidu_alog="pc_index_top_tab&click&pc_index_top_tab_appdownload_c"
                    target="_blank" href="/zq_app/" data-gzlog="tracking_type=click&eventid=0010190000000012" title="瓜子二手车直卖网APP">APP下载</a>
@@ -834,6 +836,7 @@
                    href="/bj/intro/"  data-gzlog="tracking_type=click&eventid=0010000000000010" title="瓜子二手车服务保障">服务保障</a>
             </div>
         </div>
+		-->
         <!-- menu e-->
     </div>
 
