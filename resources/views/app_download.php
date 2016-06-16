@@ -46,12 +46,13 @@
         <!-- menu s-->
                         <div class="nav">
             <div class="w">
-                <a class="fr active" baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_appdownload_c" target="_blank" href="http://www.guazi.com/zq_app/" data-gzlog="tracking_type=click&amp;eventid=0010190000000012" title="瓜子二手车直卖网APP">APP下载</a>
-                                    <a class="fr " baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_carfina_c" href="http://jr.guazi.com/bj/" data-gzlog="tracking_type=click&amp;eventid=0010000000000011" title="二手车分期付款">分期购车</a>
-                                <a class="fl " baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_index_c" href="http://www.guazi.com/bj/" data-gzlog="tracking_type=click&amp;eventid=0010000000000007" title="瓜子二手车">首页</a>
-                <a class="fl " baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_buy_c" href="http://www.guazi.com/bj/buy/" data-gzlog="tracking_type=click&amp;eventid=0010000000000008" title="北京个人二手车">我要买车</a>
-                <a class="fl " baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_sell_c" href="http://www.guazi.com/bj/sell/?clueS=01" data-gzlog="tracking_type=click&amp;eventid=0010050000000009" title="北京二手车出售">我要卖车</a>
-                <a class="fl " baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_intro_c" href="http://www.guazi.com/bj/intro/" data-gzlog="tracking_type=click&amp;eventid=0010000000000010" title="瓜子二手车服务保障">服务保障</a>
+                <a class="fr" target="_blank" href="app" gjalog="100000000521000100000010">APP下载</a>
+            <a baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_fenqi_c" class="fr active" href="common" gjalog="100000001231000100000010">分期购车</a>
+            <!--<a class="fr" href="http://www.guazi.com/zq_expandMarket/" gjalog="100000001248000100000010">车生活</a>-->
+            <a class="fl" href="index.php" gjalog="100000000053000100000010">首页</a>
+            <a class="fl" href="buy" gjalog="100000000054000100000010">我要买车</a>
+            <a class="fl" href="sell" gjalog="100000000055000100000010">我要卖车</a>
+            <a class="fl" href="server" gjalog="100000000056000100000010">服务保障</a>
             </div>
         </div>
         <!-- menu e-->
