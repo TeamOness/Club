@@ -240,13 +240,13 @@
     <div class="nav">
         <div class="w">
 
-            <a class="fr" target="_blank" href="app_download.php" gjalog="100000000521000100000010">APP下载</a>
-            <a baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_fenqi_c" class="fr active" href="http://jr.guazi.com/" gjalog="100000001231000100000010">分期购车</a>
+            <a class="fr" target="_blank" href="app" gjalog="100000000521000100000010">APP下载</a>
+            <a baidu_alog="pc_index_top_tab&amp;click&amp;pc_index_top_tab_fenqi_c" class="fr active" href="common" gjalog="100000001231000100000010">分期购车</a>
             <!--<a class="fr" href="http://www.guazi.com/zq_expandMarket/" gjalog="100000001248000100000010">车生活</a>-->
-            <a class="fl" href="index" gjalog="100000000053000100000010">首页</a>
+            <a class="fl" href="index.php" gjalog="100000000053000100000010">首页</a>
             <a class="fl" href="buy" gjalog="100000000054000100000010">我要买车</a>
             <a class="fl" href="sell" gjalog="100000000055000100000010">我要卖车</a>
-            <a class="fl" href="server_security" gjalog="100000000056000100000010">服务保障</a>
+            <a class="fl" href="server" gjalog="100000000056000100000010">服务保障</a>
         </div>
     </div>
 </div>

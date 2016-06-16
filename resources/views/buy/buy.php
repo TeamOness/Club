@@ -85,7 +85,7 @@
                 </div>
             </div>
             <!-- menu s-->
-            <?php include('nav.htm'); ?> 
+         <?php include('nav.htm'); ?> 
             <!-- menu e-->    
         </div>
         <!--买车页导流-->
@@ -454,12 +454,16 @@ $(".price").click(function() {
             <!--page--> 
             <div class="pages">  
                 <!-- <div class="pageBox" data-widget="app/ms_v2/common/list_page.js#pagination">
-                --><a href=""><<&nbsp;&nbsp;&nbsp;</a>
+                -->
+				
+				<a href=""><<&nbsp;&nbsp;&nbsp;</a>
                 <a href="?page=1">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="?page=<?php echo $prev ?>">上一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="?page=<?php echo $next ?>">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;
                 <a href="?page=<?php echo $pages ?>">末页</a>
                 <a href="">&nbsp;&nbsp;&nbsp;>></a>
+				
+				 
             </div> 
             <!-- <div class="pageBox" data-widget="app/ms_v2/common/list_page.js#pagination">
             <ul class="pageLink clearfix">

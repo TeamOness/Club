@@ -1,0 +1,264 @@
+2016-06-12 14:44:24 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Unknown component ID: db' in D:\usercar\admin\vendor\yiisoft\yii2\di\ServiceLocator.php:136
+Stack trace:
+#0 D:\usercar\admin\vendor\yiisoft\yii2\base\Application.php(491): yii\di\ServiceLocator->get('db')
+#1 D:\usercar\admin\vendor\yiisoft\yii2\db\ActiveRecord.php(133): yii\base\Application->getDb()
+#2 D:\usercar\admin\vendor\yiisoft\yii2\db\ActiveQuery.php(320): yii\db\ActiveRecord::getDb()
+#3 D:\usercar\admin\vendor\yiisoft\yii2\db\Query.php(206): yii\db\ActiveQuery->createCommand(NULL)
+#4 D:\usercar\admin\vendor\yiisoft\yii2\db\ActiveQuery.php(132): yii\db\Query->all(NULL)
+#5 D:\usercar\admin\frontend\controllers\LoginController.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\controllers\LoginController->actionLogin()
+#7 D:\usercar\admin\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\usercar\admin\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 D:\usercar\admin\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#10 D:\usercar\admin\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('login/login', Array)
+#11 D:\usercar\admin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\usercar\admin\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-06-12 14:44:24 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'login/login'
+]
+
+$_POST = [
+    'name' => ''
+    'pwd' => ''
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\server\\mysql\\bin;D:\\tools\\svn\\bin;D:\\server\\php55;D:\\server\\php55\\ext;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/server/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1832'
+    'SCRIPT_NAME' => '/admin/frontend/web/index.php'
+    'REQUEST_URI' => '/admin/frontend/web/index.php?r=login/login'
+    'QUERY_STRING' => 'r=login/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53677'
+    'SCRIPT_FILENAME' => 'D:/usercar/admin/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/usercar'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/usercar'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.usercar.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'CONTENT_LENGTH' => '10'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_REFERER' => 'http://www.usercar.com/admin/frontend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_HOST' => 'www.usercar.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/admin/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1465713864.4377
+    'REQUEST_TIME' => 1465713864
+]
+2016-06-12 14:44:24 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\usercar\admin\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\usercar\admin\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\usercar\admin\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\usercar\admin\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\usercar\admin\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\usercar\admin\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#6 {main}
+2016-06-12 14:44:24 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'login/login'
+]
+
+$_POST = [
+    'name' => ''
+    'pwd' => ''
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\server\\mysql\\bin;D:\\tools\\svn\\bin;D:\\server\\php55;D:\\server\\php55\\ext;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/server/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1832'
+    'SCRIPT_NAME' => '/admin/frontend/web/index.php'
+    'REQUEST_URI' => '/admin/frontend/web/index.php?r=login/login'
+    'QUERY_STRING' => 'r=login/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53677'
+    'SCRIPT_FILENAME' => 'D:/usercar/admin/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/usercar'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/usercar'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.usercar.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'CONTENT_LENGTH' => '10'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_REFERER' => 'http://www.usercar.com/admin/frontend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_HOST' => 'www.usercar.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/admin/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1465713864.4377
+    'REQUEST_TIME' => 1465713864
+]
+2016-06-12 14:46:10 [127.0.0.1][-][-][error][yii\base\InvalidConfigException] exception 'yii\base\InvalidConfigException' with message 'Unknown component ID: db' in D:\usercar\admin\vendor\yiisoft\yii2\di\ServiceLocator.php:136
+Stack trace:
+#0 D:\usercar\admin\vendor\yiisoft\yii2\base\Application.php(491): yii\di\ServiceLocator->get('db')
+#1 D:\usercar\admin\vendor\yiisoft\yii2\db\ActiveRecord.php(133): yii\base\Application->getDb()
+#2 D:\usercar\admin\vendor\yiisoft\yii2\db\ActiveQuery.php(320): yii\db\ActiveRecord::getDb()
+#3 D:\usercar\admin\vendor\yiisoft\yii2\db\Query.php(206): yii\db\ActiveQuery->createCommand(NULL)
+#4 D:\usercar\admin\vendor\yiisoft\yii2\db\ActiveQuery.php(132): yii\db\Query->all(NULL)
+#5 D:\usercar\admin\frontend\controllers\LoginController.php(28): yii\db\ActiveQuery->all()
+#6 [internal function]: frontend\controllers\LoginController->actionLogin()
+#7 D:\usercar\admin\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#8 D:\usercar\admin\vendor\yiisoft\yii2\base\Controller.php(151): yii\base\InlineAction->runWithParams(Array)
+#9 D:\usercar\admin\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('login', Array)
+#10 D:\usercar\admin\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('login/login', Array)
+#11 D:\usercar\admin\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\usercar\admin\frontend\web\index.php(18): yii\base\Application->run()
+#13 {main}
+2016-06-12 14:46:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'login/login'
+]
+
+$_POST = [
+    'name' => ';lfkdflskdflds'
+    'pwd' => 'dddddd'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\server\\mysql\\bin;D:\\tools\\svn\\bin;D:\\server\\php55;D:\\server\\php55\\ext;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/server/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1796'
+    'SCRIPT_NAME' => '/admin/frontend/web/index.php'
+    'REQUEST_URI' => '/admin/frontend/web/index.php?r=login/login'
+    'QUERY_STRING' => 'r=login/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53762'
+    'SCRIPT_FILENAME' => 'D:/usercar/admin/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/usercar'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/usercar'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.usercar.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'CONTENT_LENGTH' => '32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_REFERER' => 'http://www.usercar.com/admin/frontend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_HOST' => 'www.usercar.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/admin/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1465713970.7858
+    'REQUEST_TIME' => 1465713970
+]
+2016-06-12 14:46:10 [127.0.0.1][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'Exception' with message 'Serialization of 'Closure' is not allowed' 
+
+in D:\usercar\admin\vendor\yiisoft\yii2-debug\LogTarget.php:58
+
+Stack trace:
+#0 D:\usercar\admin\vendor\yiisoft\yii2-debug\LogTarget.php(58): serialize(Array)
+#1 D:\usercar\admin\vendor\yiisoft\yii2-debug\LogTarget.php(112): yii\debug\LogTarget->export(Array)
+#2 D:\usercar\admin\vendor\yiisoft\yii2\log\Dispatcher.php(183): yii\debug\LogTarget->collect(Array, true)
+#3 D:\usercar\admin\vendor\yiisoft\yii2\log\Logger.php(173): yii\log\Dispatcher->dispatch(Array, true)
+#4 D:\usercar\admin\vendor\yiisoft\yii2\base\ErrorHandler.php(111): yii\log\Logger->flush(true)
+#5 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidConfigException))
+#6 {main}
+2016-06-12 14:46:10 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'login/login'
+]
+
+$_POST = [
+    'name' => ';lfkdflskdflds'
+    'pwd' => 'dddddd'
+]
+
+$_SERVER = [
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;D:\\server\\mysql\\bin;D:\\tools\\svn\\bin;D:\\server\\php55;D:\\server\\php55\\ext;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\TortoiseGit\\bin;'
+    'SYSTEMROOT' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'PHP_FCGI_MAX_REQUESTS' => '1000'
+    'PHPRC' => 'D:/server/php55n'
+    '_FCGI_SHUTDOWN_EVENT_' => '1796'
+    'SCRIPT_NAME' => '/admin/frontend/web/index.php'
+    'REQUEST_URI' => '/admin/frontend/web/index.php?r=login/login'
+    'QUERY_STRING' => 'r=login/login'
+    'REQUEST_METHOD' => 'POST'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '53762'
+    'SCRIPT_FILENAME' => 'D:/usercar/admin/frontend/web/index.php'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/usercar'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => 'D:/usercar'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_NAME' => 'www.usercar.com'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e mod_fcgid/2.3.9'
+    'SERVER_SIGNATURE' => ''
+    'SystemRoot' => 'C:\\Windows'
+    'CONTENT_LENGTH' => '32'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_CONNECTION' => 'close'
+    'HTTP_REFERER' => 'http://www.usercar.com/admin/frontend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:47.0) Gecko/20100101 Firefox/47.0'
+    'HTTP_HOST' => 'www.usercar.com'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/admin/frontend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1465713970.7858
+    'REQUEST_TIME' => 1465713970
+]

@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 
 
-// Route::get('/buy', 'BuyController@buy');
+Route::get('/buy', 'BuyController@buy');
 // Route::get('/goodslist', 'BuyController@goodslist');
 
 
@@ -25,7 +25,7 @@ Route::get('/buy', 'BuyController@buy');
 Route::get('/goodslist', 'BuyController@goodslist');
 
 
-//崔阳阳做的模�?
+//崔阳阳做的模�?
 Route::any('common','CommonController@common');//分期购车表单添加页面
 
 Route::post('commonok','CommonController@commonok');//分期购车表单添加成功页面
@@ -35,7 +35,8 @@ Route::post('partnerok','CommonController@partnerok');//分期购车申请合作
 
 Route::any('sell','SellController@sell');//我要卖车首页显示页面
 Route::any('sellok','SellController@sellok');//我要卖车添加成功页面
-
+Route::any('server','SeverController@index');  //加载服务保障页面
+Route::any('app','AppController@index');  //加载APP下载页面
 
 // Route::get('/', 'BuyController@buy');
 // Route::get('goodslist', 'BuyController@goodslist');
@@ -44,7 +45,7 @@ Route::any('sellok','SellController@sellok');//我要卖车添加成功页面
 
 
 
-//牛宗亮加载首�?
+//牛宗亮加载首页
 Route::any('/','IndexController@index');
 Route::any('/buysearch','BuyController@buysearch');
 
