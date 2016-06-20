@@ -1,0 +1,35 @@
+.subject-wrap .banner li.pic15-new{background:url(http://imgs.xin.com/xin/images/subject/fhome_banner4.jpg) no-repeat center 0;}
+.car-ext{width:1100px;margin-top:20px;display:block;}
+.car-ext .car-crs{width:534px;height:520px;border:1px solid #d9d9d9;border-radius:12px;margin-bottom:28px;position:relative;float:left;}
+.car-ext .car-crs img{width:534px;height:356px;border-top-left-radius:12px;border-top-right-radius:12px;}
+.car-ext .car-crs .pric-ico{display:block;position:absolute;height:100px;left:10px;top:10px;background:#32b16c;text-align:center;border-radius:8px;}
+.car-ext .car-crs .pric-ico span{font:normal 18px/40px 'Microsoft Yahei';color:#fff;background:url(http://imgs.xin.com/b2c/xin-extend/512extend/images/price_del.png) center no-repeat;display:block;}
+.car-ext .car-crs .pric-ico em{font:normal 26px/56px 'Microsoft Yahei';color:#32b16c;display:block;border-bottom-left-radius:4px;border-bottom-right-radius:4px;height:56px;margin:0 4px 4px;padding:0 5px;background:#fff;}
+.car-ext .car-crs b.qlty-ico1{position:absolute;display:block;height:94px;width:94px;right:0;top:0;background:url(http://imgs.xin.com/b2c/xin-extend/512extend/images/qlty_ico1.png) center no-repeat;}
+.car-ext .car-crs b.qlty-ico2{position:absolute;display:block;height:94px;width:94px;right:0;top:0;background:url(http://imgs.xin.com/b2c/xin-extend/512extend/images/qlty_ico2.png) center no-repeat;}
+.car-ext .car-crs b.sale-ico{height:200px;width:200px;right:170px;top:80px;position:absolute;display:block;background:url(http://imgs.xin.com/xin/images/collect/sale_bg.png);}
+.car-ext .car-crs .crs-detail{margin:20px;}
+.car-ext .car-crs .crs-detail a.tit{font:normal 18px/26px 'Microsoft Yahei';color:#333;display:block;height:26px;width:494px;overflow:hidden;}
+.car-ext .car-crs .crs-detail span{height:28px;padding-bottom:15px;border-bottom:1px solid #e5e5e5;display:block;font:normal 14px/28px 'Microsoft Yahei';color:#999;}
+.car-ext .car-crs .crs-detail span b{display:inline-block;width:10px;height:28px;padding:0 10px;}
+.car-ext .car-crs .crs-detail .tel{height:40px;margin-top:15px;position:relative;}
+.car-ext .car-crs .crs-detail .tel b.num{font:normal 16px/40px 'Microsoft Yahei';color:#999;padding-left:25px;background:url(http://imgs.xin.com/b2c/xin-extend/512extend/images/ex_ico.png) 0 3px no-repeat;}
+.car-ext .car-crs .crs-detail .tel a.btm{display:inline-block;height:40px;width:240px;float:right;font:normal 16px/40px 'Microsoft Yahei';color:#fff;text-indent:43px;background:url(http://imgs.xin.com/b2c/xin-extend/512extend/images/ex_ico.png) 0 -42px no-repeat;}
+.car-ext .mr28{margin-right:28px;} 
+.car-art{width:1100px;height:230px;padding-top:30px;border-top:1px solid #e5e5e5;}
+.car-art img{width:300px;height:200px;float:left;border-radius:4px;}
+.car-art .art-list{float:left;margin:30px 0 0 30px;width:370px;height:150px;}
+.car-art .art-list p{font:normal 20px/40px 'Microsoft Yahei';color:#535251;}
+.car-art .art-list li{height:36px;text-indent:15px;background:url(http://imgs.xin.com/xin/images/subject/subject_ico.png) no-repeat 2px -934px;}
+.car-art .art-list li a{font:normal 14px/36px 'Microsoft Yahei';color:#535251;}
+.car-art .art-list li a:hover{color:#ff5837;}
+.btmPrice{height:400px;width:120px;z-index:10;display:block;position:fixed;left:0;top:50%;margin-top:-200px;}
+.brand-search{background:#fff;border-radius:9px;height:42px;width:595px;position:absolute;top:180px;left:50%;margin-left:-299px;}
+.search-btn{position:relative;background:#ff5837;border-top-right-radius:4px;border-bottom-right-radius:4px;border:none;height:42px;width:120px;padding-left:40px;color:#fff;font:normal 16px/40px "Microsoft YaHei";text-decoration:none;text-align:left;cursor:pointer;}
+.search-btn i{background-position:0 0;left:16px;top:12px;height:22px;width:23px;}
+.index-ico{background:url(http://imgs.xin.com/xin/images/home/index_ico.png) no-repeat 0 0;}
+.pop_ext{height:219px;width:361px;display:block;position:fixed;right:0;bottom:0;z-index:10;}
+.close_btn{display:block;height:14px;width:14px;position:absolute;background:url(http://imgs.xin.com/xin/images/car-detail/closebtn.png) no-repeat;}
+#cDload{left:5px;top:65px;}
+#cPrice{right:10px;top:15px;}
+.pop_dload{display:block;height:42px;width:120px;position:absolute;top:157px;left:27px;background:url(http://imgs.xin.com/xin/images/car-detail/closeBg.png) no-repeat;}

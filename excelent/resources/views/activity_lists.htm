@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>优信二手车 – 宝典</title>
+        <meta http-equiv="Access-Control-Allow-Origin" content="http://car.xin.com">
+        <meta name="keywords" content="二手车问题解答,二手车选购,二手车付一半,二手车分期付款,个人二手车出售">
+        <meta name="description" content="【优信二手车】宝典将为您选购二手车提供专业指导,为个人二手车出售提供最有价值的帮助,为买车贷款开通最便捷的通道,买卖二手车首选XIN.COM。">
+        <meta property="qc:admins" content="151402520760166375">
+        <link rel="shortcut icon" href="http://www.xin.com/favicon.ico">        
+        <script src="activity_lists_files/collect.js" async="" type="text/javascript"></script><script src="activity_lists_files/hm.js"></script><script src="activity_lists_files/zhuge-lastest.js" async="" id="zhuge-js" type="text/javascript"></script><script src="activity_lists_files/ab.js" async=""></script><script src="activity_lists_files/jquery-1.js" type="text/javascript"></script>
+        <script src="activity_lists_files/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            var TOP_INFO = { location: { }, user: { }, half_city: [], url: '' };
+            var TOP_GET = { };
+                                    var is_from_wap = /[?|&]from=wap/.test(window.location.search);
+
+            //from wap记录cookie
+            if (is_from_wap) {
+                $.cookie('access_from', 'wap', { path: '/', expires: 0 });
+            }
+            if ($.cookie('access_from') == 'wap') {
+                is_from_wap = true;
+            }
+
+            //手机端自动跳转
+            if (!is_from_wap && /Android|iP[ao]d|iPhone/gi.test(navigator.userAgent)) {
+                var reg = new RegExp("/*?" + TOP_INFO.location.ename, "g");
+                var path = window.location.pathname.replace(reg, '');
+                var param = window.location.search;
+
+                //特别页面跳转
+                var con_name = 'qa';
+                var act_name = 'lists';
+                var mdomain = 'http://m.xin.com';
+
+                //首页跳转
+                if (con_name == 'home' && act_name == 'index') {
+                    window.location.href = mdomain + '/' + TOP_INFO.location.ename + param;
+                //付一半跳转
+                } else if (con_name == 'halfprice' && act_name == 'index') {
+                    window.location.href = mdomain + '/' + TOP_INFO.location.ename + '/s/v5a2/' + param;
+                //车辆详情跳转
+                }else if (con_name == 'car' && act_name == 'index'){
+                    window.location.href = mdomain + path + param;
+                //商铺页跳转
+                }else if (con_name == 'dealer' && act_name == 'index') {
+                    window.location.href = mdomain + path + param;
+                //文章详情页跳转
+                }else if (con_name == 'article' && act_name == 'view') {
+                    var act_arr = window.location.pathname.split('/');
+                    for (i = act_arr.length - 1; i >= 0; i--) {
+                        if (!!act_arr[i]) {
+                            window.location.href = mdomain + '/article/article_detail/' + act_arr[i] + param;
+                            break;
+                        }
+                    }
+                }else if (con_name == 'article' && act_name == 'listing') { //活动列表页面跳转
+                    var act_arr = window.location.pathname.split('/');
+                    for (i = act_arr.length - 1; i >= 0; i--) {
+                        if (!!act_arr[i]) {
+                            window.location.href = mdomain + '/article/index/' + act_arr[i] + param;
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            // 初始化诸葛统计数据参数
+            var is_hf = ''=='halfprice' ? 1 : 0;
+            var search_q = '';
+            var search_ot = ''.indexOf('y1') != -1 ? '全国其他城市' : (''.indexOf('y2') != -1 ? '周边城市' : '');
+            var search_count = '';
+            var zg_page_flag = 0;
+
+            //可信网站
+            function KNET_change(eleId) {
+                var str= document.getElementById(eleId).href;
+                var str1 =str.substring(0,(str.length-6));
+                str1+=KNET_RndNum(6); 
+                document.getElementById(eleId).href=str1;
+            }
+            function KNET_RndNum(k) {
+                var rnd=""; 
+                for (var i=0;i < k;i++) {
+                    rnd+=Math.floor(Math.random()*10); 
+                }
+                return rnd;
+            }
+        </script>
+        <link href="activity_lists_files/jquery-ui.css" rel="stylesheet" type="text/css">
+        <link href="activity_lists_files/base.css" rel="stylesheet" type="text/css">
+        <link href="activity_lists_files/common.css" rel="stylesheet" type="text/css">
+        <link href="activity_lists_files/popup.css" rel="stylesheet" type="text/css">
+        <link href="activity_lists_files/page2016.css" rel="stylesheet" type="text/css">
+        <script src="activity_lists_files/popup.js" type="text/javascript"></script>
+        <script src="activity_lists_files/jquery-ui.js" type="text/javascript"></script>
+        <script src="activity_lists_files/tab.js"></script>
+        <script src="activity_lists_files/main_page.js"></script>
+        <script>
+        var suggest = null;
+        </script>
+        
+        <script>
+            $('#regA').click(function () {
+                _hmt.push(['_trackEvent', 'Register', 'Register_start']);
+            });
+            $('.noregist').click(function () {
+                _hmt.push(['_trackEvent', 'Register', 'Register_start']);
+            });
+            $('#loginA').click(function () {
+                _hmt.push(['_trackEvent', 'Login', 'Login_manual']);
+            });            
+        </script>
+    </head>
+    
+                        
+    <body class="bg-f0">
+        
+        
+        <!--20141203新版头部开始-->
+        <div class="fixed-head-wrap ">
+            <div class="fixed-head rel">
+                                <a href="http://www.xin.com/quanguo/" class="fixed-logo" title="【优】质诚【信】二手车交易平台"></a>
+                                                <dl class="select-city fixed-city abs" id="citySelect" style="display: block;">
+                    <dt id="current_city_id">北京</dt>
+                </dl>
+                <ul class="nav-list fixed-list abs">
+                    <li><a uxevent="w_top/buycar" onclick="zhuge_ckflag(1,'头部-买车列表'),zhuge_track('C-头部-买车',{ '城市':'&amp;nbsp;&amp;nbsp;' })" class="a_buypage " href="http://www.xin.com/beijing/s/" sname="" title="购买二手车">买车<b class="sbx-ico abs"></b></a></li>
+                    <li><a uxevent="w_top/sellcar" onclick="zhuge_track('C-首页-卖车', { '城市': '&amp;nbsp;&amp;nbsp;', '类型':'我要卖车' }); zhuge_track('我要卖车', { '来源页面':'头部-卖车','城市':'&amp;nbsp;&amp;nbsp;' });" class="a_sellpage buy-car " href="http://www.xin.com/sale/c2b_car/201" title="二手车出售">卖车</a></li>
+                    <li class="rel" id="li_halfprice" style=""><a uxevent="w_top/halfprice" onclick="zhuge_ckflag(1,'头部-付一半'),zhuge_track('C-头部-付一半',{ '城市':'&amp;nbsp;&amp;nbsp;' })" id="php_half_city_link" class="" href="http://www.xin.com/beijing/h/" sname="" title="首付一半 分期付款">付一半</a></li>
+                                        <li><a onclick="zhuge_track('C-头部-车辆问答',{ '城市':'&amp;nbsp;&amp;nbsp;' });uxl_track('w_top/question')" class=" a_question" href="http://www.xin.com/activity//" title="知心推荐 问题答疑">宝典</a></li>
+                                        <li><a onclick="zhuge_track('C-头部-服务保障',{ '城市':'&amp;nbsp;&amp;nbsp;' });uxl_track('w_top/service')" href="http://www.xin.com/service//" class=" a_service" title="优信二手车服务保障">服务保障</a></li>
+                    <li><a uxevent="w_top/dl_app" id="id_dl_app" href="http://www.xin.com/app/" title="优信二手车手机APP" target="_blank"><b class="ico app-ico fl"></b>下载App</a></li>
+                    <li id="xin_top_userinfo" sname=""><div class="person-wrap" style="top:0px;"><a href="javascript:clear_invalid();show_popup('#popupLogin','#popupLogin%20.closeJs');" id="loginA" class="login">登录</a>/<a href="http://www.xin.com/register/" id="regA" rel="nofollow" class="register">注册</a></div></li>
+                </ul>
+            </div>
+        </div>
+        
+        
+<div class="uxt-wrap clearfix bgf">
+    <div class="btitle">
+    <h2>宝典</h2>
+    <div class="uxt-search">
+        <input autocomplete="off" value="搜一下您关心的问题" data-default="搜一下您关心的问题" id="qa_search_input" class="qa-s-input ui-autocomplete-input" data-addtop="+6" type="text">
+        <button type="submit" class="qa-s-btn" for="qa_search_input"><i></i>搜索问题</button>
+    </div>
+    <a href="javascript:if(TOP_INFO.user.mobile){%20show_popup('#uAsk','#uAsk%20.closeJs');%20}else{%20clear_invalid();show_popup('#popupLogin','#popupLogin%20.closeJs');%20}" id="question_button" class="ask-ico" title="权威解析 专业解答">我要提问</a>
+</div> 
+    <div class="uxt-con clearfix"> 
+        <div class="utx-left">
+             
+                            <ul class="list">
+                    <li><a href="http://www.xin.com/qa/lists/" title="买车宝典" class="active">买车</a></li>
+                    <li><a href="http://www.xin.com/qa/lists/2" title="卖车助答">卖车</a></li>
+                    <li><a href="http://www.xin.com/qa/lists/7" title="付一半问题解答">首付一半</a></li>
+                </ul>
+                        
+            <div class="ulDetail uCon" style="display:block;">
+                <ul class="umy-ask">
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120252" class="qa-one">
+                            <h4>04年Polo，04年飞度，04年捷达.07年QQ6哪个更合适，预算两万多</h4>
+                            <p>您好，相对来说POLO飞度和捷达都是比较不错的，质量也比较可靠耐用，飞度会更省油一些，空间也比较灵活，您可以考虑一下。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>其他</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120244" class="qa-one">
+                            <h4>优信买车送强交险是什么东东啦？刚拿驾照！商家推荐的付一半车指的是在优信平台上的吗？就不享受送的这个险？</h4>
+                            <p>您好，优信工作人员陪同去商家处看车，成功交易，使用优信POS机刷卡支付，就可以赠送
+交强险了。赠送的交强险有效期为一年，不包含车船税，车船税必须同交强险一起购买，由购车用户承担费用。一年有效期内不参与活动的，视为放弃。商家推荐的
+付一半用户并且在该商家购买付一半车源的，不赠送交强险。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>其他</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120242" class="qa-one">
+                            <h4>宝马525跟林肯KMZ相比优缺点有哪些</h4>
+                            <p>您好，宝马525的操控性和动力是比较好的，外观时尚，内饰也更难看一些，而且空间表现优于MKZ、但隔音降噪方面比较一般，MKZ的外观大气稳重，豪华感更出色一些，舒适性较好，但是油耗相对较高，内饰比较一般。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>选车</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120240" class="qa-one">
+                            <h4>项目部代步，想买辆SUV，五万一下的，什么车好</h4>
+                            <p>您好，您可以考虑一下5-6年车龄的奇瑞瑞虎、哈弗H3、海马骑士、1-3年车龄的金杯智尚S30、长城哈弗M4等车型。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>其他</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120229" class="qa-one">
+                            <h4>15万买个suv
+新旧无所谓不要国产看着大气点的不要太费油我是农村的在农村跟城里没事开着玩</h4>
+                            <p>您好，您可以考虑一下2-4年左右的Jeep指南者、雪佛兰科帕奇、大众途观、本田CRV、日产奇骏、现代途胜等车型。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>其他</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120217" class="qa-one">
+                            <h4>我想买个十万左右的车，东南x7你看行不行</h4>
+                            <p>您好，东南DX7这款SUV是比较不错的，外观大气时尚，内饰豪华，有档次感，空间表现也不错，整体做工出色，是可以购买的。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>其他</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120195" class="qa-one">
+                            <h4>两万左右求懂车的兄弟推荐一台练手车。</h4>
+                            <p>您好，您可以考虑车龄1-3年的比亚迪F0、夏利N3、自由舰、车龄3-5年的风神H30、风云2、比亚迪F3等，这几款车都是比较不错的选择，您可以进入优信买车中心查看车辆详情。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>选车</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120188" class="qa-one">
+                            <h4>英朗和卡罗拉哪款好</h4>
+                            <p>您好，英朗和卡罗拉这两款车相比，英朗比较稳重大气，配置比较全面，安全性能高；卡罗拉质量比较稳定、耐用，油耗经济，总体上来说卡罗拉这款车是比较不错的选择，如果您比较注重安全方面可以考虑英朗。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>其他</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120185" class="qa-one">
+                            <h4>我是陕西人，在上海上班，想在上海买一辆付一半的二手车，牌照怎么办呢？一共大概得多少钱呢？</h4>
+                            <p>您好，上海是限购城市，如果车辆在上海落户上牌，是需要您自备购车指标的。您没有指标的话，您可以考虑将车辆迁入陕西上牌，但需要符合国四排放标准的车辆才能迁入。一般车辆过户费大约在1000元以内，具体费用以当地车管所公布为准。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>其他</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                        <li>
+                        <a href="http://www.xin.com/qa/detail/120178" class="qa-one">
+                            <h4>我想买一辆8-9万的二手车，请问买什么好，我是西安人</h4>
+                            <p>您好，您可以考虑车龄1-3年的福克斯、朗动、花冠、卡罗拉、车龄3-5年的逍客、起亚K5、大众迈腾等，这几款车都是比较不错的选择，您可以进入优信买车中心查看车辆详情。</p>
+                        </a>
+                        <div class="qa-btn">
+                                                                                            <span>买车</span>
+                                                                <span>其他</span>
+                                                                                        <i class="xi">1</i><i>2016-06-19</i>
+                        </div>
+                    </li>
+                                    </ul>
+                <div class="con-page">
+                                <!-- 收藏对比记录页-分页代码 -->
+        <div class="con-page">
+                                    <span class="page-current benz_page_current">1</span>
+                                                <a href="http://www.xin.com/qa/lists/1/2/" class="benz_page_a">2</a>
+                                                <a href="http://www.xin.com/qa/lists/1/3/" class="benz_page_a">3</a>
+                                                <a href="http://www.xin.com/qa/lists/1/4/" class="benz_page_a">4</a>
+                                                <a href="http://www.xin.com/qa/lists/1/5/" class="benz_page_a">5</a>
+                                                <span>...</span>
+                                                <a href="http://www.xin.com/qa/lists/1/360/" class="benz_page_a">360</a>
+                                                <a href="http://www.xin.com/qa/lists/1/2/" class="benz_page_a">下一页</a>
+                            </div>
+                    </div>
+            </div> 
+              
+        </div>
+        <div class="bright">
+        <div class="tuijian">        
+        <h2>文章推荐</h2>
+        <ul class="ulist">
+                    <li><a href="http://www.xin.com/article/view/1/325/">冬天到了你该如何善待蓄电池</a></li>
+                    <li><a href="http://www.xin.com/article/view/1/313/">车龄3年价格近半超值选宝马5系</a></li>
+                    <li><a href="http://www.xin.com/article/view/1/307/">奔驰S级 主要还得看气质</a></li>
+                    <li><a href="http://www.xin.com/article/view/1/300/">曝光台：看看这“左拥右抱”的凌派</a></li>
+                    <li><a href="http://www.xin.com/article/view/1/299/">二手车圈里人都说的“三不买”！</a></li>
+          
+        </ul>
+    </div>
+            <div class="weixin"> 
+        <h2>优信二手车微信</h2>
+        <img src="activity_lists_files/qrcode.png" alt="优信二手车在线服务" class="weipic">
+        <p>打开微信客户端“<b class="icon"></b><em>扫一扫</em>”</p>
+        <p>或关注微信号：<em>uxinfuwu</em></p>
+    </div>     
+</div>    </div>		
+</div>
+<script>
+    $(function () {
+        $(".left").height($(".help-center").height());
+        //三期打点start
+        var list_arr = new Array(),type = "1";
+        list_arr[1] = '买车';list_arr[2] = '卖车';list_arr[7] = '首付一半';
+        zhuge_track('P-车辆问答页',{ '城市':"全国",'页面来源':list_arr[type] });
+        //三期打点end
+    })
+</script>
+<script src="activity_lists_files/qa_lists.js" type="text/javascript"></script><ul style="display: none;" tabindex="0" id="ui-id-1" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content"></ul><span class="ui-helper-hidden-accessible" aria-relevant="additions" aria-live="assertive" role="status"></span>
+
+        
+                <div class="footer-wrap">
+            <div class="footer">
+                <div class="contact_new">
+                    <a href="http://www.xin.com/aboutus/" rel="nofollow">关于我们</a>
+                    <!-- <a href="/contactus/"  rel="nofollow">联系我们</a> -->
+                    <a href="http://www.xin.com/joinus/" rel="nofollow">加入我们</a>
+                    <a href="http://www.xin.com/help/" rel="nofollow">帮助中心</a>
+                    <a href="http://www.xin.com/feedback/" rel="nofollow">用户反馈</a>
+                    <a href="http://dealer.xin.com/login/" id="apply_dealer" rel="nofollow">商家申请</a>
+                    <a href="http://www.youxinjinrong.com/" rel="nofollow">优信易购</a>
+                </div>
+                <span>业务合作单位：优信互联（北京）信息技术有限公司/优信拍（北京）二手车鉴定评估有限公司</span>
+                <div class="footer3">
+                    <p>Copyright © 2015-2016 <strong><a href="">优估</a></strong> All Rights Reserved 版权所有 优估(上海) 信息科技有限公司
+                        <strong>&nbsp;&nbsp;<a href="http://www.xin.com/assets/images/business_licence.jpg" target="window">营业执照</a></strong><em>沪ICP备15036207号-2</em>
+                        <strong>
+                            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011402001229" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;padding-left:20px;">
+                                <img src="activity_lists_files/gongan.png" style="float:left;">                                    
+                                <em style="margin-left:3px;">沪公网安备 31011402001229号</em>
+                            </a>
+                        </strong>
+                        <span style="margin-left:26px;">沪通信管自贸【2016】5号</span>
+                    </p>
+                    <!--可信网站开始-->
+                    <a href="https://ss.knet.cn/verifyseal.dll?sn=e15102111010561082vc83000000&amp;pa=500267" tabindex="-1" id="urlknet" target="_blank"> 
+                        <img alt="可信网站" name="KNET_seal" src="activity_lists_files/knetSealLogo.png" oncontextmenu="return false;" onclick="KNET_change('urlknet')" border="true">
+                    </a>
+                    <!--可信网站结束-->
+                    <!--诚信网站开始-->
+                    <a id="___szfw_logo___" class="bot-logo" href="https://credit.szfw.org/CX20151104012121580123.html" target="_blank"><img src="activity_lists_files/bot_logo2.png" border="0"></a>
+                    <script type="text/javascript">
+					(function () {
+						document.getElementById('___szfw_logo___').oncontextmenu = function () {
+							return false;
+						}
+					})();
+					</script>
+                    <!--诚信网站结束-->
+                </div>            
+                <div class="index-code fr clearfix"> 
+                    <img src="activity_lists_files/code.jpg" height="100" width="100">
+                    <p class="scan-txt fl rel">
+                        关注优信二手车<br>微信公众号
+                    </p>
+                </div>
+                <div class="index-code2 fl clearfix">
+                    <img src="activity_lists_files/code_1.jpg" height="100" width="100">
+                    <p class="scan-txt fr rel">
+                        扫描我，即可下载<br>优信二手车手机版
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--温馨提示开始-->
+        <div class="popup-wrap" id="warmTip10">
+            <div class="inner">
+                <div class="tip-con">
+                    <p>温馨提示<a href="javascript:;" class="close_pop closeJs abs"></a></p>
+                    <img src="activity_lists_files/people.png">
+                    <span class="span_xin_msg">出错啦</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 弹窗页面 -->
+        <div class="popup-wrap" id="popupLogin">
+	<div class="inner">
+		<div class="popup-con2 con-height2">
+		    <span class="pop-title">登录</span>
+		    <a href="javascript:void(0)" class="ico_pop xBtn2 closeJs">关闭</a>
+		    <div class="logintab">
+	            <a href="javascript:void(0)" hidefocus="true" class="active">网站密码登录</a><a href="javascript:void(1)" hidefocus="true">短信随机码登录</a>
+		    </div>
+			<ul class="register logincon">
+				<li>
+			    <input class="ipt-box tel-bg" value="请输入手机号" id="search" type="text">
+				</li>
+				<li>
+				    <input class="code" value="请输入图片码" id="piccode_l" type="text">
+				    <a class="PageNum"></a>
+				</li>
+				<li>
+				<input class="ipt-box code-bg" value="请输入密码" id="psw5" type="text">
+				<input class="ipt-box code-bg hide" value="" id="psw6" type="password">
+				</li>
+			</ul>
+			<ul class="register logincon hide">
+				<li>
+				    <input class="ipt-box tel-bg" value="请输入手机号" id="search1" type="text">
+				</li>
+				<li>
+				    <input class="code" value="请输入图片码" id="piccode_r" type="text">
+				    <a class="PageNum"></a>
+				</li>
+				<li>
+				    <input class="code" value="六位数字验证码" id="search2" type="text">
+				    <input class="getNum vm" id="need_code1" value="获取验证码" type="button">
+				</li>
+			</ul>
+			<div class="btn-div">
+				<a href="javascript:void(0)" class="resBtn" id="login_btn">登录</a>
+			</div>
+			<div class="popBot abs">
+				<div class="loginWith fl">
+					<span>第三方登录：</span>
+					<a href="http://www.xin.com/openapi/authqq" class="ico_pop tqq" rel="nofollow"></a>
+					<a href="http://openapi.baidu.com/oauth/2.0/authorize?response_type=code&amp;client_id=Ug5Vh2SRNiSueexjtBi95Grs&amp;redirect_uri=http%3A%2F%2Fwww.xin.com%2Fopenapi%2Fbaidu_rd%2F&amp;display=popup" class="ico_pop tbd" rel="nofollow"></a>
+					<a href="https://api.weibo.com/oauth2/authorize?client_id=415981803&amp;redirect_uri=http%3A%2F%2Fwww.xin.com%2Fopenapi%2Findex%2F&amp;response_type=code" class="ico_pop xwb" rel="nofollow"></a>
+				 </div>
+				 <div class="forPass fr">
+					<a href='javascript:clear_invalid();$("#popupLogin").hide();show_popup("#forPass","#forPass%20.closeJs")'>忘记密码</a><a href="http://www.xin.com/register/" class="noregist" rel="nofollow">还没注册</a>
+				 </div>
+		  </div>
+		</div>	
+	</div>
+</div>
+<div class="popup-wrap" id="forPass">
+	<div class="inner">
+		<div class="popup-con con-height3">
+		     <span class="pop-title">找回密码</span>
+		     <div class="passtab abs">
+		            <span hidefocus="true" class="active">手机号验证 &gt;</span>
+		            <span hidefocus="true">设置密码</span>
+		    </div>
+		    <a href="javascript:void(0)" class="ico_pop xBtn2 closeJs">关闭</a>
+			<ul class="register">
+				<li class="mt40">
+				<input class="ipt-box tel-bg" value="请输入手机号" id="search3" type="text"></li>
+				<li>
+				    <input class="code" value="请输入图片码" id="piccode_g" type="text">
+				    <a class="PageNum"></a>
+				</li>
+				<li>
+				    <input class="code" value="六位数字验证码" id="search4" type="text">
+				    <input class="getNum vm" id="need_code3" value="获取验证码" type="button">
+				</li>
+			</ul>
+			<div class="btn-div">
+				<a href="javascript:void(0)" class="resBtn" id="next_step">下一步</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup-wrap" id="forgetNext">
+   <div class="inner">
+         <div class="popup-con con-height3">
+		     <span class="pop-title">找回密码</span>
+		     <div class="passtab abs">
+				<span hidefocus="true" class="pass-bg active">手机号验证 &gt;</span>
+				<span hidefocus="true" class="active">设置密码</span>
+		    </div>
+		    <a href="javascript:void(0)" class="ico_pop xBtn2 closeJs">关闭</a>
+			<ul class="register">
+				<li class="mt40">
+				    <input class="ipt-box code-bg" value="6-20位，数字、字母、_ 、组合" id="psw7" type="text">
+				    <input class="ipt-box code-bg hide" value="" id="psw8" type="password">
+				</li>
+				<li>
+				    <input class="ipt-box code-bg" value="请与上面输入密码一致" id="psw9" type="text">
+				    <input class="ipt-box code-bg hide" value="" id="psw10" type="password">
+				</li>
+			</ul>
+			<div class="btn-div">
+				<a href="javascript:void(0)" class="resBtn" id="reset_passwd">提交</a>
+			</div>
+		</div>
+   </div>
+</div>
+<div class="CarStandard popup-wrap" id="tReport">
+	<div class="CarSd-top">
+    	<a href="#" class="carGb closeJs CarSd-gb">关闭</a>
+    </div>
+    <div class="CarSd_head">
+        	<img src="activity_lists_files/promise_mico.png">
+        	<span>无重大事故车辆</span>
+     </div>
+	<div class="CarSd-big">
+        <div class="CarSd_cur">
+            <dl>
+            	<dt>如符合下述9条中任何一条，即为不符合“ 车辆无重大事故标准“的车辆，即属于重大事故车：</dt>
+                <dd>1、经过撞击，损伤到发动机舱和驾驶舱的车辆。</dd>
+                <dd>2、车身后翼子板撞击损伤超过其三分之一的车辆。</dd>
+                <dd>3、纵梁有焊接、切割、整形、变形的车辆。</dd>
+                <dd>4、减振器座有焊接、切割、整形、变形的车辆。</dd>
+                <dd>5、ABC柱有焊接、切割、整形、变形的车辆。</dd>
+                <dd>6、因撞击造成汽车安全气囊弹出的车辆。</dd>
+                <dd>7、其它不可拆卸部份有严重的焊接、切割、整形、变形的车辆。</dd>
+                <dd>8、车身经水浸泡超过车身二分之一，或积水进入驾驶舱的车辆。</dd>
+                <dd>9、车身经火焚烧超过0.5平方米，经修复仍存在安全隐患的车辆。</dd>
+            </dl>
+            <img src="activity_lists_files/car_pic2.png">
+            <p>（车辆关键部件图示）</p>
+        </div>
+        <div class="CarSd_foot">
+        	<p>不属于以上9种情况的车辆，即为符合“车辆无重大事故标准”的车辆，属于非重大事故车。</p>
+        </div>
+    </div>
+</div>
+<!--优学堂之我要提问-->
+<div class="popup-wrap" id="uAsk">
+	<div class="inner">
+		<div class="uxt-pop">
+		     <h2>我要提问</h2>
+			 <a href="#" class="ico_pop xBtn2 closeJs">关闭</a>
+			 <div class="detail">
+			 	<textarea id="suptare" maxlength="240" onkeydown='countChar("suptare","counter");' onkeyup='countChar("suptare","counter");' placeholder="请写下您的问题..."></textarea>
+			 	<p><span id="counter">0</span>/240</p>
+			 </div>
+			<div class="tag">
+			 	<p class="titTab">
+			 		
+			 	</p>
+			 	<p class="simTab active">
+			 		
+			 	</p>
+			 	<p class="simTab" style="display:none;">
+			 		
+			 	</p>
+			 	<p class="simTab" style="display:none;">
+			 		
+			 	</p>
+			</div>
+			<p class="tip">选择标签可以帮助您快速找到问题 <span style="color:red"></span></p>
+			<a href="javascript:void(0)" class="submit-btn">提交问题</a>
+			</div> 
+		</div>
+    </div>
+
+<script language="javascript"> 
+function countChar(textarea,span) {
+	document.getElementById(span).innerHTML = document.getElementById(textarea).value.length; 
+}
+$('#uAsk .simTab').delegate('a', 'click', function(){
+	$('#uAsk .simTab a').removeClass('active');
+	$(this).addClass('active');
+});
+$('#uAsk .titTab').delegate('a:not(.active)', 'click', function(){
+	$('#uAsk .titTab a').removeClass('active');
+	$(this).addClass('active');
+	var thisIndex = $(this).index();
+	$('#uAsk .simTab').removeClass('active').hide();
+	$('#uAsk .simTab:eq('+thisIndex+')').addClass('active').show();
+	$('#uAsk .simTab a').removeClass('active');
+});
+$(function(){
+	$('#uAsk .submit-btn').on('click', function ajaxSubmit(){
+		var idArr = [];
+		var title = $('#suptare').val();
+		var pid = $('#uAsk .titTab .active').attr('data_type');
+		var idObj = $('#uAsk .simTab .active').each(function(){
+			idArr.push($(this).attr('data_type'));
+		});
+		var id = idArr.toString();
+		if (!title || !pid || !id) {
+			$('#uAsk .tip span').html('信息填写不完整');
+			return false;
+		}
+		var title_filter = title.match(/[a-zA-Z0-9\u4e00-\u9fa5]/g);
+		if (!title_filter || title_filter.length > 240 || title_filter.length < 6) {
+			$('#uAsk .tip span').html('标题长度应在6〜240个字');
+			return false;
+		}
+		$.ajax({
+			type: "POST",
+			url: "/qa/ask/",
+			data: { "title":title,"pid":pid,"id":id},
+			dataType: 'json',
+			beforeSend: function(){
+				$('#uAsk .submit-btn').html('正在提交...');
+				$('#uAsk .submit-btn').unbind('click');
+			},
+			success: function(data) {
+				if (data.code == 1) {
+					$('#uAsk,.shade').hide();
+					$('#suptare').val('');
+					$("#uAsk .titTab a").removeClass('active');
+					$("#uAsk .titTab a:eq(0)").addClass('active');
+					$('#uAsk .simTab').removeClass('active').hide();
+					$('#uAsk .simTab:eq(0)').show();
+					$('#uAsk .tip span').html('');
+				}else{
+					$('#uAsk .tip span').html(data.message);
+				}
+				$('#uAsk .submit-btn').html('提交问题').on('click', ajaxSubmit);
+			},
+			error: function() {
+				$('#uAsk .tip span').html('请求失败!');
+				$('#uAsk .submit-btn').html('提交问题').on('click', ajaxSubmit);
+			}
+		});
+	});
+
+	$('#question_button').one('click', function(){
+		$.ajax({
+			url: "/qa/get_category",
+			dataType: "json",
+			success: function(data) {
+				for (var i in data.data[0]) {
+					var type = data.data[0][i][0];
+					var index = type-1;
+					if (i == 0) {
+						var addclass = 'class = "active"';
+					} else {
+						var addclass = '';
+					}
+                    if(!type || !data.data[0][i][1]) {
+                        continue;
+                    }
+					$("#uAsk .titTab").append('<a href="javascript:void(0)" '+addclass+' data_type='+type+'>'+data.data[0][i][1]+'</a>');
+					for (var j in data.data[type]) {
+                        if(!data.data[type][j][0]) {
+                            continue;
+                        }
+						$("#uAsk .simTab:eq("+index+")").append('<a href="javascript:void(0)" data_type='+data.data[type][j][0]+'>'+data.data[type][j][1]+'</a>');
+					}
+				}
+			}
+		});
+	});
+});
+</script>
+<div class="popup-wrap" id="career_apply">
+	<div class="inner">
+		 <div class="suc-con clearfix">
+		 	<img src="activity_lists_files/people.png">	
+		 	<p>恭喜您!提交成功~</p>
+		 	<a href="">确认</a>
+		 </div>
+    </div>
+</div>        <!--[if lte IE 6]>
+        <script src="http://s4.xinstatic.com/xin/js/common/DD_belatedPNG.js"></script>
+        <![endif]-->
+        
+        
+<script>var _abq=_abq||[];_abq.push(['_pageview']);!function(t,e){var a=t.createElement(e);a.async=!0,a.src=('https:'==t.location.protocol?'https://':'http://')+'ab.xin.com/ab.js';var c=t.getElementsByTagName(e)[0];c.parentNode.insertBefore(a,c)}(document,'script');</script>
+
+<script>
+$(function(){
+    $(document).on('click', function(e){
+        if(!window._abq) return;
+        
+        var target = $(e.target);
+
+        while(target.length > 0 && target.get(0) != document){
+            var abevent = target.attr('abevent') || target.attr('uxevent');
+
+            if(abevent){
+                if(abevent.indexOf('/') == 0){
+                    if(abevent) _abq.push(['_track'].concat(abevent.substr(1).split('/')));
+                }else{
+                    if(abevent) _abq.push(['_track'].concat(abevent.split('/')));
+                }
+            }
+
+            target = target.parent();
+        }
+    });
+});
+</script>
+
+
+<!-- oneapm test -->
+<script type="text/javascript">window.BWEUM||(BWEUM={});BWEUM.info = {"stand":true,"agentType":"browser","agent":"bi-collector.oneapm.com/static/js/bw-send-411.4.5.js","beaconUrl":"bi-collector.oneapm.com/beacon","licenseKey":"van2I~JfvFV3FvIZ","applicationID":2276203};</script><script type="text/javascript" src="activity_lists_files/bw-loader-411.js"></script>
+<script type="text/javascript">
+    // 加载诸葛sdk
+	window.zhuge = window.zhuge || [];
+	window.zhuge.methods = "_init debug identify track trackLink trackForm page".split(" ");
+	window.zhuge.factory = function (b) {
+	    return function () {
+	        var a = Array.prototype.slice.call(arguments);
+	        a.unshift(b);
+	        window.zhuge.push(a);
+	        return window.zhuge
+	    }
+	};
+	for (var i = 0; i < window.zhuge.methods.length; i++) {
+	    var key = window.zhuge.methods[i];
+	    window.zhuge[key] = window.zhuge.factory(key);
+	};
+
+	window.zhuge.load = function (b, x) {
+	    if (!document.getElementById("zhuge-js")) {
+	        var a = document.createElement("script");
+	        var verDate = new Date();
+	        var verStr = verDate.getFullYear().toString()
+	                + verDate.getMonth().toString() + verDate.getDate().toString();
+	        a.type = "text/javascript";
+	        a.id = "zhuge-js";
+	        a.async = !0;
+	        a.src = "http://sdk.zhugeio.com/zhuge-lastest.min.js?v=" + verStr;
+	        var c = document.getElementsByTagName("script")[0];
+	        c.parentNode.insertBefore(a, c);
+	        window.zhuge._init(b, x);
+	    }
+	};
+    if (location.hostname == 'www.xin.com') {
+        window.zhuge.load('211bffb2950a43528505fd727f23c44e', {debug:false}); //PC站正式
+    } else {
+        window.zhuge.load('480c1a5d9b694c1aad1eedabe45b60ee', {debug: true});  //PC站测试
+    }
+	
+	// baidu监测
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?ae57612a280420ca44598b857c8a9712";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+
+    // admaster监测
+    var _smq = _smq || [];
+    _smq.push(['_setAccount', '14b535e', new Date()]);
+    _smq.push(['_setDomainName', 'xin.com']);
+    _smq.push(['pageview']);
+    (function () {
+        var sm = document.createElement('script');
+        sm.type = 'text/javascript';
+        sm.async = true;
+        sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(sm, s);
+    })();
+
+    //Web端全站诸葛打点
+    function zhuge_track(event, properties) {
+        if (typeof(event)=='string' && event.length>0 && event.length<=32) {
+            if (properties && typeof(properties)=='object') {
+                zhuge.track(event, properties);
+            } else {
+                zhuge.track(event);
+            }
+        }
+        return true;
+    }
+    
+    //cookieflag，设置cookie，zhuge统计使用 (type:1 设置；type:0 清除; flag:来源页面名称设置)
+    function zhuge_ckflag(type,flag) {
+        var ret = 0;
+        type = parseInt(type);
+        flag = $.trim(flag);
+        if (type==1 && flag) {
+            ret = 1;
+            $.cookie('XIN_ZG_FROM_PAGE', '{"page": "'+flag+'","url": "'+location.href+'"}', { path: '/', expires: 0 });
+        } else if (type==0) {
+            ret = 1;
+            $.cookie('XIN_ZG_FROM_PAGE','', { path: '/', expires: 1 });
+        }
+        return ret;
+    }
+    
+    //detail_cookieflag，设置cookie，zhuge统计使用 (type:1 设置；type:0 清除; flag:来源页面名称设置), For:车辆详情页
+    function zhuge_dckflag(type,flag) {
+        var ret = 0;
+        type = parseInt(type);
+        flag = $.trim(flag);
+        if (type==1 && flag) {
+            ret = 1;
+            $.cookie('XIN_CD_ZG_FROM_PAGE_PC', '{"page": "'+flag+'","url": "'+location.href+'"}', { domain:'.xin.com', path: '/', expires: 0 });
+        } else if (type==0) {
+            ret = 1;
+            $.cookie('XIN_CD_ZG_FROM_PAGE_PC','', { domain:'.xin.com', path: '/', expires: 1 });
+        }
+        return ret;
+    }
+    //车辆详情页来源统计
+    function zhuge_from_page_tongji(page){
+        page = $.trim(page);
+        if (page) {
+            if (jschannel) {
+                zhuge_track('车辆列表页', { '来源页面':zhuge_loc_flag, '来源渠道':jschannel, '城市':'{$LOCATION_CITY.cityname|default:"&nbsp;&nbsp;"}' });
+            } else {
+                zhuge_track('车辆列表页', { '来源页面':zhuge_loc_flag,'城市':'{$LOCATION_CITY.cityname|default:"&nbsp;&nbsp;"}' });
+            }
+        }
+    }
+    
+    $(document).ready(function(){
+    	
+        zhuge_track('访问页面', {'页面URL':location.href});
+        zg_page_flag = 1;  // 记录诸葛统计标记
+        
+        var channel = "{$channel}";
+        channel = location.search.replace(/.*?channel=([^\s&?]+).*/, "$1");
+        channel = channel == location.search ? '' : channel;
+        if (channel) {
+            zhuge_track('channel渠道', {'channel渠道名称':channel});
+        }
+        var zhuge_city = $("#current_city_id").html();
+        $('#cityWrap a').bind('click', function(){
+            zhuge_track('城市切换');
+        });
+        
+        $('.select-shop').bind('click', function(){
+        	zhuge_track('C-搜索框-选中店铺', { '城市': zhuge_city });
+        });
+        
+        var jschannel = (location.search.indexOf('channel=')!==-1) ? location.search.replace(/.*?channel=([^\s&]+).*/, "$1") : '';
+
+        if (typeof(TOP_INFO) != 'undefined' && TOP_INFO.location.cityid=='201') {
+            if (jschannel) {
+                $('.a_sellpage').attr('onclick', "zhuge_track('C-首页-卖车', { '城市': '" + zhuge_city + "', '类型':'C2B卖车' }); zhuge_track('C2B卖车', { '来源页面':'头部-卖车','城市':'"+zhuge_city+"','来源渠道':'"+jschannel+"' });");
+            } else {
+                $('.a_sellpage').attr('onclick', "zhuge_track('C-首页-卖车', { '城市': '" + zhuge_city + "', '类型':'C2B卖车' }); zhuge_track('C2B卖车', { '来源页面':'头部-卖车','城市':'"+zhuge_city+"' });");
+            }
+            $('.a_sellpage').attr('uxevent', 'w_top/c2bsell');
+        } else {
+            if (jschannel) {
+                $('.a_sellpage').attr('onclick', "zhuge_track('C-首页-卖车', { '城市': '" + zhuge_city + "', '类型':'我要卖车' }); zhuge_track('我要卖车', { '来源页面':'头部-卖车','城市':'"+zhuge_city+"','来源渠道':'"+jschannel+"' });");
+            } else {
+                $('.a_sellpage').attr('onclick', "zhuge_track('C-首页-卖车', { '城市': '" + zhuge_city + "', '类型':'我要卖车' }); zhuge_track('我要卖车', { '来源页面':'头部-卖车','城市':'"+zhuge_city+"' });");
+            }
+            $('.a_sellpage').attr('uxevent', 'w_top/sellcar');
+        }
+       
+        $('.a_buypage').attr({ 'onclick':"zhuge_ckflag(1,'头部-买车列表'),zhuge_track('C-头部-买车',{ '城市':'"+zhuge_city+"' })", 'uxevent':'w_top/buycar' });
+
+        $('.a_question').attr({ 'onclick':"zhuge_track('C-头部-车辆问答',{ '城市':'"+zhuge_city+"' });uxl_track('w_top/question')"});
+        $('.a_service').attr({ 'onclick':"zhuge_track('C-头部-服务保障',{ '城市':'"+zhuge_city+"' });uxl_track('w_top/service')"});
+
+
+        $("#xin_top_userinfo").on("click","#regA",function(){
+            zhuge_track('C-头部-注册',{ '城市': zhuge_city });
+            uxl_track('w_top/regist');
+        });
+
+        $("#xin_top_userinfo").on("click","#loginA",function(){
+            zhuge_track('C-头部-登录',{ '城市':zhuge_city });
+            uxl_track('w_top/login');
+        });
+
+        $('#php_half_city_link').attr({ 'onclick':"zhuge_ckflag(1,'头部-付一半'),zhuge_track('C-头部-付一半',{ '城市':'"+zhuge_city+"' })", 'uxevent':'w_top/halfprice' });
+        
+        $('#storeCarWrap').on('click', '.carShow', function(){ zhuge_dckflag(1,'收藏记录'); });
+        $('#focusPageWrap').on('click', '.carShow', function(){ zhuge_dckflag(1,'浏览记录'); });
+        
+        $('#brandSearch, #search_search').bind('click', function(){
+        	if ($(this).attr('id')=='brandSearch') {
+        		zhuge_track('搜索框点击次数', { '来源页面':'首页' });
+        	} else if ($(this).attr('id')=='search_search') {
+        		zhuge_track('搜索框点击次数', { '来源页面':'车辆列表页' });
+        	}
+        });
+        
+        $('.select-item').on('click', '.select-option', function(){
+        	var zg_filter_suffix = $(this).parent().parent().parent().parent().find('.search_select_change').attr('name');
+        	var zg_filter_value = $(this).parent().find('li :first').text()==$(this).text() ? '不限' : $.trim($(this).text());
+        	switch (zg_filter_suffix) {
+        	    case 'r' : {  // 车龄
+                    zhuge_track('车龄筛选', { '车龄区间': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+        	    } break;
+                case 'k' : {  // 里程
+                    zhuge_track('车辆列表页-里程', { '里程区间': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+                } break;
+                case 'l' : {  // 类型
+                    zhuge_track('类型筛选', { '类型值': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+                } break;
+                case 'g' : {  // 变速箱
+                    zhuge_track('车辆列表页-变速箱', { '变速箱值': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+                } break;
+                case 'f' : {  // 国别
+                    zhuge_track('车辆列表页-国别', { '国别值': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+                } break;
+                default : {}
+        	}
+        });
+        
+        $('.color-type label').bind('click', function(){
+        	if ($(this).attr('title')) {  // 颜色
+                zhuge_track('车辆列表页-颜色', { '颜色值': $(this).attr('title'), '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+        	}
+        });
+        
+        $('.view_a').live('click', function(){
+        	if ($(this).text()) {  // 排序
+                zhuge_track('车辆列表页-排序', { '排序值': $(this).text(), '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+        	}
+        });
+        
+        $('.car-box .car-vtc').on('click', $('.car-list'), function(){
+        	if ($(this).attr('href') && $(this).attr('data-position')) {
+        		zhuge_track('查看车源', {
+        			'关键词': search_q ? search_q : '',
+        			'品牌值': $('.TipBtn_hidden_b').text() ? $.trim($('.TipBtn_hidden_b').text()) : '',
+        			'车系值': $('.TipBtn_hidden_s').text() ? $.trim($('.TipBtn_hidden_s').text()) : '',
+        			'排量值': $('.TipBtn_hidden_j').text() ? $.trim($('.TipBtn_hidden_j').text()) : '',
+        			'价格值': $('.TipBtn_hidden_p').text() ? $.trim($('.TipBtn_hidden_p').text()) : '',
+        			'车龄值': $('.car-select').find("[name='r']").parent().find('.select-default').text() ? $('.car-select').find("[name='r']").parent().find('.select-default').text() : '',
+        			'里程值': $('.car-select').find("[name='k']").parent().find('.select-default').text() ? $('.car-select').find("[name='k']").parent().find('.select-default').text() : '',
+        			'类型值': $('.car-select').find("[name='l']").parent().find('.select-default').text() ? $('.car-select').find("[name='l']").parent().find('.select-default').text() : '',
+        			'变速箱值': $('.car-select').find("[name='g']").parent().find('.select-default').text() ? $('.car-select').find("[name='g']").parent().find('.select-default').text() : '',
+        			'国别值': $('.car-select').find("[name='f']").parent().find('.select-default').text() ? $('.car-select').find("[name='f']").parent().find('.select-default').text() : '',
+        			'颜色值': $('.color-type').find('.checked').attr('title') ? $.trim($('.color-type').find('.checked').attr('title')) : '',
+        			'排序值': $('.view_a').parent().find('.active').text() ? $('.view_a').parent().find('.active').text() : '',
+        			'车源类型': $(".car-source .source-active span").text() ? $(".car-source .source-active span").text() : '',
+        			'车源位置': ($('.page-current').text() ? $('.page-current').text() : 'Unknown') + ' - ' + $(this).attr('data-position'),
+        			'车源URL': $.trim($(this).attr('href'))
+        		});
+        	}
+        });
+        
+        $('.list-con .con').on('click', 'a', function(){
+            if ($(this).attr('href') && $(this).attr('data-position')) {
+                zhuge_track(""=='halfprice' ? 'C-付一半列表页-车辆位置' : 'C-车辆列表页-车辆位置', {
+                	'城市':'&nbsp;&nbsp;',
+                    '车源位置': ($('.page-current').text() ? $('.page-current').text() : 'Unknown') + ' - ' + $(this).attr('data-position'),
+                });
+                uxl_track('w_' + (""=='halfprice' ? 'halfprice_carlist' : 'carlist') + '/rank/' + ($('.page-current').text() ? $('.page-current').text() : 'Unknown') + '-' + $(this).attr('data-position'));
+            }
+        });
+        
+        // App下载-全局打点
+        if ($('.code-edt a').length>0) {
+            $('.code-edt a').each(function(){
+            	$(this).attr('onclick', "zhuge_track('下载App', {'下载位置':'"+$(document).attr('title')+"','URL':'"+ $(this).attr('href') + "','channel渠道名称':'"+ (channel) + "'})");
+            });
+        }
+        
+        // 头部-下载App
+        if ($('#id_dl_app').length>0) {
+        	$('#id_dl_app').attr('uxevent', 'w_top/dl_app');
+        	$('#id_dl_app').bind('click', function(){
+        		zhuge_track('C-头部-下载APP', { '城市':'&nbsp;&nbsp;' });
+        	});
+        }
+        
+    });
+    
+    //----------- 诸葛 end -----------
+    
+    // 修复channel链接，针对div
+    function fix_channel_div(e,t) {
+        var channel = "{$channel}";
+        channel = location.search.replace(/.*?channel=([^\s&?]+).*/, "$1");
+        channel = channel == location.search ? '' : channel;
+        if (channel) {
+            var ela = '';
+            if (t=='id') {
+                ela = ('#'+e + ' ');
+            } else if (t=='class') {
+                ela = ('.'+e + ' ');
+            }
+            $(ela + 'a').each(function () {
+                if($(this).attr('href') && $(this).attr('href').indexOf('channel=') === -1) {
+                    if(!(($(this).attr('href')=='#') || ($(this).attr('href').indexOf('javascript'))==0)){
+                        $(this).attr('href', $(this).attr('href') + ($(this).attr('href').indexOf('?') === -1 ? '?' : '&') + 'channel=' + channel);
+                    }
+                }
+            });
+        }
+    }
+    
+    // 修复channel链接，针对单独的url
+    function fix_channel_url(url) {
+        var channel = "{$channel}";
+        channel = location.search.replace(/.*?channel=([^\s&?]+).*/, "$1");
+        channel = channel == location.search ? '' : channel;
+        if(channel && url && (url.indexOf('channel=') === -1)) {
+            if(!((url=='#') || (url.indexOf('javascript')==0))){
+                url += (url.indexOf('?') === -1 ? '?' : '&') + 'channel=' + channel;
+            }
+        }
+        return url;
+    }
+    
+    //----------- ab start -----------
+    function uxl_track(event) {
+        var ux_event = (event != 'undefined') ? $.trim(event) : '';
+        if (ux_event.length > 0) {
+            if(_abq) _abq.push(['_track'].concat(ux_event.split('/')));
+        }
+    }    
+    //----------- ab end -----------
+    
+</script>
+
+<script src="activity_lists_files/tj.js" type="text/javascript"></script><iframe src="activity_lists_files/a.htm" style="display: none;" id="admother"></iframe>
+
+        <!-- 合作页面检测 -->
+		<script type="text/javascript">
+var channel = "";
+channel = location.search.replace(/.*?channel=([^\s&?]+).*/, "$1");
+channel = channel == location.search ? '' : channel;
+if (channel) {
+    $('a').each(function () {
+        if($(this).attr('href') && $(this).attr('href').indexOf('channel=') === -1) {
+            if(!(($(this).attr('href')=='#') || ($(this).attr('href').indexOf('javascript'))==0)){
+            	$(this).attr('href', $(this).attr('href') + ($(this).attr('href').indexOf('?') === -1 ? '?' : '&') + 'channel=' + channel);
+            }
+        }
+    });
+}
+</script>
+        <script> 
+            $(document).ready(function(){
+                // 标记页头选中状态
+                var hclass = '';
+                if(location.pathname.match(/^\/s(\/\S*)?$/)) {
+                    hclass = '.a_buypage';
+                } else if(location.pathname.match(/^\/sale\/c2b_car(\/\S*)?$/) || location.pathname.match(/^\/sale\/index(\/\S*)?$/)) {
+                    hclass = '.a_sellpage';
+                } else if(location.pathname.match(/^\/h(\/\S*)?$/)) {
+                     hclass = '#php_half_city_link';
+                } else if(location.pathname.match(/^\/activity(\/\S*)?$/)) {
+                     hclass = '.a_question';
+                } else if(location.pathname.match(/^\/service(\/\S*)?$/)) {
+                     hclass = '.a_service';
+                } else if(location.pathname.match(/^\/app(\/\S*)?$/)) {
+                     hclass = '#id_dl_app';
+                }
+                if(hclass) {
+                    $(hclass).removeClass('active');
+                    $(hclass).addClass('active');
+                }
+            });
+        </script>
+    
+
+<script src="activity_lists_files/bw-send-411.js"></script><img src="activity_lists_files/collect.gif" style="display: none;"><script async="" src="activity_lists_files/a.txt" type="text/javascript"></script></body></html>

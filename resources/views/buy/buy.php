@@ -196,7 +196,7 @@ $('.brand').click(function () {
 	$(this).addClass('xuan');
 	
 	var title=$('.xuan1').attr('title');
-	//alert(title);return false;
+	alert(title);return false;
 	//alert($('.xuan').attr('id'));
 	if(title=='undifind'){
 		alert(1);return false;
@@ -230,7 +230,7 @@ $(".price").click(function() {
 	$(this).siblings().removeClass('xuan1');
 	$(this).addClass('xuan1');
 	var id=$('.xuan').attr('id');
-	//alert(id);return false;
+	alert(id);return false;
 	alert($('.xuan1').attr('title'));
 	//alert(price);
             if (price=='不限')

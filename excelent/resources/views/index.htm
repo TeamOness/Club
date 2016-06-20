@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<title>【北京二手车】北京二手车网上交易市场 – 优信二手车</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="keywords" content="北京二手车,北京二手车交易市场,北京二手车交易网,二手车分期付款,优信二手车,二手车之家,二手车估价,二手车评估">
+		<meta name="description" content="【优信二手车】提供北京海量优质二手车源,15天包退,100%真实车源,专业车况检测,精准价格评估,审核严格,绝无事故车,0佣金,可付一半分期付款买车,金融策略灵活,是国内领先,口碑绝佳的二手车交易平台">
+		<link rel="stylesheet" href="index_files/alike.css">
+		<link rel="stylesheet" href="index_files/common.css">
+		<link rel="stylesheet" href="index_files/home.css">
+		<link href="index_files/jquery-ui.css" rel="stylesheet" type="text/css">
+		<link href="index_files/popup.css" rel="stylesheet" type="text/css">
+		<script src="index_files/collect.js" async="" type="text/javascript"></script><script src="index_files/hm.js"></script><script src="index_files/zhuge-lastest.js" async="" id="zhuge-js" type="text/javascript"></script><script src="index_files/ab.js" async=""></script><script src="index_files/jquery-1.js"></script>
+        <script src="index_files/jquery-ui.js" type="text/javascript"></script>
+        <script src="index_files/popup.js" type="text/javascript"></script>
+        <script src="index_files/jquery.js" type="text/javascript"></script>
+        <script src="index_files/tab.js"></script>
+		<script type="text/javascript">
+            var TOP_INFO = { location: { }, user: { }, half_city: [], url: '' };
+            var TOP_GET = { };
+                        TOP_INFO.location = {"cityid":"201","areaid":"1","big_areaid":"2","provinceid":"2","cityname":"\u5317\u4eac","ename":"beijing","shortname":"BJ","service":"1","near":"910,906,901,902,2601","tianrun_code":"010"};
+                                    TOP_GET = {"channel":"sogoupz"};
+                        var is_from_wap = /[?|&]from=wap/.test(window.location.search);
+
+            //from wap记录cookie
+            if (is_from_wap) {
+                $.cookie('access_from', 'wap', { path: '/', expires: 0 });
+            }
+            if ($.cookie('access_from') == 'wap') {
+                is_from_wap = true;
+            }
+
+            //手机端自动跳转
+            if (!is_from_wap && /Android|iP[ao]d|iPhone/gi.test(navigator.userAgent)) {
+                var reg = new RegExp("/*?" + TOP_INFO.location.ename, "g");
+                var path = window.location.pathname.replace(reg, '');
+
+                //特别页面跳转
+                var con_name = 'home';
+                var act_name = 'index';
+                var mdomain = 'http://m.xin.com';
+
+                //首页跳转
+                if (con_name == 'home' && act_name == 'index') {
+                    window.location.href = mdomain + '/' + TOP_INFO.location.ename;
+                //付一半跳转
+                } else if (con_name == 'halfprice' && act_name == 'index') {
+                    window.location.href = mdomain + '/' + TOP_INFO.location.ename + '/s/v5a2/';
+                //车辆详情跳转
+                }else if (con_name == 'car' && act_name == 'index'){
+                    window.location.href = mdomain + path;
+                //商铺页跳转
+                }else if (con_name == 'dealer' && act_name == 'index') {
+                    window.location.href = mdomain + path;
+                //文章详情页跳转
+                }else if (con_name == 'article' && act_name == 'view') {
+                    var act_arr = window.location.pathname.split('/');
+                    for (i = act_arr.length - 1; i >= 0; i--) {
+                        if (!!act_arr[i]) {
+                            window.location.href = mdomain + '/article/article_detail/' + act_arr[i];
+                            break;
+                        }
+                    }
+                }else if (con_name == 'article' && act_name == 'listing') { //活动列表页面跳转
+                    var act_arr = window.location.pathname.split('/');
+                    for (i = act_arr.length - 1; i >= 0; i--) {
+                        if (!!act_arr[i]) {
+                            window.location.href = mdomain + '/article/index/' + act_arr[i];
+                            break;
+                        }
+                    }
+                }
+            }
+            
+            // 初始化诸葛统计数据参数
+            var is_hf = ''=='halfprice' ? 1 : 0;
+            var search_q = '';
+            var search_ot = ''.indexOf('y1') != -1 ? '全国其他城市' : (''.indexOf('y2') != -1 ? '周边城市' : '');
+            var search_count = 'Array';
+            var zg_page_flag = 0;
+
+            //可信网站
+            function KNET_change(eleId) {
+                var str= document.getElementById(eleId).href;
+                var str1 =str.substring(0,(str.length-6));
+                str1+=KNET_RndNum(6); 
+                document.getElementById(eleId).href=str1;
+            }
+            function KNET_RndNum(k) {
+                var rnd=""; 
+                for (var i=0;i < k;i++) {
+                    rnd+=Math.floor(Math.random()*10); 
+                }
+                return rnd;
+            }
+        	var suggest = [];
+ 
+        </script>
+		<script src="index_files/main_page.js"></script>
+	</head>
+	<body>
+		<div class="header-wrap">
+			<div class="header">
+				<h1>
+					<a href="http://www.xin.com/beijing/" class="logo"></a>
+				</h1>
+				<dl class="select-city fixed-city abs" id="citySelect" style="display: block;">
+                    <dt id="current_city_id">北京</dt>
+                </dl>
+				<div class="nav">
+					<a href="" class="active">首页</a>
+					<a class="top_buycar " href="http://www.xin.com/beijing/s/" sname="http://www.xin.com" title="购买二手车">买车<img class="sbx-ico" src="index_files/sbx_icon.png"></a>
+					<a uxevent="w_top/c2bsell" onclick="zhuge_track('C-首页-卖车', { '城市': '北京', '类型':'C2B卖车' }); zhuge_track('C2B卖车', { '来源页面':'头部-卖车','城市':'北京' });" class="a_sellpage  top_sellcar" href="http://www.xin.com/sale/c2b_car/201" title="二手车出售">卖车</a>
+					<a uxevent="w_top/halfprice" onclick="zhuge_ckflag(1,'头部-付一半'),zhuge_track('C-头部-付一半',{ '城市':'北京' })" style="display:inline" id="php_half_city_link" class="top_halfprice " href="http://www.xin.com/beijing/h/" sname="http://www.xin.com" title="首付一半 分期付款">付一半</a>
+										<a class=" top_book" href="http://www.xin.com/activity/201/" title="知心推荐 问题答疑">宝典</a>
+										<a uxevent="w_top/dl_app" id="id_dl_app" href="http://www.xin.com/app/" title="优信二手车手机APP" target="_blank" class="top_app">APP</a>
+					<div class="person-login" id="xin_top_userinfo" sname="http://www.xin.com"><div class="person-wrap" style="top:0px;"><a href="javascript:clear_invalid();show_popup('#popupLogin','#popupLogin%20.closeJs');" id="loginA" class="login">登录</a>/<a href="http://www.xin.com/register/" id="regA" rel="nofollow" class="register">注册</a></div></div>
+				</div>
+			</div>
+		</div>
+		<div class="banner-wrap" id="home_banner" style="background:url(http://c2.xinstatic.com/che/20160617/1744/5763c69b9511b158332.png)  no-repeat center 0;">
+			<a href="http://www.xin.com/beijing/s/" class="banner" target="_blank" id="home_banner_s"></a>
+			<img src="index_files/text_bar_top.png" class="text-top">
+			<div class="car-num">北京有<label class="randomNum"><div class="mt-number-animate"><div style="transform: translateY(-110px); transition: all 2s ease 0s;" class="mt-number-animate-dom" data-num="5">            <span class="mt-number-animate-span">0</span>            <span class="mt-number-animate-span">1</span>            <span class="mt-number-animate-span">2</span>            <span class="mt-number-animate-span">3</span>            <span class="mt-number-animate-span">4</span>            <span class="mt-number-animate-span">5</span>            <span class="mt-number-animate-span">6</span>            <span class="mt-number-animate-span">7</span>            <span class="mt-number-animate-span">8</span>            <span class="mt-number-animate-span">9</span>            <span class="mt-number-animate-span">.</span>          </div><div style="transform: translateY(-110px); transition: all 2s ease 0s;" class="mt-number-animate-dom" data-num="5">            <span class="mt-number-animate-span">0</span>            <span class="mt-number-animate-span">1</span>            <span class="mt-number-animate-span">2</span>            <span class="mt-number-animate-span">3</span>            <span class="mt-number-animate-span">4</span>            <span class="mt-number-animate-span">5</span>            <span class="mt-number-animate-span">6</span>            <span class="mt-number-animate-span">7</span>            <span class="mt-number-animate-span">8</span>            <span class="mt-number-animate-span">9</span>            <span class="mt-number-animate-span">.</span>          </div><div class="mt-number-animate-dot">,</div><div style="transform: translateY(-198px); transition: all 2s ease 0s;" class="mt-number-animate-dom" data-num="9">            <span class="mt-number-animate-span">0</span>            <span class="mt-number-animate-span">1</span>            <span class="mt-number-animate-span">2</span>            <span class="mt-number-animate-span">3</span>            <span class="mt-number-animate-span">4</span>            <span class="mt-number-animate-span">5</span>            <span class="mt-number-animate-span">6</span>            <span class="mt-number-animate-span">7</span>            <span class="mt-number-animate-span">8</span>            <span class="mt-number-animate-span">9</span>            <span class="mt-number-animate-span">.</span>          </div><div style="transform: translateY(-198px); transition: all 2s ease 0s;" class="mt-number-animate-dom" data-num="9">            <span class="mt-number-animate-span">0</span>            <span class="mt-number-animate-span">1</span>            <span class="mt-number-animate-span">2</span>            <span class="mt-number-animate-span">3</span>            <span class="mt-number-animate-span">4</span>            <span class="mt-number-animate-span">5</span>            <span class="mt-number-animate-span">6</span>            <span class="mt-number-animate-span">7</span>            <span class="mt-number-animate-span">8</span>            <span class="mt-number-animate-span">9</span>            <span class="mt-number-animate-span">.</span>          </div><div style="transform: translateY(-22px); transition: all 2s ease 0s;" class="mt-number-animate-dom" data-num="1">            <span class="mt-number-animate-span">0</span>            <span class="mt-number-animate-span">1</span>            <span class="mt-number-animate-span">2</span>            <span class="mt-number-animate-span">3</span>            <span class="mt-number-animate-span">4</span>            <span class="mt-number-animate-span">5</span>            <span class="mt-number-animate-span">6</span>            <span class="mt-number-animate-span">7</span>            <span class="mt-number-animate-span">8</span>            <span class="mt-number-animate-span">9</span>            <span class="mt-number-animate-span">.</span>          </div></div></label>辆车供您选择</div>
+			<div class="search">
+				<input class="Sitem" value="车辆" readonly="readonly" type="hidden">
+				<input autocomplete="off" class="ipt s-input ui-autocomplete-input" placeholder="请输入感兴趣的品牌、车系" data-default="请输入感兴趣的品牌、车系" id="brandSearch" data-carcount="1" name="q" type="text">
+				<a href="javascript:void(0);" class="search-btn s-btn" for="brandSearch">立即搜索</a>
+				<a uxevent="w_top/c2bsell" onclick="zhuge_track('C-首页-卖车', { '城市': '北京', '类型':'C2B卖车' }); zhuge_track('C2B卖车', { '来源页面':'头部-卖车','城市':'北京' });" href="http://www.xin.com/sale/c2b_car/201" class="buy-car sell-car a_sellpage">我要卖车</a>
+			</div>
+			<div class="clear"></div>
+			<img src="index_files/text_bar_btm.png" class="text-feature">
+		</div>
+		<div class="category-wrap">
+			<div class="brand-wrap">
+				<a href="javascript:void(0);" class="category-title title">品牌</a>
+								<div class="brand content brand_div">
+																							<a href="http://www.xin.com/beijing/s/b84" data_brand="84"><img src="index_files/b_84.png">大众</a>
+																							<a href="http://www.xin.com/beijing/s/b59" data_brand="59"><img src="index_files/b_59.png">本田</a>
+																							<a href="http://www.xin.com/beijing/s/b89" data_brand="89"><img src="index_files/b_89.png">丰田</a>
+																							<a href="http://www.xin.com/beijing/s/b62" data_brand="62"><img src="index_files/b_62.png">奥迪</a>
+																							<a href="http://www.xin.com/beijing/s/b34" data_brand="34"><img src="index_files/b_34.png">别克</a>
+																							<a href="http://www.xin.com/beijing/s/b15" data_brand="15"><img src="index_files/b_15.png">日产</a>
+																							<a href="http://www.xin.com/beijing/s/b98" data_brand="98"><img src="index_files/b_98.png">福特</a>
+																							<a href="http://www.xin.com/beijing/s/b38" data_brand="38"><img src="index_files/b_38.png">宝马</a>
+																							<a href="http://www.xin.com/beijing/s/b47" data_brand="47"><img src="index_files/b_47.png">奔驰</a>
+																							<a href="http://www.xin.com/beijing/s/b145" data_brand="145"><img src="index_files/b_145.png">马自达</a>
+																							<a href="http://www.xin.com/beijing/s/b55" data_brand="55"><img src="index_files/b_55.png">现代</a>
+																							<a href="http://www.xin.com/beijing/s/b129" data_brand="129"><img src="index_files/b_129.png">起亚</a>
+																					</div>
+							</div>
+			<div class="price-wrap">
+				<span class="price-title title">价格</span>
+				<div class="price content price_div">
+					<a href="http://www.xin.com/beijing/h/" class="bold">低首付</a>
+					<a href="http://www.xin.com/beijing/h/" class="bold">零月供</a>
+					<a href="http://www.xin.com/beijing/s/p0-5/" data_price="p0-5">5万以内</a>
+					<a href="http://www.xin.com/beijing/s/p5-10/" data_price="p5-10">5-10万</a>
+					<a href="http://www.xin.com/beijing/s/p10-15/" data_price="p10-15">10-15万</a>
+					<a href="http://www.xin.com/beijing/s/p15-20/" data_price="p15-20">15-20万</a>
+					<a href="http://www.xin.com/beijing/s/p20-30/" data_price="p20-30">20-30万</a>
+					<a href="http://www.xin.com/beijing/s/p30-50/" data_price="p30-50">30-50万</a>
+					<a href="http://www.xin.com/beijing/s/p50-/" data_price="p50-">50万以上</a>
+				</div>
+			</div>
+			<div class="modal-wrap">
+				<span class="modal-title title">车型</span>
+				<div class="modal content modal_div">
+					<a href="http://www.xin.com/beijing/s/l6/" data_id="16"><img src="index_files/c-2.png">SUV</a>
+					<a href="http://www.xin.com/beijing/s/l14/" data_id="114"><img src="index_files/c-4.png">面包</a>
+					<a href="http://www.xin.com/beijing/s/l12/" data_id="112"><img src="index_files/c-5.png">跑车</a>
+					<a href="http://www.xin.com/beijing/s/l7/" data_id="17"><img src="index_files/c-3.png">MPV</a>
+					<a href="http://www.xin.com/beijing/s/l9/" data_id="19"><img src="index_files/c-7.png">皮卡</a>
+					<a href="http://www.xin.com/beijing/s/l4/" data_id="14"><img src="index_files/c-8.png">商务</a>
+				</div>
+			</div>
+
+			<div class="brand-all-wrap">
+				<a href="javascript:void(0);" class="category-title title">品牌</a>
+				<div class="all-wrap">
+																				<div class="brand-more brand-left">
+											<dl>
+							<dt>A</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b62" data_brand="62">奥迪</a>
+																<a href="http://www.xin.com/beijing/s/b68" data_brand="68">阿斯顿马丁</a>
+																<a href="http://www.xin.com/beijing/s/b5" data_brand="5">安驰</a>
+																<a href="http://www.xin.com/beijing/s/b175" data_brand="175">阿尔法罗密欧</a>
+																<a href="http://www.xin.com/beijing/s/b141" data_brand="141">AC Schnitzer</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>B</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b34" data_brand="34">别克</a>
+																<a href="http://www.xin.com/beijing/s/b59" data_brand="59">本田</a>
+																<a href="http://www.xin.com/beijing/s/b38" data_brand="38">宝马</a>
+																<a href="http://www.xin.com/beijing/s/b47" data_brand="47">奔驰</a>
+																<a href="http://www.xin.com/beijing/s/b121" data_brand="121">比亚迪</a>
+																<a href="http://www.xin.com/beijing/s/b174" data_brand="174">标致</a>
+																<a href="http://www.xin.com/beijing/s/b93" data_brand="93">奔腾</a>
+																<a href="http://www.xin.com/beijing/s/b22" data_brand="22">保时捷</a>
+																<a href="http://www.xin.com/beijing/s/b133" data_brand="133">宝骏</a>
+																<a href="http://www.xin.com/beijing/s/b63" data_brand="63">北京汽车</a>
+																<a href="http://www.xin.com/beijing/s/b177" data_brand="177">北汽幻速</a>
+																<a href="http://www.xin.com/beijing/s/b58" data_brand="58">北汽制造</a>
+																<a href="http://www.xin.com/beijing/s/b154" data_brand="154">宾利</a>
+																<a href="http://www.xin.com/beijing/s/b4" data_brand="4">巴博斯</a>
+																<a href="http://www.xin.com/beijing/s/b6" data_brand="6">宝龙</a>
+																<a href="http://www.xin.com/beijing/s/b158" data_brand="158">布加迪</a>
+																<a href="http://www.xin.com/beijing/s/b232" data_brand="232">宝沃</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>C</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b115" data_brand="115">长城</a>
+																<a href="http://www.xin.com/beijing/s/b42" data_brand="42">长安</a>
+																<a href="http://www.xin.com/beijing/s/b146" data_brand="146">昌河</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>D</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b84" data_brand="84">大众</a>
+																<a href="http://www.xin.com/beijing/s/b150" data_brand="150">东风</a>
+																<a href="http://www.xin.com/beijing/s/b80" data_brand="80">东南</a>
+																<a href="http://www.xin.com/beijing/s/b134" data_brand="134">帝豪</a>
+																<a href="http://www.xin.com/beijing/s/b7" data_brand="7">道奇</a>
+																<a href="http://www.xin.com/beijing/s/b108" data_brand="108">大通</a>
+																<a href="http://www.xin.com/beijing/s/b45" data_brand="45">大宇</a>
+																<a href="http://www.xin.com/beijing/s/b72" data_brand="72">大迪</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>F</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b89" data_brand="89">丰田</a>
+																<a href="http://www.xin.com/beijing/s/b98" data_brand="98">福特</a>
+																<a href="http://www.xin.com/beijing/s/b60" data_brand="60">菲亚特</a>
+																<a href="http://www.xin.com/beijing/s/b46" data_brand="46">福田</a>
+																<a href="http://www.xin.com/beijing/s/b85" data_brand="85">福迪</a>
+																<a href="http://www.xin.com/beijing/s/b123" data_brand="123">法拉利</a>
+																<a href="http://www.xin.com/beijing/s/b41" data_brand="41">菲斯克</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>G</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b143" data_brand="143">广汽传祺</a>
+																<a href="http://www.xin.com/beijing/s/b109" data_brand="109">广汽吉奥</a>
+																<a href="http://www.xin.com/beijing/s/b50" data_brand="50">GMC</a>
+																<a href="http://www.xin.com/beijing/s/b176" data_brand="176">观致</a>
+																<a href="http://www.xin.com/beijing/s/b226" data_brand="226">广汽菲克</a>
+																<a href="http://www.xin.com/beijing/s/b30" data_brand="30">光冈</a>
+																<a href="http://www.xin.com/beijing/s/b189" data_brand="189">GUMPERT</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>H</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b132" data_brand="132">海马</a>
+																<a href="http://www.xin.com/beijing/s/b11" data_brand="11">华泰</a>
+																<a href="http://www.xin.com/beijing/s/b54" data_brand="54">哈飞</a>
+																<a href="http://www.xin.com/beijing/s/b33" data_brand="33">黄海</a>
+																<a href="http://www.xin.com/beijing/s/b153" data_brand="153">华普</a>
+																<a href="http://www.xin.com/beijing/s/b3" data_brand="3">悍马</a>
+																<a href="http://www.xin.com/beijing/s/b66" data_brand="66">红旗</a>
+																<a href="http://www.xin.com/beijing/s/b152" data_brand="152">汇众</a>
+																<a href="http://www.xin.com/beijing/s/b180" data_brand="180">海格</a>
+																<a href="http://www.xin.com/beijing/s/b179" data_brand="179">航天</a>
+																<a href="http://www.xin.com/beijing/s/b190" data_brand="190">华颂</a>
+																<a href="http://www.xin.com/beijing/s/b28" data_brand="28">黑豹</a>
+																<a href="http://www.xin.com/beijing/s/b90" data_brand="90">华翔</a>
+																<a href="http://www.xin.com/beijing/s/b91" data_brand="91">华北</a>
+																<a href="http://www.xin.com/beijing/s/b159" data_brand="159">华阳</a>
+																<a href="http://www.xin.com/beijing/s/b167" data_brand="167">恒天</a>
+																<a href="http://www.xin.com/beijing/s/b229" data_brand="229">华凯</a>
+															</dd>
+						</dl>
+															</div>
+																				<div class="brand-more brand-center">
+											<dl>
+							<dt>J</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b97" data_brand="97">江淮</a>
+																<a href="http://www.xin.com/beijing/s/b83" data_brand="83">吉利</a>
+																<a href="http://www.xin.com/beijing/s/b139" data_brand="139">Jeep</a>
+																<a href="http://www.xin.com/beijing/s/b87" data_brand="87">金杯</a>
+																<a href="http://www.xin.com/beijing/s/b173" data_brand="173">捷豹</a>
+																<a href="http://www.xin.com/beijing/s/b137" data_brand="137">江铃</a>
+																<a href="http://www.xin.com/beijing/s/b64" data_brand="64">金龙</a>
+																<a href="http://www.xin.com/beijing/s/b149" data_brand="149">江南</a>
+																<a href="http://www.xin.com/beijing/s/b161" data_brand="161">九龙</a>
+																<a href="http://www.xin.com/beijing/s/b76" data_brand="76">金程</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>K</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b120" data_brand="120">凯迪拉克</a>
+																<a href="http://www.xin.com/beijing/s/b61" data_brand="61">克莱斯勒</a>
+																<a href="http://www.xin.com/beijing/s/b14" data_brand="14">开瑞</a>
+																<a href="http://www.xin.com/beijing/s/b188" data_brand="188">凯翼</a>
+																<a href="http://www.xin.com/beijing/s/b182" data_brand="182">卡威</a>
+																<a href="http://www.xin.com/beijing/s/b86" data_brand="86">卡尔森</a>
+																<a href="http://www.xin.com/beijing/s/b65" data_brand="65">柯尼赛格</a>
+																<a href="http://www.xin.com/beijing/s/b136" data_brand="136">凯佰赫</a>
+																<a href="http://www.xin.com/beijing/s/b181" data_brand="181">KTM</a>
+																<a href="http://www.xin.com/beijing/s/b185" data_brand="185">凯马汽车</a>
+																<a href="http://www.xin.com/beijing/s/b220" data_brand="220">康迪</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>L</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b94" data_brand="94">铃木</a>
+																<a href="http://www.xin.com/beijing/s/b112" data_brand="112">路虎</a>
+																<a href="http://www.xin.com/beijing/s/b31" data_brand="31">雷克萨斯</a>
+																<a href="http://www.xin.com/beijing/s/b27" data_brand="27">猎豹</a>
+																<a href="http://www.xin.com/beijing/s/b99" data_brand="99">力帆</a>
+																<a href="http://www.xin.com/beijing/s/b8" data_brand="8">雷诺</a>
+																<a href="http://www.xin.com/beijing/s/b164" data_brand="164">陆风</a>
+																<a href="http://www.xin.com/beijing/s/b88" data_brand="88">林肯</a>
+																<a href="http://www.xin.com/beijing/s/b16" data_brand="16">莲花</a>
+																<a href="http://www.xin.com/beijing/s/b130" data_brand="130">劳斯莱斯</a>
+																<a href="http://www.xin.com/beijing/s/b117" data_brand="117">兰博基尼</a>
+																<a href="http://www.xin.com/beijing/s/b219" data_brand="219">罗孚</a>
+																<a href="http://www.xin.com/beijing/s/b49" data_brand="49">路特斯</a>
+																<a href="http://www.xin.com/beijing/s/b186" data_brand="186">陆地方舟</a>
+																<a href="http://www.xin.com/beijing/s/b223" data_brand="223">劳伦士</a>
+																<a href="http://www.xin.com/beijing/s/b230" data_brand="230">雷丁</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>M</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b145" data_brand="145">马自达</a>
+																<a href="http://www.xin.com/beijing/s/b26" data_brand="26">MINI</a>
+																<a href="http://www.xin.com/beijing/s/b104" data_brand="104">MG</a>
+																<a href="http://www.xin.com/beijing/s/b151" data_brand="151">玛莎拉蒂</a>
+																<a href="http://www.xin.com/beijing/s/b165" data_brand="165">美亚</a>
+																<a href="http://www.xin.com/beijing/s/b75" data_brand="75">迈凯伦</a>
+																<a href="http://www.xin.com/beijing/s/b29" data_brand="29">迈巴赫</a>
+																<a href="http://www.xin.com/beijing/s/b13" data_brand="13">摩根</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>N</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b35" data_brand="35">纳智捷</a>
+																<a href="http://www.xin.com/beijing/s/b170" data_brand="170">南汽</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>O</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b128" data_brand="128">欧宝</a>
+																<a href="http://www.xin.com/beijing/s/b118" data_brand="118">讴歌</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>P</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b148" data_brand="148">帕加尼</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>Q</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b129" data_brand="129">起亚</a>
+																<a href="http://www.xin.com/beijing/s/b155" data_brand="155">奇瑞</a>
+																<a href="http://www.xin.com/beijing/s/b21" data_brand="21">庆铃</a>
+																<a href="http://www.xin.com/beijing/s/b228" data_brand="228">乔治巴顿</a>
+															</dd>
+						</dl>
+															</div>
+																				<div class="brand-more brand-right">
+											<dl>
+							<dt>R</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b15" data_brand="15">日产</a>
+																<a href="http://www.xin.com/beijing/s/b23" data_brand="23">荣威</a>
+																<a href="http://www.xin.com/beijing/s/b56" data_brand="56">瑞麒</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>S</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b92" data_brand="92">斯柯达</a>
+																<a href="http://www.xin.com/beijing/s/b147" data_brand="147">三菱</a>
+																<a href="http://www.xin.com/beijing/s/b122" data_brand="122">smart</a>
+																<a href="http://www.xin.com/beijing/s/b156" data_brand="156">斯巴鲁</a>
+																<a href="http://www.xin.com/beijing/s/b82" data_brand="82">双龙</a>
+																<a href="http://www.xin.com/beijing/s/b74" data_brand="74">双环</a>
+																<a href="http://www.xin.com/beijing/s/b157" data_brand="157">萨博</a>
+																<a href="http://www.xin.com/beijing/s/b18" data_brand="18">陕汽通家</a>
+																<a href="http://www.xin.com/beijing/s/b96" data_brand="96">赛宝</a>
+																<a href="http://www.xin.com/beijing/s/b125" data_brand="125">世爵</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>T</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b44" data_brand="44">天津一汽</a>
+																<a href="http://www.xin.com/beijing/s/b12" data_brand="12">天马</a>
+																<a href="http://www.xin.com/beijing/s/b184" data_brand="184">特斯拉</a>
+																<a href="http://www.xin.com/beijing/s/b24" data_brand="24">通宝</a>
+																<a href="http://www.xin.com/beijing/s/b111" data_brand="111">通田</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>W</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b51" data_brand="51">五菱</a>
+																<a href="http://www.xin.com/beijing/s/b135" data_brand="135">沃尔沃</a>
+																<a href="http://www.xin.com/beijing/s/b53" data_brand="53">威麟</a>
+																<a href="http://www.xin.com/beijing/s/b32" data_brand="32">五十铃</a>
+																<a href="http://www.xin.com/beijing/s/b114" data_brand="114">威兹曼</a>
+																<a href="http://www.xin.com/beijing/s/b124" data_brand="124">万丰</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>X</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b55" data_brand="55">现代</a>
+																<a href="http://www.xin.com/beijing/s/b73" data_brand="73">雪佛兰</a>
+																<a href="http://www.xin.com/beijing/s/b71" data_brand="71">雪铁龙</a>
+																<a href="http://www.xin.com/beijing/s/b52" data_brand="52">西雅特</a>
+																<a href="http://www.xin.com/beijing/s/b37" data_brand="37">新凯</a>
+																<a href="http://www.xin.com/beijing/s/b178" data_brand="178">新龙马</a>
+																<a href="http://www.xin.com/beijing/s/b171" data_brand="171">新大地</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>Y</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b160" data_brand="160">英菲尼迪</a>
+																<a href="http://www.xin.com/beijing/s/b169" data_brand="169">英伦</a>
+																<a href="http://www.xin.com/beijing/s/b119" data_brand="119">一汽</a>
+																<a href="http://www.xin.com/beijing/s/b102" data_brand="102">依维柯</a>
+																<a href="http://www.xin.com/beijing/s/b172" data_brand="172">野马</a>
+																<a href="http://www.xin.com/beijing/s/b106" data_brand="106">永源</a>
+																<a href="http://www.xin.com/beijing/s/b187" data_brand="187">英致</a>
+																<a href="http://www.xin.com/beijing/s/b43" data_brand="43">云豹</a>
+																<a href="http://www.xin.com/beijing/s/b110" data_brand="110">英格尔</a>
+																<a href="http://www.xin.com/beijing/s/b140" data_brand="140">云雀</a>
+															</dd>
+						</dl>
+																					<dl>
+							<dt>Z</dt>
+							<dd>
+																<a href="http://www.xin.com/beijing/s/b77" data_brand="77">中华</a>
+																<a href="http://www.xin.com/beijing/s/b100" data_brand="100">众泰</a>
+																<a href="http://www.xin.com/beijing/s/b70" data_brand="70">中兴</a>
+																<a href="http://www.xin.com/beijing/s/b103" data_brand="103">中欧</a>
+																<a href="http://www.xin.com/beijing/s/b67" data_brand="67">中顺</a>
+																<a href="http://www.xin.com/beijing/s/b227" data_brand="227">知豆</a>
+																<a href="http://www.xin.com/beijing/s/b57" data_brand="57">中誉</a>
+															</dd>
+						</dl>
+															<p></p>
+										</div>
+																			</div>
+			</div>
+		</div>
+				<div class="recommend-wrap half-con">
+			<div class="recommend-title-bar">
+				<h3>付一小半</h3>
+								<a href="javascript:void(0);" data-more="http://www.xin.com/beijing/h/" class="tab-title tab-active halfprice_nav">低首付</a>
+								<a href="javascript:void(0);" data-more="http://www.xin.com/beijing/h/" class="tab-title  halfprice_nav">零月供</a>
+								<a href="http://www.xin.com/beijing/h/" class="more halfprice_more">更多&gt;</a>
+				<p></p>
+			</div>
+						<div class="halfpay-car-list carList" style="display:block">
+								<a href="http://www.xin.com/beijing/h/b62s269" class="position-left">
+				    <div>
+				    	<span>奥迪 A6L</span>
+					    <p>5.46<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src="http://s6.xinstatic.com/xinwap/images/index/carbw/269.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b59s564" class="position-center">
+				    <div>
+				    	<span>本田 雅阁</span>
+					    <p>3.24<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src="http://s6.xinstatic.com/xinwap/images/index/carbw/564.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b38s425" class="position-right">
+				    <div>
+				    	<span>宝马 5系</span>
+					    <p>5.25<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src="http://s6.xinstatic.com/xinwap/images/index/carbw/425.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b89s100" class="position-left">
+				    <div>
+				    	<span>丰田 凯美瑞</span>
+					    <p>4.7<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src="http://s6.xinstatic.com/xinwap/images/index/carbw/100.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b84s595" class="position-center">
+				    <div>
+				    	<span>大众 帕萨特</span>
+					    <p>4.09<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src="http://s6.xinstatic.com/xinwap/images/index/carbw/595.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b98s394" class="position-right">
+				    <div>
+				    	<span>福特 蒙迪欧</span>
+					    <p>2.71<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src="http://s6.xinstatic.com/xinwap/images/index/carbw/394.png">
+				    </div>
+				</a>
+							</div>
+						<div class="halfpay-car-list carList">
+								<a href="http://www.xin.com/beijing/h/b34s369" class="position-left">
+				    <div>
+				    	<span>别克 凯越</span>
+					    <p>1.47<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src-on="http://s6.xinstatic.com/xinwap/images/index/carbw/369.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b89s1072" class="position-center">
+				    <div>
+				    	<span>丰田 汉兰达</span>
+					    <p>5.61<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src-on="http://s6.xinstatic.com/xinwap/images/index/carbw/1072.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b84s340" class="position-right">
+				    <div>
+				    	<span>大众 朗逸</span>
+					    <p>1.8<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src-on="http://s6.xinstatic.com/xinwap/images/index/carbw/340.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b38s422" class="position-left">
+				    <div>
+				    	<span>宝马 3系</span>
+					    <p>4.68<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src-on="http://s6.xinstatic.com/xinwap/images/index/carbw/422.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b62s621" class="position-center">
+				    <div>
+				    	<span>奥迪 A4L</span>
+					    <p>5.64<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src-on="http://s6.xinstatic.com/xinwap/images/index/carbw/621.png">
+				    </div>
+				</a>
+								<a href="http://www.xin.com/beijing/h/b145s270" class="position-right">
+				    <div>
+				    	<span>马自达 马自达6</span>
+					    <p>2.22<b>万起</b></p>
+				    </div>	
+				    <div>
+				    	<img class="lazyload" src="index_files/grey.gif" data-src-on="http://s6.xinstatic.com/xinwap/images/index/carbw/270.png">
+				    </div>
+				</a>
+							</div>
+						<a href="http://www.xin.com/half_detail/" class="halfprice_intro_click">
+			<ul class="halfpay-car-btm">
+				<li>
+					<p>1</p>
+					<h4>线上申请</h4>
+					<span>仅需提供姓名、身份证号、银行卡号和手机号</span>
+				</li>
+				<li>
+					<p>2</p>
+					<h4>电话回访</h4>
+					<span>等待电话回访，信用良好也可能无需回访</span>
+				</li>
+				<li class="no-border-right">
+					<p>3</p>
+					<h4>审批通过 </h4>
+					<span>60分钟内出具审核结果可直接在APP查看</span>
+				</li>
+			</ul>
+			</a>
+		</div>
+						<div class="recommend-wrap recommend-con">
+			<div class="recommend-title-bar">
+				<h3>优信推荐</h3>
+								<a href="javascript:void(0);" data-more="http://www.xin.com/beijing/s/k1-3q5" class="tab-title tab-active intro_nav">准新车</a>
+								<a href="javascript:void(0);" data-more="http://www.xin.com/beijing/s/j1.1-1.6q5" class="tab-title  intro_nav">练手车</a>
+								<a href="javascript:void(0);" data-more="http://www.xin.com/beijing/s/l1" class="tab-title  intro_nav">家用代步</a>
+								<a href="javascript:void(0);" data-more="http://www.xin.com/beijing/s/l4" class="tab-title  intro_nav">商务精英</a>
+								<a href="javascript:void(0);" data-more="http://www.xin.com/beijing/s/l6" class="tab-title  intro_nav">MPV/SUV</a>
+								<a href="http://www.xin.com/beijing/s/k1-3q5" class="more intro_more">更多&gt;</a>
+				<p></p>
+			</div>
+						<dl class="recommend-car-list carList" style="display:block;">
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b38s425" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src="http://c6.xinstatic.com/xin/201603/2415/56f39cfe9838d518756_18.jpg">
+						<p>宝马 5系<span>6.80-61.80万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b84s135" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src="http://c4.xinstatic.com/che/20160619/1448/576640379bb18267482_18.jpg">
+						<p>大众 迈腾<span>5.60-27.80万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b47s246" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src="http://c1.xinstatic.com/che/20160617/1153/57637454a84ad335051_18.jpg">
+						<p>奔驰 C级<span>10.80-42.58万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b62s1919" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src="http://c6.xinstatic.com/che/20160603/1529/575131d744f1c867916_18.jpg">
+						<p>奥迪 Q5<span>18.50-46.00万</span></p>
+					</a>
+				</dd>
+							</dl>
+						<dl class="recommend-car-list carList">
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b59s453" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c4.xinstatic.com/che/20160602/1029/574f99ec4ecfd458824_18.jpg">
+						<p>本田 飞度<span>1.48-9.80万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b84s291" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c4.xinstatic.com/che/20160505/1331/572adab272672983296_18.jpg">
+						<p>大众 POLO<span>1.00-13.80万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b55s2076" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c1.xinstatic.com/che/20160603/1645/5751439b0aa57925155_18.jpg">
+						<p>现代 瑞纳<span>3.60-8.80万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b73s370" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c5.xinstatic.com/xin/201604/0615/5704b947a39be971780_18.jpg">
+						<p>雪佛兰 乐驰<span>0.58-4.50万</span></p>
+					</a>
+				</dd>
+							</dl>
+						<dl class="recommend-car-list carList">
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b84s566" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c3.xinstatic.com/che/20160531/1236/574d14dedfbbf924322_18.jpg">
+						<p>大众 速腾<span>3.20-19.98万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b89s159" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c4.xinstatic.com/che/20160518/1041/573bd6470bce7935561_18.jpg">
+						<p>丰田 卡罗拉<span>3.60-14.80万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b15s113" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c6.xinstatic.com/che/20160430/1254/57243a913cae2928271_18.jpg">
+						<p>日产 轩逸<span>3.00-13.30万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b98s1979" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c6.xinstatic.com/xin/201603/3014/56fb78e220528976250_18.jpg">
+						<p>福特 福克斯<span>1.98-14.80万</span></p>
+					</a>
+				</dd>
+							</dl>
+						<dl class="recommend-car-list carList">
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b84s135" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c4.xinstatic.com/che/20160619/1448/576640379bb18267482_18.jpg">
+						<p>大众 迈腾<span>5.60-27.80万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b62s269" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c6.xinstatic.com/che/20160603/1524/57513097d1ea4932480_18.jpg">
+						<p>奥迪 A6L<span>4.30-60.00万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b38s425" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c6.xinstatic.com/xin/201603/2415/56f39cfe9838d518756_18.jpg">
+						<p>宝马 5系<span>6.80-61.80万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b47s532" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c5.xinstatic.com/che/20160529/1237/574a72074fab1807688_18.jpg">
+						<p>奔驰 E级<span>7.90-74.80万</span></p>
+					</a>
+				</dd>
+							</dl>
+						<dl class="recommend-car-list carList">
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b133s3007" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c2.xinstatic.com/che/20160619/1635/57665968bbd19395904_18.jpg">
+						<p>宝骏 730<span>5.78-8.50万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b34s220" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c5.xinstatic.com/xin/201603/2713/56f776643672c295975_18.jpg">
+						<p>别克 GL8<span>1.00-38.60万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b89s1072" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c5.xinstatic.com/che/20160511/0932/57328ba3bbaa1408733_18.jpg">
+						<p>丰田 汉兰达<span>11.90-38.00万</span></p>
+					</a>
+				</dd>
+								<dd>
+					<a href="http://www.xin.com/beijing/s/b89s555" class="cars-info">
+						<img class="lazyload" src="index_files/grey.gif" data-src-on="http://c4.xinstatic.com/che/20160619/1820/576671fe26342704173_18.jpg">
+						<p>丰田 普拉多<span>16.20-61.80万</span></p>
+					</a>
+				</dd>
+							</dl>
+					</div>
+				<div class="seller-wrap">
+			<div class="seller-title-bar">
+				<h3>品牌旗舰店<a href="http://www.xin.com/beijing/s/v3/" class="more factory_more">更多&gt;</a></h3>
+				 <img style="height:0;width:0;visibility:hidden;" src="index_files/a68439b1108306c3821i0m202h_002.gif">
+				<div class="bar">
+                    
+                                        <a href="http://c.admaster.com.cn/c/a68439,b1108306,c3821,i0,m101,h" target="_blank" aid="2" pid="1" bid="" class="active brand_nav">
+                        <img src="index_files/b_47.png" height="50" width="50">
+                        奔驰
+                    </a>
+                                                                         
+                                            <a href="http://www.xin.com/beijing/s/b84v3" target="" bid="84" class="brand_nav">
+                            <img src="index_files/b_84.png" height="50" width="50">
+                            大众
+                        </a>
+                                                                             
+                                            <a href="http://www.xin.com/beijing/s/b38v3" target="" bid="38" class="brand_nav">
+                            <img src="index_files/b_38.png" height="50" width="50">
+                            宝马
+                        </a>
+                                                                             
+                                            <a href="http://www.xin.com/beijing/s/b62v3" target="" bid="62" class="brand_nav">
+                            <img src="index_files/b_62.png" height="50" width="50">
+                            奥迪
+                        </a>
+                                                                             
+                                            <a href="http://www.xin.com/beijing/s/b98v3" target="" bid="98" class="brand_nav">
+                            <img src="index_files/b_98.png" height="50" width="50">
+                            福特
+                        </a>
+                                                                             
+                                            <a href="http://www.xin.com/beijing/s/b34v3" target="" bid="34" class="brand_nav">
+                            <img src="index_files/b_34.png" height="50" width="50">
+                            别克
+                        </a>
+                                                                             
+                                            <a href="http://www.xin.com/beijing/s/b89v3" target="" bid="89" class="brand_nav">
+                            <img src="index_files/b_89.png" height="50" width="50">
+                            丰田
+                        </a>
+                                                                             
+                                            <a href="http://www.xin.com/beijing/s/b59v3" target="" bid="59" class="brand_nav">
+                            <img src="index_files/b_59.png" height="50" width="50">
+                            本田
+                        </a>
+                                                                        	<p></p>
+            	</div>
+			</div>
+									<dl class="seller-car-list" style="display:block">
+                                <dd>
+                    <a href="http://che.xin.com/157/62047.html" target="_blank" class="benz" idx="1">
+                                                <img class="lazyload" src="index_files/grey.gif" alt="奔驰 A180 时尚型" data-src="http://c2.xinstatic.com/che/20160617/1800/5763ca41d4f7c322333.jpg">
+                                                <h4>奔驰 A180 时尚型</h4>
+                        <p>¥17.80<b>万</b></p>
+                        <div class="btm">
+							<span class="fl">2013/08上牌</span>
+							<span class="fr">
+								                        			里程 5.02万公里
+                        		                        	</span>
+						</div>
+                    </a>
+                </dd>
+                                <dd>
+                    <a href="http://che.xin.com/21/62046.html" target="_blank" class="benz" idx="2">
+                                                <img class="lazyload" src="index_files/grey.gif" alt="奔驰 改款 E300L 运动型" data-src="http://c1.xinstatic.com/che/20160617/1800/5763ca40882da747354.jpg">
+                                                <h4>奔驰 改款 E300L 运动型</h4>
+                        <p>¥42.80<b>万</b></p>
+                        <div class="btm">
+							<span class="fl">2014/06上牌</span>
+							<span class="fr">
+								                        			里程 5.31万公里
+                        		                        	</span>
+						</div>
+                    </a>
+                </dd>
+                                <dd>
+                    <a href="http://che.xin.com/149/62045.html" target="_blank" class="benz" idx="3">
+                                                <img class="lazyload" src="index_files/grey.gif" alt="奔驰 ML400 4MATIC豪华型" data-src="http://c6.xinstatic.com/che/20160617/1800/5763ca363570b849917.jpg">
+                                                <h4>奔驰 ML400 4MATIC豪华型</h4>
+                        <p>¥99.80<b>万</b></p>
+                        <div class="btm">
+							<span class="fl">2015/02上牌</span>
+							<span class="fr">
+								                        			里程 2.79万公里
+                        		                        	</span>
+						</div>
+                    </a>
+                </dd>
+                                <dd>
+                    <a href="http://che.xin.com/183/62043.html" target="_blank" class="benz" idx="4">
+                                                <img class="lazyload" src="index_files/grey.gif" alt="奔驰 GLK 260 2.0T 自动 动感型 极致版" data-src="http://c4.xinstatic.com/che/20160617/1800/5763ca341f716984797.jpg">
+                                                <h4>奔驰 GLK 260 2.0T 自动 动感型 极致版</h4>
+                        <p>¥35.00<b>万</b></p>
+                        <div class="btm">
+							<span class="fl">2015/06上牌</span>
+							<span class="fr">
+								                        			里程 1.03万公里
+                        		                        	</span>
+						</div>
+                    </a>
+                </dd>
+                            </dl>
+                                    	            	            <dl class="seller-car-list">
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12790011.html" target="_blank" class="aimg" idx="1">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="大众 迈腾 2013款 2.0T 自动 豪华型" data-src-on="http://c1.xinstatic.com/che/20160619/2107/576699258c8b1683396_18.jpg">
+	                            <h4>大众 迈腾 2013款 2.0T 自动 豪华型</h4>
+	                            <p>¥19.95<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2014/01 上牌</span>
+									<span class="fr">里程4.50万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12790009.html" target="_blank" class="aimg" idx="2">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="大众 途观 2013款 1.8T 自动 豪华版前驱" data-src-on="http://c1.xinstatic.com/che/20160619/2101/576697c4b3c5f118665_18.jpg">
+	                            <h4>大众 途观 2013款 1.8T 自动 豪华版前驱</h4>
+	                            <p>¥22.75<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2014/01 上牌</span>
+									<span class="fr">里程3.29万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789661.html" target="_blank" class="aimg" idx="3">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="大众 桑塔纳 2007款 1.8 手动 景畅豪华型" data-src-on="http://c1.xinstatic.com/che/20160619/1807/57666ee8eef7c454556_18.jpg">
+	                            <h4>大众 桑塔纳 2007款 1.8 手动 景畅豪华型</h4>
+	                            <p>¥3.00<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2009/02 上牌</span>
+									<span class="fr">里程9.26万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789638.html" target="_blank" class="aimg" idx="4">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="大众 捷达 2006款 1.6 手动 CIX伙伴" data-src-on="http://c1.xinstatic.com/che/20160619/1805/57666e81df63f308039_18.jpg">
+	                            <h4>大众 捷达 2006款 1.6 手动 CIX伙伴</h4>
+	                            <p>¥2.60<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2008/02 上牌</span>
+									<span class="fr">里程9.26万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	            </dl>
+	            				            	            <dl class="seller-car-list">
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789140.html" target="_blank" class="aimg" idx="1">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="宝马 5系 2006款 2.5 自动 523i豪华型" data-src-on="http://c1.xinstatic.com/che/20160619/1719/576663a8aa47c518297_18.jpg">
+	                            <h4>宝马 5系 2006款 2.5 自动 523i豪华型</h4>
+	                            <p>¥12.00<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2006/05 上牌</span>
+									<span class="fr">里程10.10万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789055.html" target="_blank" class="aimg" idx="2">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="宝马 5系 2014款 2.0T 自动 528Li领先型" data-src-on="http://c1.xinstatic.com/che/20160616/1639/576265c194480304841_18.jpg">
+	                            <h4>宝马 5系 2014款 2.0T 自动 528Li领先型</h4>
+	                            <p>¥23.14<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2014/12 上牌</span>
+									<span class="fr">里程1.56万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789044.html" target="_blank" class="aimg" idx="3">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="宝马 5系 2009款 2.5 自动 523Li领先型" data-src-on="http://c1.xinstatic.com/che/20160619/1712/576661fd24258241043_18.jpg">
+	                            <h4>宝马 5系 2009款 2.5 自动 523Li领先型</h4>
+	                            <p>¥16.80<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2009/09 上牌</span>
+									<span class="fr">里程8.68万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12788538.html" target="_blank" class="aimg" idx="4">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="宝马 1系两厢五门版 2011款 2.0 自动 120i" data-src-on="http://c1.xinstatic.com/che/20160619/1641/57665ac50439c499854_18.jpg">
+	                            <h4>宝马 1系两厢五门版 2011款 2.0 自动 120i</h4>
+	                            <p>¥12.00<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2011/04 上牌</span>
+									<span class="fr">里程5.31万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	            </dl>
+	            				            	            <dl class="seller-car-list">
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12790165.html" target="_blank" class="aimg" idx="1">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="奥迪 A4L 2013款 2.0T 自动 35TFSI标准型" data-src-on="http://c1.xinstatic.com/che/20160620/0857/57673f69eda0c388835_18.jpg">
+	                            <h4>奥迪 A4L 2013款 2.0T 自动 35TFSI标准型</h4>
+	                            <p>¥22.00<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2013/08 上牌</span>
+									<span class="fr">里程3.56万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12790004.html" target="_blank" class="aimg" idx="2">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="奥迪 A6L 2015款 2.5 自动 30FSI纪念舒享版" data-src-on="http://c1.xinstatic.com/che/20160619/2047/5766946617e1b948029_18.jpg">
+	                            <h4>奥迪 A6L 2015款 2.5 自动 30FSI纪念舒享版</h4>
+	                            <p>¥37.05<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2015/03 上牌</span>
+									<span class="fr">里程3.89万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789327.html" target="_blank" class="aimg" idx="3">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="奥迪 TT 2011款 2.0T 自动 Coupe" data-src-on="http://c1.xinstatic.com/che/20160619/1734/57666713854f4494658_18.jpg">
+	                            <h4>奥迪 TT 2011款 2.0T 自动 Coupe</h4>
+	                            <p>¥25.00<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2011/12 上牌</span>
+									<span class="fr">里程4.15万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789143.html" target="_blank" class="aimg" idx="4">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="奥迪 A6 2003款 1.8T 自动 基本型" data-src-on="http://c1.xinstatic.com/che/20160619/1659/57665f004c21f160090_18.jpg">
+	                            <h4>奥迪 A6 2003款 1.8T 自动 基本型</h4>
+	                            <p>¥4.80<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2003/07 上牌</span>
+									<span class="fr">里程11.45万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	            </dl>
+	            				            	            <dl class="seller-car-list">
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12787496.html" target="_blank" class="aimg" idx="1">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="福特 锐界 2015款 2.0T 自动 尊锐型四驱" data-src-on="http://c1.xinstatic.com/che/20160619/1536/57664b6292340248203_18.jpg">
+	                            <h4>福特 锐界 2015款 2.0T 自动 尊锐型四驱</h4>
+	                            <p>¥33.80<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2015/09 上牌</span>
+									<span class="fr">里程1.87万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12783788.html" target="_blank" class="aimg" idx="2">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="福特 蒙迪欧 2010款 2.3 自动 豪华运动型导航版" data-src-on="http://c1.xinstatic.com/che/20160619/1046/5766078770b34784661_18.jpg">
+	                            <h4>福特 蒙迪欧 2010款 2.3 自动 豪华运动型导航版</h4>
+	                            <p>¥8.70<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2010/03 上牌</span>
+									<span class="fr">里程10.60万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12783656.html" target="_blank" class="aimg" idx="3">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="福特 福克斯三厢 2012款 1.6 手动 舒适型" data-src-on="http://c1.xinstatic.com/che/20160619/1039/576605cfcfc56720122_18.jpg">
+	                            <h4>福特 福克斯三厢 2012款 1.6 手动 舒适型</h4>
+	                            <p>¥7.50<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2013/07 上牌</span>
+									<span class="fr">里程3.80万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12783021.html" target="_blank" class="aimg" idx="4">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="福特 蒙迪欧 2008款 2.3 自动 豪华运动型导航版" data-src-on="http://c1.xinstatic.com/che/20160619/0956/5765fbb4237fe679858_18.jpg">
+	                            <h4>福特 蒙迪欧 2008款 2.3 自动 豪华运动型导航版</h4>
+	                            <p>¥7.80<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2009/08 上牌</span>
+									<span class="fr">里程6.30万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	            </dl>
+	            				            	            <dl class="seller-car-list">
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789389.html" target="_blank" class="aimg" idx="1">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="别克 威朗 2015款 1.5T 自动 20T豪华型" data-src-on="http://c1.xinstatic.com/che/20160615/1156/5760d1eaa4b19512433_18.jpg">
+	                            <h4>别克 威朗 2015款 1.5T 自动 20T豪华型</h4>
+	                            <p>¥8.59<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2015/08 上牌</span>
+									<span class="fr">里程0.67万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12788622.html" target="_blank" class="aimg" idx="2">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="别克 英朗XT 2013款 1.6T 自动 时尚运动型" data-src-on="http://c1.xinstatic.com/che/20160619/1641/57665ac51e89a734408_18.jpg">
+	                            <h4>别克 英朗XT 2013款 1.6T 自动 时尚运动型</h4>
+	                            <p>¥10.00<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2013/09 上牌</span>
+									<span class="fr">里程5.31万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12788558.html" target="_blank" class="aimg" idx="3">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="别克 君威 2009款 2.4 自动 旗舰型" data-src-on="http://c1.xinstatic.com/che/20160619/1643/57665b150ea68685080_18.jpg">
+	                            <h4>别克 君威 2009款 2.4 自动 旗舰型</h4>
+	                            <p>¥10.30<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2009/01 上牌</span>
+									<span class="fr">里程8.30万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12788517.html" target="_blank" class="aimg" idx="4">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="别克 GL8 2011款 2.4 自动 CT舒适型" data-src-on="http://c1.xinstatic.com/che/20160619/1640/57665a92abc06376061_18.jpg">
+	                            <h4>别克 GL8 2011款 2.4 自动 CT舒适型</h4>
+	                            <p>¥13.50<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2012/12 上牌</span>
+									<span class="fr">里程6.10万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	            </dl>
+	            				            	            <dl class="seller-car-list">
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789372.html" target="_blank" class="aimg" idx="1">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="丰田 汉兰达 2012款 2.7 自动 豪华版7座前驱" data-src-on="http://c1.xinstatic.com/che/20160616/1203/57622521be753572784_18.jpg">
+	                            <h4>丰田 汉兰达 2012款 2.7 自动 豪华版7座前驱</h4>
+	                            <p>¥14.27<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2014/07 上牌</span>
+									<span class="fr">里程2.42万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12788876.html" target="_blank" class="aimg" idx="2">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="丰田 坦途 2014款 5.7 自动 美规1794限量版" data-src-on="http://c1.xinstatic.com/che/20160619/1701/57665f645db6f595511_18.jpg">
+	                            <h4>丰田 坦途 2014款 5.7 自动 美规1794限量版</h4>
+	                            <p>¥45.50<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2016/01 上牌</span>
+									<span class="fr">里程1.22万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12788557.html" target="_blank" class="aimg" idx="3">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="丰田 皇冠 2007款 2.5 自动 Royal真皮特别版" data-src-on="http://c1.xinstatic.com/che/20160619/1642/57665b1248f97213837_18.jpg">
+	                            <h4>丰田 皇冠 2007款 2.5 自动 Royal真皮特别版</h4>
+	                            <p>¥8.30<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2007/05 上牌</span>
+									<span class="fr">里程11.22万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12785943.html" target="_blank" class="aimg" idx="4">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="丰田 卡罗拉 2007款 1.6 自动 GL" data-src-on="http://c1.xinstatic.com/che/20160619/1333/57662eb2d35a9801095_18.jpg">
+	                            <h4>丰田 卡罗拉 2007款 1.6 自动 GL</h4>
+	                            <p>¥5.50<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2010/05 上牌</span>
+									<span class="fr">里程6.91万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	            </dl>
+	            				            	            <dl class="seller-car-list">
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12789335.html" target="_blank" class="aimg" idx="1">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="本田 CR-V 2015款 2.0 自动 经典版前驱" data-src-on="http://c1.xinstatic.com/che/20160619/1605/5766524a2b8de846150_18.jpg">
+	                            <h4>本田 CR-V 2015款 2.0 自动 经典版前驱</h4>
+	                            <p>¥17.30<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2015/08 上牌</span>
+									<span class="fr">里程1.41万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12788047.html" target="_blank" class="aimg" idx="2">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="本田 CR-V 2010款 2.0 自动 Exi经典型四驱" data-src-on="http://c1.xinstatic.com/che/20160619/1603/576651bf85c94298870_18.jpg">
+	                            <h4>本田 CR-V 2010款 2.0 自动 Exi经典型四驱</h4>
+	                            <p>¥12.66<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2011/07 上牌</span>
+									<span class="fr">里程5.80万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12787527.html" target="_blank" class="aimg" idx="3">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="本田 CR-V 2005款 2.0 自动 iVTEC四驱" data-src-on="http://c1.xinstatic.com/che/20160619/1537/57664bc76cfbc881563_18.jpg">
+	                            <h4>本田 CR-V 2005款 2.0 自动 iVTEC四驱</h4>
+	                            <p>¥7.20<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2006/08 上牌</span>
+									<span class="fr">里程10.50万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	                    <dd>
+	                        <a href="http://che.xin.com/12784947.html" target="_blank" class="aimg" idx="4">
+	                            <img class="lazyload" src="index_files/grey.gif" alt="本田 CR-V 2008款 2.0 自动 Lxi都市版前驱" data-src-on="http://c1.xinstatic.com/che/20160619/1157/5766183500ed3397053_18.jpg">
+	                            <h4>本田 CR-V 2008款 2.0 自动 Lxi都市版前驱</h4>
+	                            <p>¥9.60<b>万</b></p>
+	                            <div class="btm">
+									<span class="fl">2009/04 上牌</span>
+									<span class="fr">里程7.12万公里</span>
+								</div>
+	                        </a>
+	                    </dd>
+	                	            </dl>
+	            					</div>
+		<div class="qa-wrap">
+			<div class="qa-area">
+				<div class="left-area">
+					<a href="http://www.xin.com/article/view/4/475/" class="qa-hot">
+						<span class="tag hot-tag">热点 &gt;</span>
+						<img src="index_files/hot_pic.jpg">
+						<span class="tit">新手必备 雨天行车六大技巧</span>
+					</a>
+					<div class="qa-list">
+					    <p><a href="http://www.xin.com/article/view/4/471/">大限已过 二手车离“解限”还有多远？</a></p>
+						<p><a href="http://www.xin.com/article/view/4/478/">小小“插班生” 奥迪A1以小见大</a></p>
+						<p><a href="http://www.xin.com/article/view/4/479/">哈弗H6 80后男人的情愫</a></p>
+						<p><a href="http://www.xin.com/article/view/3/485/">别样乐趣 欧洲杯期间的汽车生活</a></p>
+					</div>
+				</div>
+				<div class="right-area">
+					<div class="qa-art">
+						<a href="http://www.xin.com/activity/201/" class="book_click">
+							<span class="tag book-tag">宝典 &gt;</span>
+							<img src="index_files/ask_pic.jpg">
+							<div class="right-tit">
+								<p>不懂车？选车难？有问题找专家</p>
+								<span>买二手车总会遇到不少疑问，二手车怎么看车况？有了预算，我该选什么品牌？过户手续怎么办？有问题就来问二手车专家吧，一对一为您解答。您想知道的，这里都有答案……
+								</span>
+							</div>
+						</a>
+					</div>
+					<div class="qa-art mt30">
+						<a href="http://www.xin.com/article/view/4/470/" class="article_click">
+							<span class="tag art-tag">文章 &gt;</span>
+							<img src="index_files/art_pic.jpg">
+							<div class="right-tit">
+								<p>新手福音 二手车选购扫盲篇</p>
+								<span>到了二手车市场之后，首先不要被各种各样的销售还有车型挑花了眼，找准几个小窍门，哪怕看不太懂也要围着车辆转几圈，二手车贩子们欺负的也是那种老实人。我们摆摆样子做到输人不输阵，从气势上就压倒对方！
+								</span>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="story-wrap">
+			<h3>消费者故事</h3>
+			<h4>好车生活 从此开驶</h4>
+			<div class="story-list">
+			    <a href="http://www.xin.com/article/view/1/459/" class="self-right position-one data-show" name="data-show">
+			    	<div class="story-self ">
+						<span><img src="index_files/stroy_pic1.png"></span>
+						<p><strong>李先生</strong>：对于生活，简单点，不争一城一地之得失。买车也一样，方便快捷是我想要的，优信二手车，让我体验到了卖车的极致体验。</p>
+					</div>
+					<b></b>
+			    </a>	
+			    <a href="http://www.xin.com/article/view/1/463" class="self-left position-three data-show" name="data-show">
+			    	<div class="story-self">
+						<span><img src="index_files/stroy_pic3.png"></span>
+						<p><strong>刘先生</strong>：优信二手车的业务员贴心的从推荐到安排看车，再到最终成交，全程陪伴，服务真是没的说，卖车过程真的很舒心。</p>
+					</div>
+					<b></b>
+			    </a>
+			    <a href="http://www.xin.com/article/view/1/464/" class="self-right position-two data-show" name="data-show">
+			    	<div class="story-self ">
+						<span><img src="index_files/stroy_pic4.png"></span>
+						<p><strong>房先生</strong>：工作和生活稳定了之后，因为添丁进口，所以有了卖车的想法。朋友推荐了优信二手车，认真、负责的态度让我体验到了客户至上的态度，这...</p>
+					</div>
+					<b></b>
+			    </a>	
+			    <a href="http://www.xin.com/article/view/1/461/" class="self-right position-four data-show" name="data-show">
+			    	<div class="story-self">
+						<span><img src="index_files/stroy_pic5.png"></span>
+						<p><strong>姚女士</strong>：作为一个毕业后留在家乡发展的90后，喜欢个性，崇尚自由，如今已经大学毕业四年的我，也算存了一些小小的积蓄，除了吃住，那么对我最重要的...</p>
+					</div>
+					<b></b>
+			    </a>
+			    <a href="http://www.xin.com/article/view/1/465/" class="self-left position-five data-show" name="data-show">
+			    	<div class="story-self ">
+						<span><img src="index_files/stroy_pic2.png"></span>
+						<p><strong>刁先生</strong>：和老婆结婚几年了，刚开始结婚的时候生活并不富裕，也没有给老婆什么好的生活，近几年做生意也都是老婆陪着东奔西走，但老婆从来没抱怨过什...</p>
+					</div>
+					<b></b>
+			    </a>			
+			</div>
+			
+    		
+<script>var _abq=_abq||[];_abq.push(['_pageview']);!function(t,e){var a=t.createElement(e);a.async=!0,a.src=('https:'==t.location.protocol?'https://':'http://')+'ab.xin.com/ab.js';var c=t.getElementsByTagName(e)[0];c.parentNode.insertBefore(a,c)}(document,'script');</script>
+
+<script>
+$(function(){
+    $(document).on('click', function(e){
+        if(!window._abq) return;
+        
+        var target = $(e.target);
+
+        while(target.length > 0 && target.get(0) != document){
+            var abevent = target.attr('abevent') || target.attr('uxevent');
+
+            if(abevent){
+                if(abevent.indexOf('/') == 0){
+                    if(abevent) _abq.push(['_track'].concat(abevent.substr(1).split('/')));
+                }else{
+                    if(abevent) _abq.push(['_track'].concat(abevent.split('/')));
+                }
+            }
+
+            target = target.parent();
+        }
+    });
+});
+</script>
+
+
+<!-- oneapm test -->
+<script type="text/javascript">window.BWEUM||(BWEUM={});BWEUM.info = {"stand":true,"agentType":"browser","agent":"bi-collector.oneapm.com/static/js/bw-send-411.4.5.js","beaconUrl":"bi-collector.oneapm.com/beacon","licenseKey":"van2I~JfvFV3FvIZ","applicationID":2276203};</script><script type="text/javascript" src="index_files/bw-loader-411.js"></script>
+<script type="text/javascript">
+    // 加载诸葛sdk
+	window.zhuge = window.zhuge || [];
+	window.zhuge.methods = "_init debug identify track trackLink trackForm page".split(" ");
+	window.zhuge.factory = function (b) {
+	    return function () {
+	        var a = Array.prototype.slice.call(arguments);
+	        a.unshift(b);
+	        window.zhuge.push(a);
+	        return window.zhuge
+	    }
+	};
+	for (var i = 0; i < window.zhuge.methods.length; i++) {
+	    var key = window.zhuge.methods[i];
+	    window.zhuge[key] = window.zhuge.factory(key);
+	};
+
+	window.zhuge.load = function (b, x) {
+	    if (!document.getElementById("zhuge-js")) {
+	        var a = document.createElement("script");
+	        var verDate = new Date();
+	        var verStr = verDate.getFullYear().toString()
+	                + verDate.getMonth().toString() + verDate.getDate().toString();
+	        a.type = "text/javascript";
+	        a.id = "zhuge-js";
+	        a.async = !0;
+	        a.src = "http://sdk.zhugeio.com/zhuge-lastest.min.js?v=" + verStr;
+	        var c = document.getElementsByTagName("script")[0];
+	        c.parentNode.insertBefore(a, c);
+	        window.zhuge._init(b, x);
+	    }
+	};
+    if (location.hostname == 'www.xin.com') {
+        window.zhuge.load('211bffb2950a43528505fd727f23c44e', {debug:false}); //PC站正式
+    } else {
+        window.zhuge.load('480c1a5d9b694c1aad1eedabe45b60ee', {debug: true});  //PC站测试
+    }
+	
+	// baidu监测
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "//hm.baidu.com/hm.js?ae57612a280420ca44598b857c8a9712";
+		var s = document.getElementsByTagName("script")[0]; 
+		s.parentNode.insertBefore(hm, s);
+	})();
+
+    // admaster监测
+    var _smq = _smq || [];
+    _smq.push(['_setAccount', '14b535e', new Date()]);
+    _smq.push(['_setDomainName', 'xin.com']);
+    _smq.push(['pageview']);
+    (function () {
+        var sm = document.createElement('script');
+        sm.type = 'text/javascript';
+        sm.async = true;
+        sm.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'cdnmaster.com/sitemaster/collect.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(sm, s);
+    })();
+
+    //Web端全站诸葛打点
+    function zhuge_track(event, properties) {
+        if (typeof(event)=='string' && event.length>0 && event.length<=32) {
+            if (properties && typeof(properties)=='object') {
+                zhuge.track(event, properties);
+            } else {
+                zhuge.track(event);
+            }
+        }
+        return true;
+    }
+    
+    //cookieflag，设置cookie，zhuge统计使用 (type:1 设置；type:0 清除; flag:来源页面名称设置)
+    function zhuge_ckflag(type,flag) {
+        var ret = 0;
+        type = parseInt(type);
+        flag = $.trim(flag);
+        if (type==1 && flag) {
+            ret = 1;
+            $.cookie('XIN_ZG_FROM_PAGE', '{"page": "'+flag+'","url": "'+location.href+'"}', { path: '/', expires: 0 });
+        } else if (type==0) {
+            ret = 1;
+            $.cookie('XIN_ZG_FROM_PAGE','', { path: '/', expires: 1 });
+        }
+        return ret;
+    }
+    
+    //detail_cookieflag，设置cookie，zhuge统计使用 (type:1 设置；type:0 清除; flag:来源页面名称设置), For:车辆详情页
+    function zhuge_dckflag(type,flag) {
+        var ret = 0;
+        type = parseInt(type);
+        flag = $.trim(flag);
+        if (type==1 && flag) {
+            ret = 1;
+            $.cookie('XIN_CD_ZG_FROM_PAGE_PC', '{"page": "'+flag+'","url": "'+location.href+'"}', { domain:'.xin.com', path: '/', expires: 0 });
+        } else if (type==0) {
+            ret = 1;
+            $.cookie('XIN_CD_ZG_FROM_PAGE_PC','', { domain:'.xin.com', path: '/', expires: 1 });
+        }
+        return ret;
+    }
+    //车辆详情页来源统计
+    function zhuge_from_page_tongji(page){
+        page = $.trim(page);
+        if (page) {
+            if (jschannel) {
+                zhuge_track('车辆列表页', { '来源页面':zhuge_loc_flag, '来源渠道':jschannel, '城市':'{$LOCATION_CITY.cityname|default:"&nbsp;&nbsp;"}' });
+            } else {
+                zhuge_track('车辆列表页', { '来源页面':zhuge_loc_flag,'城市':'{$LOCATION_CITY.cityname|default:"&nbsp;&nbsp;"}' });
+            }
+        }
+    }
+    
+    $(document).ready(function(){
+    	
+        zhuge_track('访问页面', {'页面URL':location.href});
+        zg_page_flag = 1;  // 记录诸葛统计标记
+        
+        var channel = "{$channel}";
+        channel = location.search.replace(/.*?channel=([^\s&?]+).*/, "$1");
+        channel = channel == location.search ? '' : channel;
+        if (channel) {
+            zhuge_track('channel渠道', {'channel渠道名称':channel});
+        }
+        var zhuge_city = $("#current_city_id").html();
+        $('#cityWrap a').bind('click', function(){
+            zhuge_track('城市切换');
+        });
+        
+        $('.select-shop').bind('click', function(){
+        	zhuge_track('C-搜索框-选中店铺', { '城市': zhuge_city });
+        });
+        
+        var jschannel = (location.search.indexOf('channel=')!==-1) ? location.search.replace(/.*?channel=([^\s&]+).*/, "$1") : '';
+
+        if (typeof(TOP_INFO) != 'undefined' && TOP_INFO.location.cityid=='201') {
+            if (jschannel) {
+                $('.a_sellpage').attr('onclick', "zhuge_track('C-首页-卖车', { '城市': '" + zhuge_city + "', '类型':'C2B卖车' }); zhuge_track('C2B卖车', { '来源页面':'头部-卖车','城市':'"+zhuge_city+"','来源渠道':'"+jschannel+"' });");
+            } else {
+                $('.a_sellpage').attr('onclick', "zhuge_track('C-首页-卖车', { '城市': '" + zhuge_city + "', '类型':'C2B卖车' }); zhuge_track('C2B卖车', { '来源页面':'头部-卖车','城市':'"+zhuge_city+"' });");
+            }
+            $('.a_sellpage').attr('uxevent', 'w_top/c2bsell');
+        } else {
+            if (jschannel) {
+                $('.a_sellpage').attr('onclick', "zhuge_track('C-首页-卖车', { '城市': '" + zhuge_city + "', '类型':'我要卖车' }); zhuge_track('我要卖车', { '来源页面':'头部-卖车','城市':'"+zhuge_city+"','来源渠道':'"+jschannel+"' });");
+            } else {
+                $('.a_sellpage').attr('onclick', "zhuge_track('C-首页-卖车', { '城市': '" + zhuge_city + "', '类型':'我要卖车' }); zhuge_track('我要卖车', { '来源页面':'头部-卖车','城市':'"+zhuge_city+"' });");
+            }
+            $('.a_sellpage').attr('uxevent', 'w_top/sellcar');
+        }
+       
+        $('.a_buypage').attr({ 'onclick':"zhuge_ckflag(1,'头部-买车列表'),zhuge_track('C-头部-买车',{ '城市':'"+zhuge_city+"' })", 'uxevent':'w_top/buycar' });
+
+        $('.a_question').attr({ 'onclick':"zhuge_track('C-头部-车辆问答',{ '城市':'"+zhuge_city+"' });uxl_track('w_top/question')"});
+        $('.a_service').attr({ 'onclick':"zhuge_track('C-头部-服务保障',{ '城市':'"+zhuge_city+"' });uxl_track('w_top/service')"});
+
+
+        $("#xin_top_userinfo").on("click","#regA",function(){
+            zhuge_track('C-头部-注册',{ '城市': zhuge_city });
+            uxl_track('w_top/regist');
+        });
+
+        $("#xin_top_userinfo").on("click","#loginA",function(){
+            zhuge_track('C-头部-登录',{ '城市':zhuge_city });
+            uxl_track('w_top/login');
+        });
+
+        $('#php_half_city_link').attr({ 'onclick':"zhuge_ckflag(1,'头部-付一半'),zhuge_track('C-头部-付一半',{ '城市':'"+zhuge_city+"' })", 'uxevent':'w_top/halfprice' });
+        
+        $('#storeCarWrap').on('click', '.carShow', function(){ zhuge_dckflag(1,'收藏记录'); });
+        $('#focusPageWrap').on('click', '.carShow', function(){ zhuge_dckflag(1,'浏览记录'); });
+        
+        $('#brandSearch, #search_search').bind('click', function(){
+        	if ($(this).attr('id')=='brandSearch') {
+        		zhuge_track('搜索框点击次数', { '来源页面':'首页' });
+        	} else if ($(this).attr('id')=='search_search') {
+        		zhuge_track('搜索框点击次数', { '来源页面':'车辆列表页' });
+        	}
+        });
+        
+        $('.select-item').on('click', '.select-option', function(){
+        	var zg_filter_suffix = $(this).parent().parent().parent().parent().find('.search_select_change').attr('name');
+        	var zg_filter_value = $(this).parent().find('li :first').text()==$(this).text() ? '不限' : $.trim($(this).text());
+        	switch (zg_filter_suffix) {
+        	    case 'r' : {  // 车龄
+                    zhuge_track('车龄筛选', { '车龄区间': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+        	    } break;
+                case 'k' : {  // 里程
+                    zhuge_track('车辆列表页-里程', { '里程区间': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+                } break;
+                case 'l' : {  // 类型
+                    zhuge_track('类型筛选', { '类型值': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+                } break;
+                case 'g' : {  // 变速箱
+                    zhuge_track('车辆列表页-变速箱', { '变速箱值': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+                } break;
+                case 'f' : {  // 国别
+                    zhuge_track('车辆列表页-国别', { '国别值': zg_filter_value, '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+                } break;
+                default : {}
+        	}
+        });
+        
+        $('.color-type label').bind('click', function(){
+        	if ($(this).attr('title')) {  // 颜色
+                zhuge_track('车辆列表页-颜色', { '颜色值': $(this).attr('title'), '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+        	}
+        });
+        
+        $('.view_a').live('click', function(){
+        	if ($(this).text()) {  // 排序
+                zhuge_track('车辆列表页-排序', { '排序值': $(this).text(), '来源页面':(is_hf ? '付一半列表页' : '车辆列表页') });
+        	}
+        });
+        
+        $('.car-box .car-vtc').on('click', $('.car-list'), function(){
+        	if ($(this).attr('href') && $(this).attr('data-position')) {
+        		zhuge_track('查看车源', {
+        			'关键词': search_q ? search_q : '',
+        			'品牌值': $('.TipBtn_hidden_b').text() ? $.trim($('.TipBtn_hidden_b').text()) : '',
+        			'车系值': $('.TipBtn_hidden_s').text() ? $.trim($('.TipBtn_hidden_s').text()) : '',
+        			'排量值': $('.TipBtn_hidden_j').text() ? $.trim($('.TipBtn_hidden_j').text()) : '',
+        			'价格值': $('.TipBtn_hidden_p').text() ? $.trim($('.TipBtn_hidden_p').text()) : '',
+        			'车龄值': $('.car-select').find("[name='r']").parent().find('.select-default').text() ? $('.car-select').find("[name='r']").parent().find('.select-default').text() : '',
+        			'里程值': $('.car-select').find("[name='k']").parent().find('.select-default').text() ? $('.car-select').find("[name='k']").parent().find('.select-default').text() : '',
+        			'类型值': $('.car-select').find("[name='l']").parent().find('.select-default').text() ? $('.car-select').find("[name='l']").parent().find('.select-default').text() : '',
+        			'变速箱值': $('.car-select').find("[name='g']").parent().find('.select-default').text() ? $('.car-select').find("[name='g']").parent().find('.select-default').text() : '',
+        			'国别值': $('.car-select').find("[name='f']").parent().find('.select-default').text() ? $('.car-select').find("[name='f']").parent().find('.select-default').text() : '',
+        			'颜色值': $('.color-type').find('.checked').attr('title') ? $.trim($('.color-type').find('.checked').attr('title')) : '',
+        			'排序值': $('.view_a').parent().find('.active').text() ? $('.view_a').parent().find('.active').text() : '',
+        			'车源类型': $(".car-source .source-active span").text() ? $(".car-source .source-active span").text() : '',
+        			'车源位置': ($('.page-current').text() ? $('.page-current').text() : 'Unknown') + ' - ' + $(this).attr('data-position'),
+        			'车源URL': $.trim($(this).attr('href'))
+        		});
+        	}
+        });
+        
+        $('.list-con .con').on('click', 'a', function(){
+            if ($(this).attr('href') && $(this).attr('data-position')) {
+                zhuge_track(""=='halfprice' ? 'C-付一半列表页-车辆位置' : 'C-车辆列表页-车辆位置', {
+                	'城市':'北京',
+                    '车源位置': ($('.page-current').text() ? $('.page-current').text() : 'Unknown') + ' - ' + $(this).attr('data-position'),
+                });
+                uxl_track('w_' + (""=='halfprice' ? 'halfprice_carlist' : 'carlist') + '/rank/' + ($('.page-current').text() ? $('.page-current').text() : 'Unknown') + '-' + $(this).attr('data-position'));
+            }
+        });
+        
+        // App下载-全局打点
+        if ($('.code-edt a').length>0) {
+            $('.code-edt a').each(function(){
+            	$(this).attr('onclick', "zhuge_track('下载App', {'下载位置':'"+$(document).attr('title')+"','URL':'"+ $(this).attr('href') + "','channel渠道名称':'"+ (channel) + "'})");
+            });
+        }
+        
+        // 头部-下载App
+        if ($('#id_dl_app').length>0) {
+        	$('#id_dl_app').attr('uxevent', 'w_top/dl_app');
+        	$('#id_dl_app').bind('click', function(){
+        		zhuge_track('C-头部-下载APP', { '城市':'北京' });
+        	});
+        }
+        
+    });
+    
+    //----------- 诸葛 end -----------
+    
+    // 修复channel链接，针对div
+    function fix_channel_div(e,t) {
+        var channel = "{$channel}";
+        channel = location.search.replace(/.*?channel=([^\s&?]+).*/, "$1");
+        channel = channel == location.search ? '' : channel;
+        if (channel) {
+            var ela = '';
+            if (t=='id') {
+                ela = ('#'+e + ' ');
+            } else if (t=='class') {
+                ela = ('.'+e + ' ');
+            }
+            $(ela + 'a').each(function () {
+                if($(this).attr('href') && $(this).attr('href').indexOf('channel=') === -1) {
+                    if(!(($(this).attr('href')=='#') || ($(this).attr('href').indexOf('javascript'))==0)){
+                        $(this).attr('href', $(this).attr('href') + ($(this).attr('href').indexOf('?') === -1 ? '?' : '&') + 'channel=' + channel);
+                    }
+                }
+            });
+        }
+    }
+    
+    // 修复channel链接，针对单独的url
+    function fix_channel_url(url) {
+        var channel = "{$channel}";
+        channel = location.search.replace(/.*?channel=([^\s&?]+).*/, "$1");
+        channel = channel == location.search ? '' : channel;
+        if(channel && url && (url.indexOf('channel=') === -1)) {
+            if(!((url=='#') || (url.indexOf('javascript')==0))){
+                url += (url.indexOf('?') === -1 ? '?' : '&') + 'channel=' + channel;
+            }
+        }
+        return url;
+    }
+    
+    //----------- ab start -----------
+    function uxl_track(event) {
+        var ux_event = (event != 'undefined') ? $.trim(event) : '';
+        if (ux_event.length > 0) {
+            if(_abq) _abq.push(['_track'].concat(ux_event.split('/')));
+        }
+    }    
+    //----------- ab end -----------
+    
+</script>
+
+<script src="index_files/tj.js" type="text/javascript"></script>
+
+			<script type="text/javascript">
+var channel = "";
+channel = location.search.replace(/.*?channel=([^\s&?]+).*/, "$1");
+channel = channel == location.search ? '' : channel;
+if (channel) {
+    $('a').each(function () {
+        if($(this).attr('href') && $(this).attr('href').indexOf('channel=') === -1) {
+            if(!(($(this).attr('href')=='#') || ($(this).attr('href').indexOf('javascript'))==0)){
+            	$(this).attr('href', $(this).attr('href') + ($(this).attr('href').indexOf('?') === -1 ? '?' : '&') + 'channel=' + channel);
+            }
+        }
+    });
+}
+</script>
+		</div><iframe src="index_files/a68439b1108306c3821i0m202h_002.gif" style="display: none;" id="advhome"></iframe>
+		        <div class="footer-wrap">
+            <div class="footer">
+                <div class="contact_new">
+                    <a href="http://www.xin.com/aboutus/" rel="nofollow">关于我们</a>
+                    <!-- <a href="http://www.xin.com/contactus/"  rel="nofollow">联系我们</a> -->
+                    <a href="http://www.xin.com/joinus/" rel="nofollow">加入我们</a>
+                    <a href="http://www.xin.com/help/" rel="nofollow">帮助中心</a>
+                    <a href="http://www.xin.com/feedback/" rel="nofollow">用户反馈</a>
+                    <a href="http://dealer.xin.com/login/" id="apply_dealer" rel="nofollow">商家申请</a>
+                    <a href="http://www.youxinjinrong.com/" rel="nofollow">优信易购</a>
+                </div>
+                <span>业务合作单位：优信互联（北京）信息技术有限公司/优信拍（北京）二手车鉴定评估有限公司</span>
+                <div class="footer3">
+                    <p>Copyright © 2015-2016 <strong><a href="">优估</a></strong> All Rights Reserved 版权所有 优估(上海) 信息科技有限公司
+                        <strong>&nbsp;&nbsp;<a href="http://www.xin.com/assets/images/business_licence.jpg" target="window">营业执照</a></strong><em>沪ICP备15036207号-2</em>
+                        <strong>
+                            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011402001229" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;padding-left:20px;">
+                                <img src="index_files/gongan.png" style="float:left;">                                    
+                                <em style="margin-left:3px;">沪公网安备 31011402001229号</em>
+                            </a>
+                        </strong>
+                        <span style="margin-left:26px;">沪通信管自贸【2016】5号</span>
+                    </p>
+                    <!--可信网站开始-->
+                    <a href="https://ss.knet.cn/verifyseal.dll?sn=e15102111010561082vc83000000&amp;pa=500267" tabindex="-1" id="urlknet" target="_blank"> 
+                        <img alt="可信网站" name="KNET_seal" src="index_files/knetSealLogo.png" oncontextmenu="return false;" onclick="KNET_change('urlknet')" border="true">
+                    </a>
+                    <!--可信网站结束-->
+                    <!--诚信网站开始-->
+                    <a id="___szfw_logo___" class="bot-logo" href="https://credit.szfw.org/CX20151104012121580123.html" target="_blank"><img src="index_files/bot_logo2.png" border="0"></a>
+                    <script type="text/javascript">
+					(function () {
+						document.getElementById('___szfw_logo___').oncontextmenu = function () {
+							return false;
+						}
+					})();
+					</script>
+                    <!--诚信网站结束-->
+                </div>            
+                <div class="index-code fr clearfix"> 
+                    <img src="index_files/code.jpg" height="100" width="100">
+                    <p class="scan-txt fl rel">
+                        关注优信二手车<br>微信公众号
+                    </p>
+                </div>
+                <div class="index-code2 fl clearfix">
+                    <img src="index_files/code_1.jpg" height="100" width="100">
+                    <p class="scan-txt fr rel">
+                        扫描我，即可下载<br>优信二手车手机版
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!--温馨提示开始-->
+        <div class="popup-wrap" id="warmTip10">
+            <div class="inner">
+                <div class="tip-con">
+                    <p>温馨提示<a href="javascript:;" class="close_pop closeJs abs"></a></p>
+                    <img src="index_files/people.png">
+                    <span class="span_xin_msg">出错啦</span>
+                </div>
+            </div>
+        </div>
+        
+
+		<div class="popup-wrap" id="popupLogin">
+	<div class="inner">
+		<div class="popup-con2 con-height2">
+		    <span class="pop-title">登录</span>
+		    <a href="javascript:void(0)" class="ico_pop xBtn2 closeJs">关闭</a>
+		    <div class="logintab">
+	            <a href="javascript:void(0)" hidefocus="true" class="active">网站密码登录</a><a href="javascript:void(1)" hidefocus="true">短信随机码登录</a>
+		    </div>
+			<ul class="register logincon">
+				<li>
+			    <input class="ipt-box tel-bg" value="请输入手机号" id="search" type="text">
+				</li>
+				<li>
+				    <input class="code" value="请输入图片码" id="piccode_l" type="text">
+				    <a class="PageNum"></a>
+				</li>
+				<li>
+				<input class="ipt-box code-bg" value="请输入密码" id="psw5" type="text">
+				<input class="ipt-box code-bg hide" value="" id="psw6" type="password">
+				</li>
+			</ul>
+			<ul class="register logincon hide">
+				<li>
+				    <input class="ipt-box tel-bg" value="请输入手机号" id="search1" type="text">
+				</li>
+				<li>
+				    <input class="code" value="请输入图片码" id="piccode_r" type="text">
+				    <a class="PageNum"></a>
+				</li>
+				<li>
+				    <input class="code" value="六位数字验证码" id="search2" type="text">
+				    <input class="getNum vm" id="need_code1" value="获取验证码" type="button">
+				</li>
+			</ul>
+			<div class="btn-div">
+				<a href="javascript:void(0)" class="resBtn" id="login_btn">登录</a>
+			</div>
+			<div class="popBot abs">
+				<div class="loginWith fl">
+					<span>第三方登录：</span>
+					<a href="http://www.xin.com/openapi/authqq" class="ico_pop tqq" rel="nofollow"></a>
+					<a href="http://openapi.baidu.com/oauth/2.0/authorize?response_type=code&amp;client_id=Ug5Vh2SRNiSueexjtBi95Grs&amp;redirect_uri=http%3A%2F%2Fwww.xin.com%2Fopenapi%2Fbaidu_rd%2F&amp;display=popup" class="ico_pop tbd" rel="nofollow"></a>
+					<a href="https://api.weibo.com/oauth2/authorize?client_id=415981803&amp;redirect_uri=http%3A%2F%2Fwww.xin.com%2Fopenapi%2Findex%2F&amp;response_type=code" class="ico_pop xwb" rel="nofollow"></a>
+				 </div>
+				 <div class="forPass fr">
+					<a href='javascript:clear_invalid();$("#popupLogin").hide();show_popup("#forPass","#forPass%20.closeJs")'>忘记密码</a><a href="http://www.xin.com/register/" class="noregist" rel="nofollow">还没注册</a>
+				 </div>
+		  </div>
+		</div>	
+	</div>
+</div>
+<div class="popup-wrap" id="forPass">
+	<div class="inner">
+		<div class="popup-con con-height3">
+		     <span class="pop-title">找回密码</span>
+		     <div class="passtab abs">
+		            <span hidefocus="true" class="active">手机号验证 &gt;</span>
+		            <span hidefocus="true">设置密码</span>
+		    </div>
+		    <a href="javascript:void(0)" class="ico_pop xBtn2 closeJs">关闭</a>
+			<ul class="register">
+				<li class="mt40">
+				<input class="ipt-box tel-bg" value="请输入手机号" id="search3" type="text"></li>
+				<li>
+				    <input class="code" value="请输入图片码" id="piccode_g" type="text">
+				    <a class="PageNum"></a>
+				</li>
+				<li>
+				    <input class="code" value="六位数字验证码" id="search4" type="text">
+				    <input class="getNum vm" id="need_code3" value="获取验证码" type="button">
+				</li>
+			</ul>
+			<div class="btn-div">
+				<a href="javascript:void(0)" class="resBtn" id="next_step">下一步</a>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="popup-wrap" id="forgetNext">
+   <div class="inner">
+         <div class="popup-con con-height3">
+		     <span class="pop-title">找回密码</span>
+		     <div class="passtab abs">
+				<span hidefocus="true" class="pass-bg active">手机号验证 &gt;</span>
+				<span hidefocus="true" class="active">设置密码</span>
+		    </div>
+		    <a href="javascript:void(0)" class="ico_pop xBtn2 closeJs">关闭</a>
+			<ul class="register">
+				<li class="mt40">
+				    <input class="ipt-box code-bg" value="6-20位，数字、字母、_ 、组合" id="psw7" type="text">
+				    <input class="ipt-box code-bg hide" value="" id="psw8" type="password">
+				</li>
+				<li>
+				    <input class="ipt-box code-bg" value="请与上面输入密码一致" id="psw9" type="text">
+				    <input class="ipt-box code-bg hide" value="" id="psw10" type="password">
+				</li>
+			</ul>
+			<div class="btn-div">
+				<a href="javascript:void(0)" class="resBtn" id="reset_passwd">提交</a>
+			</div>
+		</div>
+   </div>
+</div>
+<div class="CarStandard popup-wrap" id="tReport">
+	<div class="CarSd-top">
+    	<a href="#" class="carGb closeJs CarSd-gb">关闭</a>
+    </div>
+    <div class="CarSd_head">
+        	<img src="index_files/promise_mico.png">
+        	<span>无重大事故车辆</span>
+     </div>
+	<div class="CarSd-big">
+        <div class="CarSd_cur">
+            <dl>
+            	<dt>如符合下述9条中任何一条，即为不符合“ 车辆无重大事故标准“的车辆，即属于重大事故车：</dt>
+                <dd>1、经过撞击，损伤到发动机舱和驾驶舱的车辆。</dd>
+                <dd>2、车身后翼子板撞击损伤超过其三分之一的车辆。</dd>
+                <dd>3、纵梁有焊接、切割、整形、变形的车辆。</dd>
+                <dd>4、减振器座有焊接、切割、整形、变形的车辆。</dd>
+                <dd>5、ABC柱有焊接、切割、整形、变形的车辆。</dd>
+                <dd>6、因撞击造成汽车安全气囊弹出的车辆。</dd>
+                <dd>7、其它不可拆卸部份有严重的焊接、切割、整形、变形的车辆。</dd>
+                <dd>8、车身经水浸泡超过车身二分之一，或积水进入驾驶舱的车辆。</dd>
+                <dd>9、车身经火焚烧超过0.5平方米，经修复仍存在安全隐患的车辆。</dd>
+            </dl>
+            <img src="index_files/car_pic2.png">
+            <p>（车辆关键部件图示）</p>
+        </div>
+        <div class="CarSd_foot">
+        	<p>不属于以上9种情况的车辆，即为符合“车辆无重大事故标准”的车辆，属于非重大事故车。</p>
+        </div>
+    </div>
+</div>
+<!--优学堂之我要提问-->
+<div class="popup-wrap" id="uAsk">
+	<div class="inner">
+		<div class="uxt-pop">
+		     <h2>我要提问</h2>
+			 <a href="#" class="ico_pop xBtn2 closeJs">关闭</a>
+			 <div class="detail">
+			 	<textarea id="suptare" maxlength="240" onkeydown='countChar("suptare","counter");' onkeyup='countChar("suptare","counter");' placeholder="请写下您的问题..."></textarea>
+			 	<p><span id="counter">0</span>/240</p>
+			 </div>
+			<div class="tag">
+			 	<p class="titTab">
+			 		
+			 	</p>
+			 	<p class="simTab active">
+			 		
+			 	</p>
+			 	<p class="simTab" style="display:none;">
+			 		
+			 	</p>
+			 	<p class="simTab" style="display:none;">
+			 		
+			 	</p>
+			</div>
+			<p class="tip">选择标签可以帮助您快速找到问题 <span style="color:red"></span></p>
+			<a href="javascript:void(0)" class="submit-btn">提交问题</a>
+			</div> 
+		</div>
+    </div>
+
+<script language="javascript"> 
+function countChar(textarea,span) {
+	document.getElementById(span).innerHTML = document.getElementById(textarea).value.length; 
+}
+$('#uAsk .simTab').delegate('a', 'click', function(){
+	$('#uAsk .simTab a').removeClass('active');
+	$(this).addClass('active');
+});
+$('#uAsk .titTab').delegate('a:not(.active)', 'click', function(){
+	$('#uAsk .titTab a').removeClass('active');
+	$(this).addClass('active');
+	var thisIndex = $(this).index();
+	$('#uAsk .simTab').removeClass('active').hide();
+	$('#uAsk .simTab:eq('+thisIndex+')').addClass('active').show();
+	$('#uAsk .simTab a').removeClass('active');
+});
+$(function(){
+	$('#uAsk .submit-btn').on('click', function ajaxSubmit(){
+		var idArr = [];
+		var title = $('#suptare').val();
+		var pid = $('#uAsk .titTab .active').attr('data_type');
+		var idObj = $('#uAsk .simTab .active').each(function(){
+			idArr.push($(this).attr('data_type'));
+		});
+		var id = idArr.toString();
+		if (!title || !pid || !id) {
+			$('#uAsk .tip span').html('信息填写不完整');
+			return false;
+		}
+		var title_filter = title.match(/[a-zA-Z0-9\u4e00-\u9fa5]/g);
+		if (!title_filter || title_filter.length > 240 || title_filter.length < 6) {
+			$('#uAsk .tip span').html('标题长度应在6〜240个字');
+			return false;
+		}
+		$.ajax({
+			type: "POST",
+			url: "/qa/ask/",
+			data: { "title":title,"pid":pid,"id":id},
+			dataType: 'json',
+			beforeSend: function(){
+				$('#uAsk .submit-btn').html('正在提交...');
+				$('#uAsk .submit-btn').unbind('click');
+			},
+			success: function(data) {
+				if (data.code == 1) {
+					$('#uAsk,.shade').hide();
+					$('#suptare').val('');
+					$("#uAsk .titTab a").removeClass('active');
+					$("#uAsk .titTab a:eq(0)").addClass('active');
+					$('#uAsk .simTab').removeClass('active').hide();
+					$('#uAsk .simTab:eq(0)').show();
+					$('#uAsk .tip span').html('');
+				}else{
+					$('#uAsk .tip span').html(data.message);
+				}
+				$('#uAsk .submit-btn').html('提交问题').on('click', ajaxSubmit);
+			},
+			error: function() {
+				$('#uAsk .tip span').html('请求失败!');
+				$('#uAsk .submit-btn').html('提交问题').on('click', ajaxSubmit);
+			}
+		});
+	});
+
+	$('#question_button').one('click', function(){
+		$.ajax({
+			url: "/qa/get_category",
+			dataType: "json",
+			success: function(data) {
+				for (var i in data.data[0]) {
+					var type = data.data[0][i][0];
+					var index = type-1;
+					if (i == 0) {
+						var addclass = 'class = "active"';
+					} else {
+						var addclass = '';
+					}
+                    if(!type || !data.data[0][i][1]) {
+                        continue;
+                    }
+					$("#uAsk .titTab").append('<a href="javascript:void(0)" '+addclass+' data_type='+type+'>'+data.data[0][i][1]+'</a>');
+					for (var j in data.data[type]) {
+                        if(!data.data[type][j][0]) {
+                            continue;
+                        }
+						$("#uAsk .simTab:eq("+index+")").append('<a href="javascript:void(0)" data_type='+data.data[type][j][0]+'>'+data.data[type][j][1]+'</a>');
+					}
+				}
+			}
+		});
+	});
+});
+</script>
+<div class="popup-wrap" id="career_apply">
+	<div class="inner">
+		 <div class="suc-con clearfix">
+		 	<img src="index_files/people.png">	
+		 	<p>恭喜您!提交成功~</p>
+		 	<a href="">确认</a>
+		 </div>
+    </div>
+</div>
+	
+	<script src="index_files/numberRun.js"></script>
+	<script src="index_files/zhuge_home.js"></script>
+	<script src="index_files/home.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		var total = '55991';
+		$("label.randomNum").numberAnimate({ num:total, speed:2000, symbol:"," });
+	});	
+	</script>
+
+<ul style="display: none;" tabindex="0" id="ui-id-1" class="ui-autocomplete ui-front ui-menu ui-widget ui-widget-content"></ul><span class="ui-helper-hidden-accessible" aria-relevant="additions" aria-live="assertive" role="status"></span><script src="index_files/bw-send-411.js"></script><img src="index_files/collect.gif" style="display: none;"><script async="" src="index_files/a.txt" type="text/javascript"></script></body></html>

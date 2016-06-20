@@ -1,0 +1,802 @@
+body {
+	 font-family: "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei", 微软雅黑, "Segoe UI", Tahoma, 宋体b8b体, SimSun, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+	font-size: 100%;
+	font-weight: normal
+}
+img{
+	border:0;
+}
+.mt30 {
+	margin-top: 30px;
+}
+.no-border-right {
+	border-right: 0 !important;
+}
+.border-right {
+	border-right: 1px solid #ebebeb !important;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+
+/*顶部*/
+.header-wrap {
+	width: 100%;
+	height:55px;
+	position: fixed;
+	top:30px;
+	left: 0;
+	z-index:90;
+}
+.header-active {
+	background: #fff;
+	border-bottom: 1px solid #e5e6e6;
+}
+.header-wrap .header {
+	width: 1210px;
+	height:55px;
+	margin: auto;
+	position: relative;
+}
+.header-wrap .logo {
+	float: left;
+	width: 145px;
+	height:55px;
+	background: url('http://imgs.xin.com/www/img/home_logo.png') no-repeat left center;
+}
+.header-wrap .nav {
+	float: right;
+	line-height:55px;
+}
+.header-wrap .nav a {
+	display: inline-block;
+	margin: 0 13px;
+	color: #282828;
+	font-size: 16px;
+	position:relative;
+}
+.header-wrap .nav .sbx-ico{
+	position:absolute;
+	display:block;
+	width:38px;
+	height:20px;
+	top:1px;
+	left:24px;
+}
+.header-wrap .nav a.active {
+	color: #ff5a37;
+	font-weight: bold;
+}
+.header-wrap .nav a.login, .header-wrap .nav a.register,
+.header-wrap .phone-info a{
+	margin: 0 0;
+}
+.header-wrap .person-login{float:right;width:146px;
+height:88px;}
+.header-wrap .person-login .person-wrap{
+    position: relative;
+    zoom: 1;
+    top:5px;
+    cursor: pointer;
+    padding: 0px 8px;
+    border-bottom: none;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -o-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+}
+.header-wrap .person-login .person-info{
+	height:86px;
+	border: 1px solid #e4e4e4;
+	margin:-1px;
+	background: #fdfdfd;
+}
+.person-wrap .phone-info {
+    position: relative;
+    zoom: 1;
+    padding-left: 25px;
+    
+}
+.person-wrap p {
+    font: normal 14px/44px "Microsoft YaHei";
+    color: #333;
+}
+.person-wrap.person-info a.exit{ display: block }
+.person-wrap a.exit{ display: none }
+.person-wrap .exit{
+	position:absolute;
+	left:0;
+	top:3px;
+	height:40px;
+	line-height:40px;
+	font-size: 16px !important;
+	width:128px;
+	margin: 0 !important;
+	border-top:1px dashed #e5e5e5;
+	text-align:center;
+}
+.person-wrap .phone-info .person-ico {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    background: url(http://imgs.xin.com/xin/images/common/xin_ico.png) no-repeat 0 -205px;
+    height: 20px;
+    width: 20px;
+}
+.header-wrap .nav a.login {
+	text-indent: 22px;
+	background: url(http://imgs.xin.com/www/img/home_login.png) no-repeat left center;
+}
+.header-wrap .nav a:hover {
+	color: #ff5a37;
+}
+
+/*底部*/
+.footer-wrap {
+	background: #444;
+	overflow: hidden;
+}
+.footer {
+	width: 1210px;
+	position: relative;
+	margin: auto;
+}
+.footer p {
+	font: normal 12px/22px "Microsoft YaHei";
+	color: #acacac
+}
+.footer p strong a {
+	color: #acacac
+}
+.footer .contact {
+	width: 600px;
+	margin: 0 auto 12px;
+	padding: 45px 0;
+	border-bottom: 1px solid #5e5e5e;
+	text-align: center
+}
+.contact a {
+	padding: 0 15px;
+	font: normal 16px/46px "Microsoft YaHei";
+	color: #e5e5e5
+}
+.contact a:hover {
+	text-decoration: underline
+}
+.qr-code {
+	position: absolute;
+	right: 0;
+	top: 54px;
+	width: 142px
+}
+.qr-code .scan-txt {
+	margin-top: 10px;
+	font: normal 12px/20px "Microsoft YaHei";
+	color: #999
+}
+.qr-code .arrow-ico {
+	background-position: 0 -143px;
+	position: absolute;
+	top: -25px;
+	left: -25px;
+	height: 32px;
+	width: 23px
+}
+.footer2 {
+	width: 600px;
+	margin: 0 auto;
+	margin-top: 8px;
+	padding-top: 8px;
+	text-align: center
+}
+.footer span {
+	font: normal 12px/40px "Microsoft YaHei";
+	color: #acacac
+}
+.gongan {
+	display: block;
+	margin-left: 10px;
+	width: 500px;
+	color: #acacac;
+	text-indent: 24px;
+	float: right;
+	height: 40px;
+	background: url(http://imgs.xin.com/www/img/beianbgs.png) no-repeat left center;
+	background-size: 20px 20px;
+}
+.gongan img {
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+}
+.footer .contact_new {
+	width: 1210px;
+	padding: 55px 0;
+	border-bottom: 1px solid #515151;
+	color: #e5e5e5
+}
+.contact_new a {
+	margin-right: 30px;
+	font: normal 16px/46px "Microsoft YaHei";
+	color: #e5e5e5
+}
+.contact_new a:hover {
+	text-decoration: underline
+}
+.footer3 {
+	width: 1210px;
+	border-top: 1px solid #515151;
+}
+.footer3 p {
+	font: normal 12px/40px "Microsoft YaHei";
+	position: relative
+}
+.footer3 strong {
+	margin: 0 3px;
+}
+.footer3 a.bot-logo {
+	margin-left: 10px;
+	display: inline-block
+}
+.footer3 em{
+	font-style:normal;
+}
+.index-code {
+	position: absolute;
+	right: 300px;
+	top: 29px;
+	height: 100px
+}
+.index-code2 {
+	position: absolute;
+	right: 25px;
+	top: 29px;
+	height: 100px
+}
+.index-code img, .index-code2 img {
+	float: left
+}
+.index-code .scan-txt, .index-code2 .scan-txt {
+	margin: 30px 0 0 10px;
+	font: normal 14px/20px "Microsoft YaHei";
+	color: #e5e5e5
+}
+
+/*城市选择*/
+.select-city {
+	top:40px;
+	left: 160px;
+	width:90px;
+	position: absolute;
+	font-size:16px;
+	color: #333
+}
+.select-city dt {
+	position: absolute;
+	height: 25px;
+	line-height: 25px;
+	top: -25px;
+	text-align:right;
+	cursor: pointer;
+	border-radius: 6px;
+	-o-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-mozborder-radius: 6px;
+	z-index: 100;
+	padding-right:10px;
+	background:url('http://imgs.xin.com/www/img/city_arrow.png') right 12px no-repeat;
+}
+
+.select-city .city-txt {
+	padding-right: 28px
+}
+.select-city .city-ico {
+	background-position: 0 -52px;
+	top: 25px;
+	right: 15px;
+	height: 9px;
+	width: 15px
+}
+.select-city dt.active {
+	color: #ff5837;
+	background:url('http://imgs.xin.com/www/img/city_arrow_up.png') right 12px no-repeat;
+}
+.select-city dd {
+	display: none;
+	width: 750px;
+	height: 450px;
+	background: #fff;
+	margin-top: 5px;
+	border: 1px solid #e5e5e5;
+	overflow-y: scroll
+}
+.select-city dt.active .city-txt {
+	color: #ff5837
+}
+.select-city dd ul li {
+	width: 100%;
+	border-bottom: 1px dashed #ebebeb;
+	font-size:14px;
+	line-height:40px;
+	color: #666
+}
+.select-city dd ul li a, .select-city .hot-city a {
+	_display: inline;
+	display: block;
+	float: left;
+	width: 60px;
+	padding-left: 18px;
+	text-align: left;
+	color: #666
+}
+.select-city dd ul li a:hover, .select-city .hot-city a:hover, .select-city .pro-letter a:hover, .select-city dd ul li a.cur, .select-city .hot-city a.cur, .select-city .pro-letter a.cur {
+	color: #ff5837
+}
+.select-city dd ul li span {
+	_display: inline;
+	display: block;
+	float: left;
+	width: 100px;
+	background: #f2f2f2;
+	text-indent: 10px
+}
+.select-city dd ul li span.mcity, .select-city dd ul li span.mcity b, .select-city dd ul li span.scity b {
+	color: #f2f2f2
+}
+.select-city dd ul li span b {
+	color: #999;
+	display: inline-block;
+	width: 30px
+}
+.select-city .hot-city {
+	height: 40px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size:14px;
+	line-height:40px;
+	position: relative
+}
+.select-city .hot-city span {
+	_display: inline;
+	display: block;
+	float: left;
+	width: 100px;
+	background: #f2f2f2;
+	text-align: center;
+	color: #ff5837
+}
+.select-city .pro-letter {
+	height: 40px;
+	border-bottom: 1px solid #e5e5e5;
+	font-size:14px;
+	line-height:40px;
+}
+.select-city .pro-letter span {
+	_display: inline;
+	display: block;
+	float: left;
+	width: 100px;
+	background: #f2f2f2;
+	text-align: center;
+	color: #666
+}
+.select-city .pro-letter em {
+	_display: inline;
+	display: block;
+	float: left;
+	width: 15px;
+	margin-left: 20px;
+	text-align: left;
+	color: #666;
+	font-style:normal;
+	cursor: pointer;
+}
+.select-city .pro-letter em:hover {
+	color: #ff5837
+}
+.select-city .cityMore {
+	float: left;
+	font-size:14px;
+	color: #666;
+	background: #f2f2f2 url('http://imgs.xin.com/xin/images/common/dashed.png') bottom repeat-x
+}
+.select-city .cityMore span {
+	display: inline-block;
+	float: left
+}
+.select-city .cityMore span:first-child {
+	position: relative;
+	width: 100px;
+	text-indent: 40px;
+	font-size:14px;
+	line-height:22px;
+	padding: 10px 0;
+	z-index: 11
+}
+.select-city .cityMore span:first-child b {
+	position: absolute;
+	top: 12px;
+	left: -16px;
+	color: #999999;
+	font-size:14px;
+}
+.select-city .cityMore span + span {
+	width: 629px;
+	text-align: left;
+	color: #666;
+	overflow: hidden;
+	background: white url('http://imgs.xin.com/xin/images/common/dashed.png') bottom repeat-x
+}
+.select-city .cityMore span + span em {
+	width: 100%;
+	display: inline-block;
+	background: white url('http://imgs.xin.com/xin/images/common/dashed.png') bottom repeat-x
+}
+.select-city .cityMore span + span a {
+	width: 60px;
+	color: #666;
+	font-size:14px;
+	line-height:22px;
+	padding-left: 18px;
+	font-style: normal;
+	padding: 10px 0 10px 14px;
+	display: inline-block
+}
+.select-city .cityMore a:hover, .select-city .cityMore a.cur {
+	color: #ff5837
+}
+.select-city .noDas {
+	background: #f2f2f2 !important
+}
+.select-city .noDas em {
+	background: white !important
+}
+.hot-city .search-focus {
+	position: relative;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	height: 28px;
+	line-height: 28px;
+	width: 360px;
+	margin: 10px auto
+}
+.hot-city .search-focus input {
+	display: block;
+	border: none;
+	background: none;
+	font-size:14px;
+	line-height:28px;
+	height: 28px;
+	color: #333;
+	text-indent: 40px;
+	width: 360px
+}
+.hot-city .search-focus .search-ico {
+	display: block;
+	background: url(http://imgs.xin.com/xin/images/common/xin_ico.png) no-repeat  -77px 3px;
+	height: 34px;
+	width: 18px;
+	position: absolute;
+	left: 10px;
+	top: 2px;
+	cursor: pointer;
+}
+.hot-city .search-focus .search-ico:hover {
+	background: url(http://imgs.xin.com/xin/images/common/xin_ico.png) no-repeat  -39px 3px;
+}
+.hot-city .city-blur {
+	width: 360px;
+	border: 1px solid #e5e5e5;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	top: 32px;
+	z-index: 10;
+	background: #fff;
+	display: none
+}
+.hot-city .city-blur a {
+	display: block;
+	width: 330px;
+	height: 30px;
+	padding: 0 15px;
+	color: #333 !important;
+	font-size:14px;
+	line-height:30px;
+}
+.hot-city .city-blur a:hover {
+	background: #f2f2f2;
+	color: #333 !important
+}
+.hot-city .city-blur a em {
+	float: right;
+	color: #c5c5c5
+}
+
+/*数字滚动插件的CSS可调整样式*/
+.mt-number-animate{ 
+   height:22px;
+   font-size:22px;
+   line-height:22px;
+   overflow: hidden; 
+   display: inline-block; 
+   vertical-align:top;
+   color:#1a1a1a;
+   position: relative; }
+.mt-number-animate .mt-number-animate-dot{ 
+   width:5px;/*设置分割符宽度*/ 
+   line-height: 22px; 
+   float: left; 
+   color: #1a1a1a;
+   text-align: center;
+}
+.mt-number-animate .mt-number-animate-dom{ 
+   width: 13px;/*设置单个数字宽度*/ 
+   text-align: center; 
+   color: #1a1a1a;
+   float: left; 
+   position:relative; top: 0;
+}
+.mt-number-animate .mt-number-animate-dom .mt-number-animate-span{ 
+   width: 100%; 
+   float: left;
+}
+/*数字滚动插件的CSS可调整样式*/
+
+
+/*图片淡入  淡出效果*/
+@-webkit-keyframes fadeIn {
+	0% {
+		opacity: 0.5
+	}
+	100% {
+		opacity: 1
+	}
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0.5
+	}
+	100% {
+		opacity: 1
+	}
+}
+/*图片淡入  淡出效果*/
+
+/*登录弹框*/
+.hide {
+	display: none;
+}
+.shade {
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color: #282828;
+	width: 100%;
+	height: 100%;
+	filter: Alpha(opacity=60);
+	opacity: 0.6;
+}
+.popup-wrap {
+	_position: fixed;
+	position: fixed;
+	z-index: 1000;
+	display:none;
+	left: 50%; 
+	top: 50%; 
+	margin-left: -305px;
+	margin-top: -244px;;
+}
+.popup-login {
+	height: 468px;
+	width: 560px;
+	background: #fff;
+	border-radius: 8px;
+	-webkit-border-radius: 8px;
+}
+.popup-login .pop-title {
+	font-size:14px;
+	line-height:60px;
+	color: #333333;
+	width: 100%;
+	text-indent: 30px;
+	border-bottom: 1px solid #e5e5e5;
+	display: block;
+}
+.ico_pop {
+	background: url(http://imgs.xin.com/xin/images/popup/pop_icon.png) no-repeat;
+}
+.xBtn2 {
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	background-position: 0 -555px;
+	width: 20px;
+	height: 20px;
+	display: block;
+	text-indent: -9999em;
+}
+.popup-login .logintab {
+	height: 40px;
+	width: 280px;
+	border-bottom: 2px solid #e5e5e5;
+	text-align: center;
+	margin: 20px auto 0
+}
+.popup-login .logintab a {
+	display: block;
+	float: left;
+	width: 138px;
+	font: normal 14px/40px "Microsoft YaHei";
+	color: #999999
+}
+.popup-login .logintab a.active {
+	border-bottom: 2px solid #ff5837;
+	color: #ff5837
+}
+.popup-wrap ul.register {
+	width: 282px;
+	margin: 30px auto 0;
+}
+.popup-wrap ul.register li {
+	margin-bottom: 16px
+}
+.popup-wrap ul.register li label {
+	width: 90px;
+	color: #666666;
+	font: normal 14px "Microsoft YaHei";
+	display: inline-block;
+	vertical-align: middle;
+	text-align: right;
+	padding-right: 10px
+}
+.popup-wrap ul.register li .ipt-box {
+	vertical-align: middle;
+	height: 18px;
+	width: 260px;
+	border: 1px solid #d6d6d6;
+	font: normal 14px/34px "Microsoft YaHei";
+	color: #bfbfbf;
+	border-radius: 6px;
+	line-height: 18px;
+	padding: 8px 10px;
+}
+.popup-wrap ul.register li .code {
+	vertical-align: middle;
+	width: 98px;
+	height: 18px;
+	padding: 8px 10px;
+	color: #bfbfbf;
+	font: normal 14px/34px "Microsoft YaHei";
+	border: 1px solid #d6d6d6;
+	border-radius: 6px;
+	line-height: 18px;
+	float: left;
+}
+.popup-wrap ul.register li .PageNum {
+	display: inline-block;
+	width: 70px;
+	height: 30px;
+	margin-left: 47px
+}
+.popup-wrap ul.register li .PageNum img {
+	width: 70px;
+	height: 30px;
+	margin-bottom: -14px
+}
+.popup-wrap ul.register .sure {
+	display: inline-block;
+	vertical-align: middle;
+	height: 18px;
+	width: 15px;
+	margin-left: 5px;
+	background: url(http://imgs.xin.com/xin/images/popup/pop_icon.png) 0 0 no-repeat
+}
+.popup-wrap ul.register .tel-bg {
+	background: url(http://imgs.xin.com/xin/images/popup/pop_icon.png) 255px -586px no-repeat
+}
+.popup-wrap ul.register .code-bg {
+	background: url(http://imgs.xin.com/xin/images/popup/pop_icon.png) 255px -621px no-repeat
+}
+.popup-wrap ul.register li input.code {
+	width: 140px
+}
+.popup-wrap ul.register li input.getNum {
+	height: 35px;
+	width: 112px;
+	margin-left: 5px;
+	border-radius: 6px;
+	text-align: center;
+	cursor: pointer;
+	color: #333333;
+	background: #fff;
+	border: 1px solid #d6d6d6;
+	font: normal 14px/33px "Microsoft YaHei";
+	display: inline-block
+}
+.popup-wrap .btn-div {
+	padding-bottom: 25px;
+	margin-left: 140px;
+	position: relative
+}
+.popup-wrap .btn-div a.resBtn {
+	width: 280px;
+	height: 35px;
+	text-align: center;
+	font: normal 16px/35px "Microsoft YaHei";
+	color: #fff;
+	display: inline-block;
+	background: #ff5837;
+	border-radius: 6px;
+}
+.popBot {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-top: 1px solid #ededed;
+	padding: 8px 0;
+	background: #f7f7f7;
+	border-radius: 0 0 8px 8px;
+}
+.popBot .readynum {
+	text-align: center
+}
+.popBot .readynum span {
+	font: normal 14px/34px "Microsoft YaHei";
+	color: #797979
+}
+.popBot .readynum a {
+	font: normal 14px/34px "Microsoft YaHei";
+	color: #ff5837
+}
+.loginWith {
+	margin-left: 30px;
+	float: left;
+}
+.loginWith span {
+	color: #3b3b3b;
+	font: normal 16px/22px "Microsoft YaHei";
+	vertical-align: middle
+}
+.loginWith a {
+	width: 33px;
+	height: 33px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 5px
+}
+.loginWith a.tqq {
+	background-position: 0 -83px
+}
+.loginWith a.tbd {
+	background-position: 0 -758px
+}
+.loginWith a.xwb {
+	background-position: 0 -126px
+}
+.forPass {
+	vertical-align: middle;
+	color: #adadad;
+	margin-right: 20px;
+	float: right;
+}
+.forPass a {
+	font: normal 16px/33px "Microsoft YaHei";
+	color: #adadad;
+	padding: 0 10px
+}
+.forPass a.noregist {
+	color: #ff5837;
+	border-left: 1px solid #adadad
+}

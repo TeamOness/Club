@@ -1,0 +1,400 @@
+.home-advert1{
+	width:100%;
+	height: 260px;
+	top:0;
+	position: fixed;
+	z-index: 99999999999;
+}
+.home-advert1 a{
+	display:block;
+	width: 100%;
+	height: 260px;
+	top:0;
+	left:0;
+}
+.home-advert1 img, 
+.home-advert2 img,
+.home-advert3 img, 
+.half-advert img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+.adv-close {
+	display: block;
+	width: 19px;
+	height: 19px;
+	background: url(http://imgs.xin.com/xin/images/home/adv_close.png) no-repeat;
+	position: absolute;
+	cursor: pointer
+}
+.adv-close:hover {
+	background: url(http://imgs.xin.com/xin/images/home/adv_close_hover.png) no-repeat
+}
+.home-advert1 .adv-close {
+	left: 50%;
+	top: 5px;
+	margin-left: 525px
+}
+.home-advert2{
+	width: 1100px;
+	height: 120px;
+	bottom:0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	position: fixed;
+	z-index: 999
+}
+.home-advert2 a{
+	display:block;
+	width: 1100px;
+	height: 120px;
+}
+.home-advert2 .adv-close {
+	right: 5px;
+	top: 5px;
+	margin-left: 525px
+}
+.home-advert3{
+	width: 1100px;
+	height: 90px;
+	margin: 0 auto;
+}
+.home-advert3 a{
+	display:block;
+	width: 1100px;
+	height: 90px;
+}
+.car-show li{
+	position:relative;
+}
+.spread-ads img{
+   display:block;
+   position:absolute;
+   left:0;
+   top:0;
+   width: 260px;
+   height: 300px;
+}
+.brand-switch {
+	width: 1100px;
+	margin: 30px auto 0;
+	position: relative
+}
+.brand-switch .switch {
+	width:1100px;
+	height: 90px;
+}
+.brand-switch li {
+	width: 136px;
+	float: left;
+	border:1px solid #e5e5e5;
+	border-left: none;
+}
+.brand-switch li.br {
+	border-right: 1px solid #e5e5e5
+}
+.brand-switch a.active {
+	border-bottom: 4px solid #ff5837
+}
+.brand-switch a.active span {
+	color: #ff5837
+}
+.brand-switch li a {
+	display: block;
+	height: 90px;
+	text-align: center
+}
+.brand-switch li img {
+	width: 50px;
+	height: 50px;
+	margin-top: 10px
+}
+.brand-switch li span {
+	font: normal 14px/20px "Microsoft YaHei";
+	display: block;
+	color: #333
+}
+.brand-switch a.check-more {
+	float: left;
+	display: inline-block;
+	width: 124px;
+	height: 124px;
+	font: normal 14px/124px "Microsoft YaHei";
+	color: #333;
+	text-align: center;
+	background: #f2f2f2
+}
+.brand-switch a.check-more:hover {
+	color: #ff5837
+}
+.brand-switch .b-left {
+	background-position: 0 -729px;
+	left: 50%;
+	margin-left: -620px;
+	top: 50%;
+	margin-top: 25px;
+	display: block;
+	z-index: 10;
+	width: 50px;
+	height: 89px;
+	cursor: pointer
+}
+.brand-switch .b-right {
+	background-position: 0 -620px;
+	right: 50%;
+	margin-right: -620px;
+	top: 50%;
+	margin-top: 25px;
+	display: block;
+	z-index: 10;
+	width: 50px;
+	height: 89px;
+	cursor: pointer
+}
+.brand-switch .b-left:hover {
+	background-position: 0 -515px
+}
+.brand-switch .b-right:hover {
+	background-position: 0 -411px
+}
+.brand-switch .con-car {
+	margin: 30px 0 0;
+	display: none;
+}
+.brand-switch .con-car .con {
+	width: 258px;
+	border: 1px solid #d9d9d9;
+	border-radius: 7px;
+	position: relative;
+	float: left
+}
+.brand-switch .con-car .con:hover {
+	border: 1px solid #ff5837
+}
+.brand-switch .con-car .con:hover h4, .brand-switch .con-car .con:hover h4 a {
+	color: #ff5837
+}
+.brand-switch .con-car .con a.aimg, .brand-switch .con-car .con img {
+	width: 258px;
+	height: 175px;
+	display: block;
+	border-radius: 6px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0
+}
+.brand-switch .con-car .con .pad {
+	padding: 10px 14px 0
+}
+.brand-switch .con-car .new {
+	font: normal 12px/28px "Microsoft YaHei";
+	color: #999999;
+	height: 28px;
+	width: 230px;
+	clear: both;
+	border-bottom: 1px solid #e4e4e4
+}
+.brand-switch .con-car .con h4 a {
+	display: block;
+	height: 44px;
+	font: normal 14px/22px "Microsoft YaHei";
+	color: #333333;
+	overflow: hidden
+}
+.brand-switch .con-car .con em {
+	font: bold 20px/24px "Microsoft YaHei";
+	color: #ff5837;
+	margin: 5px 0;
+	display: inline-block;
+	float: left
+}
+.brand-switch .con-car .con span {
+	height: 28px;
+	font-size: 12px;
+	line-height: 28px;
+	color: #999999
+}
+.brand-switch .con-car .con b.line {
+	display: inline-block;
+	width: 10px;
+	height: 28px;
+	padding: 0 10px 0 6px
+}
+.brand-switch .con-car .con i {
+	font-style: normal;
+	color: #979797
+}
+.sale-advert1{
+	width: 1100px;
+	height: 80px;
+	margin: 0 auto 20px;
+	position:relative;
+}
+.sale-advert2{
+	width: 1100px;
+	height: 80px;
+	margin: 0 auto;
+	position:relative;
+}
+.sale-advert1 a,
+.sale-advert2 a{
+	display:block;
+	width: 1100px;
+	height: 80px;
+}
+.car-guess {
+	width: 100%;
+	background: #fafafa;
+}
+.car-guess h3 {
+    font: bold 18px/30px "Microsoft YaHei";
+    padding: 20px 0 10px;
+    color: #333333;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 10px;
+}
+.con-car {
+	width: 1100px;
+	margin: 30px auto
+}
+.con-car .con {
+	width: 258px;
+	border: 1px solid #d9d9d9;
+	border-radius: 7px;
+	position: relative;
+	float: left
+}
+.con-car .con:hover {
+	border: 1px solid #ff5837
+}
+.con-car .con:hover h4 {
+	color: #ff5837
+}
+.con-car .con img {
+	width: 258px;
+	height: 175px;
+	display: block;
+	border-radius: 6px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0
+}
+.con-car .con .pad {
+	padding: 10px 14px 0
+}
+.con-car .new {
+	font: normal 12px/28px "Microsoft YaHei";
+	color: #999999;
+	height: 28px;
+	width: 230px;
+	clear: both;
+	border-bottom: 1px solid #e4e4e4
+}
+.con-car .con h4 a {
+	display: block;
+	height: 44px;
+	font: normal 14px/22px "Microsoft YaHei";
+	color: #333333;
+	overflow: hidden
+}
+.con-car .con em {
+	font: bold 20px/24px "Microsoft YaHei";
+	color: #ff5837;
+	margin: 5px 0;
+	display: inline-block;
+	float: left
+}
+.con-car .con span {
+	height: 28px;
+	font-size: 12px;
+	line-height: 28px;
+	color: #999999
+}
+.con-car .con b.line {
+	display: inline-block;
+	width: 10px;
+	height: 28px;
+	padding: 0 10px 0 6px
+}
+.con-car .con i {
+	font-style: normal;
+	color: #979797
+}
+.detail-advert1{
+	width: 1100px;
+	height: 80px;
+	margin: 0 auto;
+}
+.detail-advert1 a{
+	display:block;
+	width: 1100px;
+	height: 80px;
+}
+.item-wrap .item{
+	position:relative;
+}
+.item-wrap a.adv-img{
+	display: block;
+	width: 263px;
+	height: 360px;
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:9;
+}
+.half-advert{
+	width:100%;
+	height: 80px;
+	margin:0 auto;
+}
+.half-advert a{
+	display:block;
+	width:100%;
+	height:80px;
+}
+.vip-shop {
+	width: 1100px;
+	height: 120px;
+}
+.vip-shop li {
+	width: 234px;
+	height: 90px;
+	padding: 15px 20px;
+	float: left
+}
+.vip-shop li img {
+	display: inline;
+	float: left;
+	margin-right: 10px
+}
+.vip-shop li p {
+	margin-bottom: 5px
+}
+.vip-shop li .name {
+	display: inline-block;
+	width: 184px;
+	font: normal 18px/20px "Microsoft YaHei";
+	color: #333;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+.vip-shop li .ads {
+	display: inline-block;
+	width: 184px;
+	font: normal 14px/20px "Microsoft YaHei";
+	color: #999;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}
+.vip-shop li b {
+	display: block;
+	font: normal 14px/20px "Microsoft YaHei";
+	color: #666;
+	width: 234px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis
+}

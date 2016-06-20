@@ -1,0 +1,867 @@
+.shop_benz{
+    background: #111;
+}
+.shop_benz .benz_name{
+    color: #fff;
+    font-size: 20px;
+}
+.shop_benz .benz_name:after{
+    content: "原厂认证";
+    color: #fff;
+    background: #ff5a37;
+    text-align: center;
+    width: 74px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    font-size: 14px;
+    vertical-align: 3px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.shop_benz  .ads{
+    color: #909090;
+    font-size:14px;
+}
+.shop_benz .benz_tab{
+    margin-right: 40px;
+    margin-left: 0;
+    width: auto;
+}
+.shop_benz .benz_tab .tab{
+    color: #fff;
+    font-size: 14px;
+}
+.shop_benz .benz_tab .tab-key{
+    width: auto;
+}
+.shop_benz .benz_logo{
+    width: 73px;
+    height: 60px;
+    background: url('http://imgs.xin.com/xin/images/shop/benz_logo2.png') no-repeat;
+}
+.shop-con .benz_line:before{
+    content: "";
+    width: 4px;
+    height: 19px;
+    display: inline-block;
+    background: url('http://imgs.xin.com/xin/images/shop/ic_1.png') no-repeat;
+    position: absolute;
+    top: 8px;
+    left: 3px;
+}
+.benz_city{
+    width: 1100px;
+    margin: 20px auto 0;
+}
+.benz_city .benz_pic{
+    width: 1100px;
+    height: 240px;
+    margin: 0 auto 20px;
+}
+.benz_city .benz_level{
+    width: 1010px;
+    padding: 13px 25px 0 63px;
+    border: 1px solid #e5e5e5;
+    background: #fafafa;
+    font-size: 14px;
+    position: relative;
+}
+.benz_city .benz_level:before{
+    content: "车系：";
+    display: inline-block;
+    position: absolute;
+    left: 25px;
+    color: #999;
+    top: 15px;
+}
+.benz_city .benz_level li{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.benz_city .benz_level li a{
+    display: inline-block; 
+    padding: 2px 6px;
+    color: #666;
+    margin: 0 3px;
+}
+.benz_city .benz_level li a.active{
+    background: #111;
+    color: #fff;
+}
+.benz_banner{
+    display: block;
+    width: 1100px;
+    margin-top: 15px;
+}
+.benz_banner img{
+    width: 1100px;
+    height: 150px;
+    display: block;
+}
+.benz_h1:after{
+    content: "原厂认证";
+    color: #fff;
+    background: #ff5a37;
+    text-align: center;
+    width: 74px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    font-size: 14px;
+    vertical-align: 3px;
+    margin-left: 10px;
+    display: inline-block;
+}
+.benz_shop{
+    width: 251px;
+    float: right;
+}
+.benz_shop .benz_shop_link{
+    display: inline-block;
+    width: 251px;
+}
+.benz_shop .benz_shop_link .benz_shop_pic{
+    width: 251px;
+    height: 80px;
+    display: block;
+}
+.benz_shop_logo .benz_shop_logo_pic{
+    display: block;
+    width: 92px;
+    height: 76px;
+    margin: 0 auto;
+}
+.benz_shop_logo .benz_shop_btn{
+    width: 180;
+    height: 34px;
+    padding: 0 10px;
+    display: inline-block;
+    font-size: 14px;
+    line-height: 34px;
+    color: #fff;
+    background: #111;
+    border-radius: 6px;
+}
+.benz_shop_logo .benz_shop_btn:before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url('http://imgs.xin.com/xin/images/shop/benz_logo4.png') no-repeat;
+    display: inline-block;
+    vertical-align: -5px;
+    margin-right: 4px;
+}
+.con-page span.benz_page_current,
+.con-page a.benz_page_a:hover{
+    background: #111 !important;
+}
+.shop-con .con-car .benz_con:hover{
+    border: 2px solid #bfbfbf;
+}
+.car-detail .d-box .d-list .twotit .benz_money{
+    width: 490px;
+}
+.car-detail .d-box .d-list .twotit .benz_money .wan_1,
+.car-detail .d-box .d-list .twotit .benz_money .wan_2{
+    width: 244px;
+    text-align: center;
+}
+.car-detail .d-box .d-list .benz_company{
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    margin-top: 20px;
+}
+.car-recommend .rec-con .benz_list:hover{
+    border: 1px solid #bfbfbf;
+}
+.car-detail .d-box .d-photo .btn_benz_tu{
+    display: block;
+    width: 87px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 20px;
+    top: 335px;
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    border-radius: 20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+    cursor: pointer;
+}
+.car-detail .d-box .d-photo .btn_benz_tu:before{
+    content: "";
+    width: 13px;
+    height: 13px;
+    background: url('http://imgs.xin.com/xin/images/shop/ic_tu.png') no-repeat;
+    display: inline-block;
+    margin-bottom: -2px;
+    margin-right: 6px;
+}
+.car-detail .d-box .d-photo .btn_benz_num{
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 335px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 16px;
+    color: #fff;
+    background: rgba(0,0,0,.5);
+    text-align: center;
+    border-radius: 20px;
+    -webkit-border-radius:20px;
+    -moz-border-radius:20px;
+    -ms-border-radius:20px;
+    -o-border-radius:20px;
+}
+.con-page {
+    margin: 30px auto;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+.con-page strong, 
+.con-page span.page-current {
+    background: #111;
+    color: #ffffff;
+}
+.con-page span, .con-page strong, .con-page a {
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+    border: 1px solid #d9d9d9;
+    color: #666666;
+    font: normal 14px "Microsoft YaHei";
+}
+.car-upper span.benz_xian{
+    border-right: none;
+    border-left: none;
+}
+
+
+/*--benz_title--*/
+.Benz_head{
+    width: 100%;
+    height: 82px;
+    line-height: 82px;
+    background: #000;
+}
+.benz_head_con{
+    width: 1100px;
+    height: 80px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.benz_head_con .benz_head_logo1{
+    width: 190px;
+    height: 48px;
+    padding-top: 16px;
+    float: left;
+}
+.benz_head_con .benz_head_list{
+    display: inline-block;
+    margin-left: 48px;
+    float: left;
+}
+.benz_head_con .benz_head_list li{
+    display: inline-block;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.benz_head_con .benz_head_list li a{
+    display: inline-block;
+    color: #aaa;
+    height: 40px;
+    line-height: 38px;
+}
+.benz_head_con .benz_head_list li a.active{
+    color: #fff;
+    border-bottom: 2px solid #fff;
+}
+.benz_head_con .benz_head_list li a:hover{
+    color: #fff;
+}
+.benz_head_con .benz_head_logo2{
+    width: 73px;
+    height: 60px;
+    padding-top: 10px;
+    float: right;
+}
+/*--benz_title--*/
+
+/*--benz_footer--*/
+.Benz_foter{
+    display: block;
+    height: 60px;
+    background: #111;
+}
+.Benz_foter .benz_foter_list{
+    width: 490px;
+    margin: 0 auto;
+    height: 40px;
+    font-size: 14px;
+    overflow: hidden;
+    padding-top: 20px;
+}
+.Benz_foter .benz_foter_list li{
+    padding: 0 20px;
+    float: left;
+    border-left: 1px solid #bbb;
+    color: #bbb;
+}
+.Benz_foter .benz_foter_list li:first-child{
+    border-left: none;
+}
+.Benz_foter .benz_foter_list li a{
+    display: inline-block;
+    color: #bbb;;
+}
+/*--benz_footer--*/
+
+
+/*--benz_index--*/
+.Benz_banner{
+    width: 1100px;
+    height: 360px;
+    margin: 20px auto 0;
+    position: relative;
+    overflow: hidden;
+}
+.Benz_banner .flex-prev,
+.Benz_banner .flex-next{
+    position: absolute;
+    z-index: 5;
+    width: 50px;
+    height: 66px;
+    margin: 0 auto;
+    cursor: pointer;
+    top: 147px;
+    color: transparent;
+}
+.Benz_banner .flex-prev{
+    background: rgba(0,0,0,.6) url('http://imgs.xin.com/xin/images/shop/ic_banner_arrow_left.png') no-repeat center;
+    left: 0;
+}
+.Benz_banner .flex-next{
+    background: rgba(0,0,0,.6) url('http://imgs.xin.com/xin/images/shop/ic_banner_arrow_right.png') no-repeat center;
+    right: 0;
+}
+.Benz_banner .benz_slider{
+    position: relative;
+    width: 1100px;
+    height: 360px;
+    overflow: hidden;
+    zoom:1;
+}
+.Benz_banner .benz_slider img{
+    width: 1100px;
+    height: 360px;
+    display: block;
+}
+.benz_min_height{
+    min-height: 600px;
+}
+.Benz_car_list{
+    width: 1100px;
+    margin: 0 auto 34px;
+}
+.Benz_car_list .benz_title{
+    width: 1100px;
+    height: 80px;
+    line-height: 80px;
+    clear: both;
+}
+.Benz_car_list .benz_title h1{
+    display: block;
+    float: left;
+    color: #111;
+    font-size: 16px;
+}
+.Benz_car_list .benz_title h1:before{
+    content: "";
+    width: 4px;
+    height: 20px;
+    background: #111;
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: -5px;
+}
+.Benz_car_list .benz_title h1 span{
+    color: #ff5a37;
+}
+.Benz_car_list .benz_title .benz_link{
+    width: 201px;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    background: #111;
+    font-size: 16px;
+    color: #fff;
+    float: right;
+    margin-top: 20px;
+    position: relative;
+}
+.Benz_car_list .benz_title .benz_link span{
+    width: 201px;
+    height: 40px;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+.Benz_car_list .benz_title .benz_link span:before{
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background: url('http://imgs.xin.com/xin/images/shop/ic_search.png') no-repeat;
+    margin-bottom: -4px;
+    margin-right: 10px;
+}
+.Benz_car_list .benz_title .benz_link ul{
+    position: absolute;
+    top: -240px;
+    z-index: 9;
+    height: 240px;
+    width: 201px;
+    background: #333;
+    display: none;
+    overflow-y: scroll;
+}
+.Benz_car_list .benz_title .benz_link ul li a{
+    color: #fff;
+    display: inline-block;
+    padding-left: 16px;
+    width: 160px;
+}
+.Benz_car_list .benz_title .benz_link ul li a:hover{
+    background: #111;
+}
+.Benz_car_list .benz_title .price_ranking{
+    display: block;
+    float: right;
+    width: 94px;
+    height: 22px;
+    text-align: center;
+    border-left:1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    color: #585858;
+    font-size: 14px; 
+    margin-top: 29px;
+    line-height: 22px;
+}
+.Benz_car_list .benz_title .benz_more{
+    width: 90px;
+    height: 40px;
+    line-height: 40px;
+    background: #111;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 10px;
+    float: right;
+    margin-top: 20px;
+}
+.Benz_car_list .benz_title .benz_more:after{
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #fff;
+    border-right:1px solid #fff;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    display: inline-block;
+    margin-bottom: 2px;
+}
+.Benz_car_list .benz_car_list_pic{
+    display: block;
+    overflow: hidden;
+}
+.Benz_car_list .benz_car_list_pic li{
+    width: 260px;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.Benz_car_list .benz_car_list_pic li:nth-child(4n){
+    margin-right: 0;
+}
+.Benz_car_list .benz_car_list_pic li:last-child{
+    margin-right: 0;
+}
+.Benz_car_list .benz_car_list_pic li a{
+    display: block;
+    border: 1px solid #d9d9d9;
+    position: relative;
+    border-radius: 6px;
+}
+.Benz_car_list .benz_car_list_pic li a:hover{
+    border: 1px solid #bfbfbf;
+}
+.Benz_car_list .benz_car_list_pic li a img{
+    width: 258px;
+    height: 175px;
+    display: block;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+}
+.Benz_car_list .benz_car_list_pic li a:after{
+    content: "";
+    width: 62px;
+    height: 60px;
+    background: url('http://imgs.xin.com/xin/images/shop/ic_y.png') no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: 109px;
+    right: 5px;
+}
+.Benz_car_list .benz_car_list_pic li a .benz_car_text{
+    padding: 10px 14px;
+}
+.Benz_car_list .benz_car_list_pic li a .benz_car_text p{
+    color: #585858;
+    font-size: 14px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.Benz_car_list .benz_car_list_pic li a .benz_car_text span.rmb{
+    color: #ff5a37;
+    font-weight: bold;
+    font-size: 20px; 
+}
+.Benz_car_list .benz_car_list_pic li a .benz_car_text .plate{
+    display: block;
+    border-top: 1px solid #e4e4e4;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.Benz_car_list .benz_car_list_pic li a .benz_car_text .plate span{
+    width: 48%;
+    display: inline-block;
+    text-align: center;
+    border-right: 1px solid #e4e4e4;
+    color: #999;
+    font-size: 12px;
+}
+.Benz_car_list .benz_car_list_pic li a .benz_car_text .plate span:last-child{
+    border-right: none;
+}
+.Benz_car_list .benz_car_list_pic li a .benz_car_text .new_rmb{
+    font-size: 12px;
+    line-height: 28px;
+    height: 28px;
+    color: #999;
+}
+
+
+
+
+
+/*--benz_index--*/
+
+
+/*--benz_dealer_list--*/
+#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+#l-map{height:100%;width:78%;float:left;border-right:2px solid #bcbcbc;}
+#r-result{height:100%;width:20%;float:left;}
+.Dealer_list{
+    width: 1100px;
+    margin: 20px auto 40px;
+    min-height: 600px;
+}
+.benz_dealer_map{
+    width: 1100px;
+    height: 240px;
+    border: 1px solid #d9d9d9;
+    position: relative;
+}
+.benz_dealer_map .benz_dealer_pic1{
+    display: block;
+    width: 1100px;
+    height: 240px;
+}
+.benz_dealer_text{
+    border: 1px solid #d9d9d9;
+    width: 220px;
+    height: 100px;
+    background: #fff;
+    padding: 30px 20px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+.benz_dealer_text:before{
+    content: "";
+    width: 48px;
+    height: 40px;
+    background: url('http://imgs.xin.com/xin/images/shop/benz_logo.png') no-repeat;
+    display: inline-block;
+    margin-bottom: -5px;
+    margin-right: 14px;
+}
+.benz_dealer_text h1{
+    display: inline-block;
+    height: 40px;
+    color: #111;
+    font-size: 14px;
+}
+.choice_city{
+    display: block;
+    border-top: 1px solid #e5e5e5;
+    margin-top: 20px;
+    padding-top: 20px;
+    position: relative;
+}
+.choice_city .city_region{
+    display: inline-block;
+    color: #999;
+    font-size: 14px;
+}
+.choice_city .country{
+    display: inline-block;
+    width: 146px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    background: #111;
+    position: relative;
+    cursor: pointer;
+    border: none;
+}
+.choice_city .country:after{
+    content: "";
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    width: 6px;
+    height: 6px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    top: 9px;
+}
+.select-box-2{
+    display: none;
+    width: 146px;
+    height: 180px;
+    overflow: hidden;
+    position: absolute;
+    bottom: -180px;
+    left: 73px;
+}
+.choice_city .country_city{
+    position: absolute;
+    right: 70px;
+    width: 76px;
+    height: 180px;
+    z-index: 9;
+    background: #333;
+    overflow-y: scroll;
+    display: block;
+}
+.choice_city .country_city a,
+.choice_city .country_city_list a{
+    color: #fff;
+    display: block;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.choice_city .country_city a:hover,
+.choice_city .country_city_list a:hover{
+    background: #111;
+}
+.choice_city .country_city_list{
+    position: absolute;
+    right: 0px;
+    width: 70px;
+    height: 180px;
+    z-index: 9;
+    background: #333;
+    display: none;
+    overflow-y: scroll;
+}
+.benz_dealer_company{
+    width: 1020px;
+    margin: 0 auto;
+    display: block;
+    border: 1px solid #e5e5e5;
+    padding: 0 40px;
+}
+.benz_dealer_company a{
+    display: block;
+    height: 80px;
+    color: #666;
+    font-size: 14px;
+    padding-top: 40px;
+    overflow: hidden;
+}
+.benz_dealer_company li{
+    border-bottom: 1px solid #e5e5e5;
+}
+.benz_dealer_company li:last-child{
+    border-bottom: none;
+}
+.benz_dealer_company a h2{
+    display: inline-block;
+    float: left;
+}
+.benz_dealer_company a h2 .company{
+    font-size: 16px;
+    margin-bottom: 14px;
+    font-weight: bold;
+    color: #111;
+}
+.benz_dealer_company a .dealer_tel{
+    display: inline-block;
+    float: right;
+    color: #111;
+    margin-top: 16px;
+    margin-right: 4px;
+}
+.benz_dealer_company a .dealer_tel:before{
+    content: "";
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    background: url('http://imgs.xin.com/xin/images/shop/ic_tel.png') no-repeat;
+    margin-bottom: -3px;
+    margin-right: 3px;
+}
+.benz_dealer_company a .dealer_tel:after{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #b5b3b4;
+    border-right: 2px solid #b5b3b4;
+    transform:rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+}
+/*--benz_dealer_list--*/
+
+.starelite{
+    display: block;
+    width: 1100px;
+    margin: 0 auto;
+    height: 60px;
+    clear: both;
+    padding-top: 40px;
+}
+.starelite h1{
+    display: inline-block;
+    float: left;
+    font-size: 18px;
+    color: #585858; 
+}
+.starelite .choice{
+    display: block;
+    float: right;
+    color: #999;
+    font-size: 14px;
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+.starelite .choice .select-box-2{
+    left: 74px;
+}
+
+
+/*--benz_brand--*/
+.Benz_brand{
+    width: 1100px;
+    display: block;
+    margin: 20px auto 40px;
+}
+.benz_brand_top{
+    display: block;
+    height: 384px;
+    background: #111;
+    margin-bottom: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.benz_brand_top b{
+    display: inline-block;
+    width: 76px;
+    height: 76px;
+    background: url('http://imgs.xin.com/xin/images/shop/ic_3.png') no-repeat;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -38px;
+    margin-left: -246px;
+    cursor: pointer;
+    z-index: 9;
+}
+.benz_brand_top img{
+    width: 680px;
+    height: 384px;
+    float: left;
+}
+.benz_brand_top p{
+    display: inline-block;
+    width: 352px;
+    float: right;
+    padding: 90px 33px 0;
+    color: #fff;
+    font-size: 16px;
+}
+.benz_brand_top p span{
+    display: block;
+    text-align:Justify;
+    text-justify:inter-ideograph;
+    text-indent: 2em;
+    margin-bottom: 16px;
+}
+.benz_brand_bot{
+    display: block;
+    overflow: hidden;
+}
+.benz_brand_bot .benz_brand_bot_left{
+    display: inline-block;
+    float: left;
+    width: 530px;
+}
+.benz_brand_bot .benz_brand_bot_right{
+    display: inline-block;
+    float: right;
+    width: 530px;
+}
+.benz_brand_bot  h1{
+    font-size: 18px;
+    color: #111;
+    margin: 30px 0 20px;
+    display: block;
+}
+.benz_brand_bot p{
+    font-size: 14px;
+    color: #666;
+    text-align:Justify;
+    text-justify:inter-ideograph;
+}
+
+/*--benz_brand--*/

@@ -1,0 +1,76 @@
+.ico_btn{background: url(http://imgs.xin.com/b2c/xin-extend/false-home/images/ico_btn.png) no-repeat 0 0;}
+.top-wrap{width:100%;height:460px;background:#f2f2f2;}
+.top-wrap .fst-search{width:210px;height:450px;padding:5px 15px;background:#f85636;color:#fff;float:left;}
+.top-wrap .fst-search p{font:normal 14px/50px "Microsoft YaHei";}
+.top-wrap .fst-search p a{color:#fff;font:normal 12px/50px "Microsoft YaHei";float:right;}
+.top-wrap .fst-search .type{width:210px;height:150px;}
+.top-wrap .fst-search li{float:left;width:70px;height:28px;}
+.top-wrap .fst-search li a{color:#fff;font:normal 14px/28px "Microsoft YaHei";display:block;}
+.top-wrap .fig-search{width:860px;height:460px;float:right;position:relative;}
+
+/* flexslider begin*/
+.flex-slider{position:relative;width:860px;height:460px;overflow:hidden;zoom:1;}
+.flex-viewport{max-height:2000px;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
+.flex-slider .slides{zoom:1;}
+.flex-slider .slides img{width:860px;height:460px;}
+.flex-direction-nav a{width:50px;height:89px;line-height:99em;overflow:hidden;margin:-85px 0 0;display:block;position:absolute;top:50%;z-index:10;cursor:pointer;opacity:0;filter:alpha(opacity=0);-webkit-transition:all .3s ease;}
+.flex-direction-nav .flex-next{background:url(http://imgs.xin.com/b2c/xin-extend/false-home/images/ico_btn.png) no-repeat 0 0;right:0;}
+.flex-direction-nav .flex-prev{background:url(http://imgs.xin.com/b2c/xin-extend/false-home/images/ico_btn.png) no-repeat 0 -104px;left:0;}
+.flex-slider:hover .flex-next{opacity:0.8;filter:alpha(opacity=25);}
+.flex-slider:hover .flex-prev{opacity:0.8;filter:alpha(opacity=25);}
+.flex-slider:hover .flex-next:hover,
+.flex-slider:hover .flex-prev:hover{opacity:1;filter:alpha(opacity=50);}
+.flex-control-nav{width:120px;position:absolute;bottom:95px;right:100px;}
+.flex-control-nav li{margin:0 5px;display:inline-block;zoom:1;*display:inline;}
+.flex-control-paging li a{background:url(http://imgs.xin.com/b2c/xin-extend/false-home/images/dot.png) no-repeat 0 -24px;display:block;height:16px;overflow:hidden;text-indent:-99em;width:16px;cursor:pointer;}
+.flex-control-paging li a.flex-active{background-position:0 0;}
+/* flexslider end*/
+
+.top-wrap .fig-search .ipt-search{width:860px;height:60px;padding-top:20px;background:#e1e1e5;position:absolute;left:0;bottom:0;}
+.act-con{height:160px;width:1100px;margin-top:20px;}
+.act-con li{width:260px;height:160px;float:left;}
+.act-con li + li{margin-left:20px;}
+.brand-switch{width:100%;margin-top:20px;position:relative;}
+.brand-switch .switch{width:1100px;height:124px;margin:0 auto;border-top:1px solid #e5e5e5;border-bottom:2px solid #e5e5e5;}
+.brand-switch ul.tit{width:976px;height:124px;float:left;}
+.brand-switch ul.tit li{width:122px;float:left;}
+.brand-switch ul.tit a.cur{border-bottom:4px solid #ff5837;}
+.brand-switch ul.tit a.cur span{color:#ff5837;}
+.brand-switch ul.tit li a{display:block;width:122px;height:122px;text-align:center;}
+.brand-switch ul.tit li img{width:50px;height:50px;margin:20px 0 10px;}
+.brand-switch ul.tit li span{font:normal 14px/30px "Microsoft YaHei";display:block;color:#333;}
+.brand-switch a.check-more{float:left;display:inline-block;width:124px;height:124px;font:normal 14px/124px "Microsoft YaHei";color:#333;text-align:center;background:#f2f2f2;}
+.brand-switch a.check-more:hover{color:#ff5837;}
+.brand-switch .b-left{background-position:0 -729px;left:50%;margin-left:-620px;top:50%;margin-top:25px;display:block;z-index:10;width:50px;height:89px;cursor:pointer;}
+.brand-switch .b-right{background-position:0 -620px;right:50%;margin-right:-620px;top:50%;margin-top:25px;display:block;z-index:10;width:50px;height:89px;cursor:pointer;}
+.brand-switch .b-left:hover{background-position:0 -515px;}
+.brand-switch .b-right:hover{background-position:0 -411px;}
+
+/*20150127新增加的样式*/
+.clist{width:1096px;margin:0 auto;}
+.clist li{width:258px;height:316px;margin:20px 7px 0;border:1px solid #d9d9d9;border-radius:7px;float:left;}
+.clist li:hover{border:1px solid #ff5837;}
+.clist li:hover h4,.clist li:hover h4 a{color:#ff5837;}
+.clist li a.aimg,.clist li img{width:258px;height:175px;display:block;border-radius:6px;border-bottom-left-radius:0;border-bottom-right-radius:0;}
+.clist li .pad{padding:10px 14px 0;}
+.clist li a.f-tel{display:inline-block;width:80px;height:30px;font:normal 14px/30px "Microsoft YaHei";text-align:center;background:#ff5837;color:#fff;border-radius:4px;float:right;}
+.clist .new{font:normal 12px/28px "Microsoft YaHei";color:#999999;height:28px;border-bottom:1px solid #e4e4e4;}
+.clist li h4 a{display:block;height:44px;font:normal 14px/22px "Microsoft YaHei";color:#333333;overflow:hidden;}
+.clist li em{font:bold 20px/30px "Microsoft YaHei";color:#ff5837;display:block;position:relative;}
+.clist li span{height:28px;font-size:12px;line-height:28px;color:#999999;}
+.clist li b{display:inline-block;width:10px;height:28px;padding:0 10px 0 6px;}
+.clist li i{font-style:normal;color:#979797;}
+.type-switch{width:1100px;height:840px;margin:20px auto 0;}
+.type-switch .switch{width:1100px;height:60px;margin:0 auto;border-top:1px solid #e5e5e5;border-bottom:2px solid #e5e5e5;}
+.type-switch ul.tit{width:700px;height:60px;float:left;}
+.type-switch ul.tit li{width:140px;height:58px;float:left;}
+.type-switch ul.tit a.cur{border-bottom:4px solid #ff5837;}
+.type-switch ul.tit a.cur a{color:#ff5837;}
+.type-switch ul.tit li a{display:block;width:140px;height:58px;font:normal 18px/58px "Microsoft YaHei";color:#666;text-align:center;}
+.type-switch a.type-more{display:block;margin:30px auto 0;width:300px;height:50px;font:normal 20px/50px "Microsoft YaHei";border-radius:4px;color:#666;text-align:center;border:1px solid #e5e5e5;}
+.type-switch a.type-more:hover{color:#ff5837;border:1px solid #ff5837;}
+.optPic{height:400px;width:120px;display:block;position:fixed;right:0;top:50%;margin-top:-200px;}
+.close_btn{display:block;height:14px;width:14px;position:absolute;background:url(http://imgs.xin.com/xin/images/car-detail/closebtn.png) no-repeat;}
+#cPrice{right:10px;top:15px;}
+
+
