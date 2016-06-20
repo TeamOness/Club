@@ -391,7 +391,7 @@
 								<li>
 									<a href="index.php?r=car/carcheck">
 										<i class="icon-double-angle-right"></i>
-										添加汽车检测信息
+										添加汽车信息
 									</a>
 								</li>
 							</ul>
@@ -485,7 +485,7 @@
 							<li>
 								<a href="index.php?r=car">汽车信息管理</a>
 							</li>
-							<li class="active">汽车检测信息添加</li>
+							<li class="active">汽车信息添加</li>
 						</ul><!-- .breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -504,7 +504,7 @@
 								汽车信息
 								<small>
 									<i class="icon-double-angle-right"></i>
-									车辆检测信息
+									车辆信息
 								</small>
 							</h1>
 						</div><!-- /.page-header -->
